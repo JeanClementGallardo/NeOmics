@@ -8,8 +8,7 @@ class Labkey(models.Model):
     password = models.CharField(max_length=200)
 
 
-class Path(models.Model):
-    url = models.URLField()
-    file = models.FileField(default="manage.py")
-
+class RawData(models.Model):
+    organism = models.CharField(max_length=200)
+    labkey_url = models.URLField()
 

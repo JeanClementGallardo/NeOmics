@@ -1,6 +1,6 @@
 from django.shortcuts import render, HttpResponseRedirect
 from django.http import HttpResponse
-from .forms import NameForm
+from .forms import ContactForm
 
 
 # Create your views here.
@@ -9,20 +9,24 @@ def index(request):
     return render(request, "import_raw/index.html")
 
 
-def get_name(request):
-    # if this is a POST request we need to process the form data
-    if request.method == 'POST':
-        # create a form instance and populate it with data from the request:
-        form = NameForm(request.POST)
-        # check whether it's valid:
-        if form.is_valid():
-            # process the data in form.cleaned_data as required
-            # ...
-            # redirect to a new URL:
-            return HttpResponseRedirect('/thanks/')
+def contact(request):
+    # Construire le formulaire, soit avec les données postées,
+    # soit vide si l'utilisateur accède pour la première fois
+    # à la page.
+    form = ContactForm(request.POST or None)
+    # Nous vérifions que les données envoyées sont valides
+    # Cette méthode renvoie False s'il n'y a pas de données
+    # dans le formulaire ou qu'il contient des erreurs.
+    if form.is_valid():
+        # Ici nous pouvons traiter les données du formulaire
+        sujet = form.cleaned_data['sujet']
+        message = form.cleaned_data['message']
+        envoyeur = form.cleaned_data['envoyeur']
+        renvoi = form.cleaned_data['renvoi']
 
-    # if a GET (or any other method) we'll create a blank form
-    else:
-        form = NameForm()
+        # Nous pourrions ici envoyer l'e-mail grâce aux données
+        # que nous venons de récupérer
+        envoi = True
 
-    return render(request, 'import_raw/name.html', {'form': form})
+    # Quoiqu'il arrive, on affiche la page du formulaire.
+    return render(request, 'import_raw/contact.html', locals())
