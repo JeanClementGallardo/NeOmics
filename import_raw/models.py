@@ -9,6 +9,7 @@ class Labkey(models.Model):
 
 
 class Path(models.Model):
-    filepath = models.FilePathField(max_length=500)
+    url = models.URLField()
+    file = models.FileField(default="manage.py")
 
 
