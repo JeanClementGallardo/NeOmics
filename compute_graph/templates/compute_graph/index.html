@@ -5,17 +5,14 @@
     <title>Neomics</title>
 </head>
 <body>
-{% load static %}
-<script type="text/javascript" src="{% static "compute_graph/index.js" %}"></script>
     <h1>Compute graph</h1>
-    <h2>
-        <select multiple id="object">
-            <option value = "human">Human</option>
-            <option value = "arabidopsis">Arabidopsis</option>
-            <option value = "mouse">Mouse</option>
-        </select>
-        <button id ="selection" type="button" onclick="stat()">Process Analysis</button>
-    </h2>
+    {%  if organism_list %}
+        <ul>
+        {% for organism in organism_list %}
+            <li><a href = "{% url 'compute_graph:stat_choice' organism.organism %}"></a></li>
+        {% endfor %}
+        </ul>
+    {% endif %}
     <a href="/">Home</a>
 </body>
 </html>
