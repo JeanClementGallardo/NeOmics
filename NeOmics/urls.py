@@ -17,7 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
+
 urlpatterns = [
+    path('',include('navigator.urls')),
     path('import_raw/', include('import_raw.urls')),
+    path('compute_graph/',include('compute_graph.urls')),
+    path('viewer/',include('viewer.urls')),
     path('admin/', admin.site.urls),
 ]
+
