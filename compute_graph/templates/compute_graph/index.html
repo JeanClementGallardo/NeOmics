@@ -9,7 +9,7 @@
     {%  if organism_list %}
         <ul>
         {% for organism in organism_list %}
-            <li><a href = "{% url 'compute_graph:stat_choice' organism.organism %}"></a></li>
+            <li><a href = "{% url 'compute_graph:stat_choice' organism.organism %}">{{ organism.organism }}</a></li>
         {% endfor %}
         </ul>
     {% endif %}
