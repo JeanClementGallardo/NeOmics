@@ -1,10 +1,28 @@
 from django.db import models
-from django.conf import settings
+from import_raw.models import RawData
+
+
 # Create your models here.
-
-class StatList(models.Model):
+class AnalysisFamily(models.Model):
     name = models.CharField(max_length=200)
-    script = models.FilePathField(path=settings.FILE_PATH_FIELD_DIRECTORY)
-    family_name = models.CharField(max_length=200)
-    params_list = models.FilePathField(path=settings.FILE_PATH_FIELD_DIRECTORY,default=settings.FILE_PATH_FIELD_DIRECTORY)
 
+    def __str__(self):
+        return self.name
+
+
+class Analysis(models.Model):
+    name = models.CharField(max_length=200)
+    script = models.FileField(upload_to='Scripts')
+    family = models.ForeignKey(AnalysisFamily, on_delete=models.CASCADE)
+    params_list = models.FileField(upload_to='Scripts/Params')
+
+    def __str__(self):
+        return self.name
+
+
+class Graph(models.Model):
+    organism = models.ForeignKey(RawData, on_delete=models.CASCADE)
+    analysis_family = models.ForeignKey(AnalysisFamily, on_delete=models.CASCADE)
+    neo4j_uri = models.URLField()
+    neo4j_user = models.CharField(default="neo4j", max_length=200)
+    neo4j_password = models.CharField(default="neo4j", max_length=200)
