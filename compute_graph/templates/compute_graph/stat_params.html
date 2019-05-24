@@ -3,9 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Neomics</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'compute_graph/bootstrap.css' %}">
 </head>
 <body>
-<h1>Voilà les paramètres pour cette analyse statistique</h1>
 <a href="/">Home</a>
+<h1>{{ analysis.name }} on {{ raw_data.organism }}</h1>
+{% if error_message %}
+    <em>{{ error_message }}</em>
+{% endif %}
+<form action="{% url 'compute_graph:stat_params' raw_data.organism analysis.name %}" method="post">
+    {% csrf_token %}
+    {% for param in params %}
+        <p>
+            <label for="{{ param.name }}" data-toggle="tooltip" title="{{ param.help_text }}">
+                {{ param.name }} =
+            </label>
+            <input type="text" name="{{ param.name }}" id="{{ param.name }}" value="{{ param.default }}">
+
+        </p>
+
+    {% endfor %}
+    <input type="submit" value="Calculate and Import to neo4j">
+</form>
+
 </body>
 </html>

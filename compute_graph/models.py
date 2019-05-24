@@ -14,7 +14,7 @@ class Analysis(models.Model):
     name = models.CharField(max_length=200)
     script = models.FileField(upload_to='Scripts')
     family = models.ForeignKey(AnalysisFamily, on_delete=models.CASCADE)
-    params_list = models.FileField(upload_to='Scripts/Params')
+    parameters_json_file = models.FileField(upload_to='Scripts/Params')
 
     def __str__(self):
         return self.name
