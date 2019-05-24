@@ -6,6 +6,13 @@
 </head>
 <body>
     <h1>Graph Viewer</h1>
+        {%  if organism_list %}
+        <ul>
+        {% for organism in organism_list %}
+            <li><a href = "{% url 'viewer:graph' organism.organism %}">{{ organism.organism }}</a></li>
+        {% endfor %}
+        </ul>
+        {% endif %}
     <a href="/">Home</a>
 </body>
 </html>
