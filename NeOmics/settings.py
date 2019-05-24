@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+import os.path
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -117,6 +118,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-
+# NEO4J_URL_START = '~/PycharmProjects/NeOmics/NeOmics/neo4j/bin/neo4j start'
+# NEO4J_URL_STOP = '~/PycharmProjects/NeOmics/NeOmics/neo4j/bin/neo4j stop'
+START = BASE_DIR+'/NeOmics/neo4j/bin/neo4j'+" start"
+STOP = BASE_DIR+'/NeOmics/neo4j/bin/neo4j'+" stop"
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

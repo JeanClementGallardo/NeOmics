@@ -3,9 +3,11 @@
 import os
 import sys
 
+from django.conf import settings
 
 def main():
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'NeOmics.settings')
+    os.system(settings.START)
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
@@ -17,5 +19,7 @@ def main():
     execute_from_command_line(sys.argv)
 
 
+
 if __name__ == '__main__':
     main()
+    os.system(settings.STOP)
