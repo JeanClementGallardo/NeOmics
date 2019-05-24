@@ -126,3 +126,4 @@ STATIC_URL = '/static/'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+FILE_PATH_FIELD_DIRECTORY = '/home/jean_clement/script_r'

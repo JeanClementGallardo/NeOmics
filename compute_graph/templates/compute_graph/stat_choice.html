@@ -2,9 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Neomics</title>
 </head>
 <body>
-
+    <h1>Compute graph</h1>
+    {%  if stat_list %}
+        <ul>
+        {% for stat in stat_list %}
+            <li><a href = "{{ request.path }}/{{ stat.name }}">{{ stat.name }}</a></li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+    <a href="/">Home</a>
 </body>
 </html>
