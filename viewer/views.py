@@ -4,7 +4,6 @@ from django.views import generic
 
 from import_raw.models import RawData
 
-
 # Create your views here.
 
 def index(request):
