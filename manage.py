@@ -5,9 +5,9 @@ import sys
 
 from django.conf import settings
 
+
 def main():
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'NeOmics.settings')
-    os.system(settings.START)
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
@@ -16,10 +16,12 @@ def main():
             "available on your PYTHONPATH environment variable? Did you "
             "forget to activate a virtual environment?"
         ) from exc
+    if "runserver" in sys.argv:
+        os.system(settings.START)
     execute_from_command_line(sys.argv)
-
 
 
 if __name__ == '__main__':
     main()
-    os.system(settings.STOP)
+    if "runserver" in sys.argv:
+        os.system(settings.STOP)

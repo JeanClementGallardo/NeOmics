@@ -1,11 +1,11 @@
 from django.db import models
 
 
-# Create your models here.
-class Labkey(models.Model):
-    uri = models.CharField(max_length=200)
-    users = models.CharField(max_length=200)
-    password = models.CharField(max_length=200)
+# # Create your models here.
+# class Labkey(models.Model):
+#     uri = models.CharField(max_length=200)
+#     users = models.CharField(max_length=200)
+#     password = models.CharField(max_length=200)
 
 
 class RawData(models.Model):
