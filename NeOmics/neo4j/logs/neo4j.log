@@ -1,0 +1,434 @@
+nohup: les entrées sont ignorées
+2019-05-24 09:55:36.171+0000 INFO  ======== Neo4j 3.5.5 ========
+2019-05-24 09:55:36.183+0000 INFO  Starting...
+2019-05-24 09:55:38.031+0000 INFO  Bolt enabled on 127.0.0.1:7687.
+2019-05-24 09:55:39.416+0000 INFO  Started.
+2019-05-24 09:55:40.380+0000 INFO  Remote interface available at http://localhost:7474/
+2019-05-24 11:41:21.722+0000 WARN  The client is unauthorized due to authentication failure.
+2019-05-24 11:55:17.237+0000 INFO  Neo4j Server shutdown initiated by request
+2019-05-24 11:55:17.255+0000 INFO  Stopping...
+2019-05-24 11:55:17.333+0000 INFO  Stopped.
+nohup: les entrées sont ignorées
+2019-05-24 12:01:07.588+0000 INFO  ======== Neo4j 3.5.5 ========
+2019-05-24 12:01:07.599+0000 INFO  Starting...
+2019-05-24 12:01:09.653+0000 INFO  Bolt enabled on 127.0.0.1:7687.
+2019-05-24 12:01:11.201+0000 INFO  Started.
+2019-05-24 12:01:12.347+0000 INFO  Remote interface available at http://localhost:7474/
+2019-05-24 12:02:36.434+0000 INFO  Neo4j Server shutdown initiated by request
+2019-05-24 12:02:36.455+0000 INFO  Stopping...
+2019-05-24 12:02:36.544+0000 INFO  Stopped.
+nohup: les entrées sont ignorées
+2019-05-24 12:07:29.745+0000 INFO  ======== Neo4j 3.5.5 ========
+2019-05-24 12:07:29.758+0000 INFO  Starting...
+2019-05-24 12:07:31.530+0000 INFO  Bolt enabled on 127.0.0.1:7687.
+2019-05-24 12:07:32.912+0000 INFO  Started.
+2019-05-24 12:07:33.907+0000 INFO  Remote interface available at http://localhost:7474/
+2019-05-24 12:07:57.020+0000 INFO  Neo4j Server shutdown initiated by request
+2019-05-24 12:07:57.043+0000 INFO  Stopping...
+2019-05-24 12:07:57.129+0000 INFO  Stopped.
+nohup: les entrées sont ignorées
+2019-05-24 12:18:12.182+0000 INFO  ======== Neo4j 3.5.5 ========
+2019-05-24 12:18:12.198+0000 INFO  Starting...
+2019-05-24 12:18:13.035+0000 ERROR Failed to start Neo4j: Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@5a2d131d' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)". Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@5a2d131d' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+org.neo4j.server.ServerStartupException: Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@5a2d131d' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+	at org.neo4j.server.exception.ServerStartupErrors.translateToServerStartupError(ServerStartupErrors.java:45)
+	at org.neo4j.server.AbstractNeoServer.start(AbstractNeoServer.java:187)
+	at org.neo4j.server.ServerBootstrapper.start(ServerBootstrapper.java:123)
+	at org.neo4j.server.ServerBootstrapper.start(ServerBootstrapper.java:90)
+	at org.neo4j.server.CommunityEntryPoint.main(CommunityEntryPoint.java:32)
+Caused by: org.neo4j.kernel.lifecycle.LifecycleException: Component 'org.neo4j.server.database.LifecycleManagingDatabase@5a2d131d' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:473)
+	at org.neo4j.kernel.lifecycle.LifeSupport.start(LifeSupport.java:111)
+	at org.neo4j.server.AbstractNeoServer.start(AbstractNeoServer.java:180)
+	... 3 more
+Caused by: java.lang.RuntimeException: Error starting org.neo4j.graphdb.facade.GraphDatabaseFacadeFactory, /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases
+	at org.neo4j.graphdb.facade.GraphDatabaseFacadeFactory.initFacade(GraphDatabaseFacadeFactory.java:229)
+	at org.neo4j.graphdb.facade.GraphDatabaseFacadeFactory.newFacade(GraphDatabaseFacadeFactory.java:146)
+	at org.neo4j.server.database.CommunityGraphFactory.newGraphDatabase(CommunityGraphFactory.java:41)
+	at org.neo4j.server.database.LifecycleManagingDatabase.start(LifecycleManagingDatabase.java:90)
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:452)
+	... 5 more
+Caused by: org.neo4j.kernel.lifecycle.LifecycleException: Component 'org.neo4j.kernel.internal.locker.StoreLockerLifecycleAdapter@1fc32e4f' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:473)
+	at org.neo4j.kernel.lifecycle.LifeSupport.start(LifeSupport.java:111)
+	at org.neo4j.graphdb.facade.GraphDatabaseFacadeFactory.initFacade(GraphDatabaseFacadeFactory.java:224)
+	... 9 more
+Caused by: org.neo4j.kernel.StoreLockException: Store and its lock file has been locked by another process: /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)
+	at org.neo4j.kernel.internal.locker.StoreLocker.storeLockException(StoreLocker.java:116)
+	at org.neo4j.kernel.internal.locker.StoreLocker.checkLock(StoreLocker.java:92)
+	at org.neo4j.kernel.internal.locker.GlobalStoreLocker.checkLock(GlobalStoreLocker.java:61)
+	at org.neo4j.kernel.internal.locker.StoreLockerLifecycleAdapter.start(StoreLockerLifecycleAdapter.java:36)
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:452)
+	... 11 more
+2019-05-24 12:18:13.035+0000 INFO  Neo4j Server shutdown initiated by request
+nohup: les entrées sont ignorées
+2019-05-24 12:19:11.048+0000 INFO  ======== Neo4j 3.5.5 ========
+2019-05-24 12:19:11.062+0000 INFO  Starting...
+2019-05-24 12:19:11.967+0000 ERROR Failed to start Neo4j: Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@5a2d131d' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)". Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@5a2d131d' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+org.neo4j.server.ServerStartupException: Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@5a2d131d' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+	at org.neo4j.server.exception.ServerStartupErrors.translateToServerStartupError(ServerStartupErrors.java:45)
+	at org.neo4j.server.AbstractNeoServer.start(AbstractNeoServer.java:187)
+	at org.neo4j.server.ServerBootstrapper.start(ServerBootstrapper.java:123)
+	at org.neo4j.server.ServerBootstrapper.start(ServerBootstrapper.java:90)
+	at org.neo4j.server.CommunityEntryPoint.main(CommunityEntryPoint.java:32)
+Caused by: org.neo4j.kernel.lifecycle.LifecycleException: Component 'org.neo4j.server.database.LifecycleManagingDatabase@5a2d131d' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:473)
+	at org.neo4j.kernel.lifecycle.LifeSupport.start(LifeSupport.java:111)
+	at org.neo4j.server.AbstractNeoServer.start(AbstractNeoServer.java:180)
+	... 3 more
+Caused by: java.lang.RuntimeException: Error starting org.neo4j.graphdb.facade.GraphDatabaseFacadeFactory, /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases
+	at org.neo4j.graphdb.facade.GraphDatabaseFacadeFactory.initFacade(GraphDatabaseFacadeFactory.java:229)
+	at org.neo4j.graphdb.facade.GraphDatabaseFacadeFactory.newFacade(GraphDatabaseFacadeFactory.java:146)
+	at org.neo4j.server.database.CommunityGraphFactory.newGraphDatabase(CommunityGraphFactory.java:41)
+	at org.neo4j.server.database.LifecycleManagingDatabase.start(LifecycleManagingDatabase.java:90)
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:452)
+	... 5 more
+Caused by: org.neo4j.kernel.lifecycle.LifecycleException: Component 'org.neo4j.kernel.internal.locker.StoreLockerLifecycleAdapter@1fc32e4f' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:473)
+	at org.neo4j.kernel.lifecycle.LifeSupport.start(LifeSupport.java:111)
+	at org.neo4j.graphdb.facade.GraphDatabaseFacadeFactory.initFacade(GraphDatabaseFacadeFactory.java:224)
+	... 9 more
+Caused by: org.neo4j.kernel.StoreLockException: Store and its lock file has been locked by another process: /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)
+	at org.neo4j.kernel.internal.locker.StoreLocker.storeLockException(StoreLocker.java:116)
+	at org.neo4j.kernel.internal.locker.StoreLocker.checkLock(StoreLocker.java:92)
+	at org.neo4j.kernel.internal.locker.GlobalStoreLocker.checkLock(GlobalStoreLocker.java:61)
+	at org.neo4j.kernel.internal.locker.StoreLockerLifecycleAdapter.start(StoreLockerLifecycleAdapter.java:36)
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:452)
+	... 11 more
+2019-05-24 12:19:11.968+0000 INFO  Neo4j Server shutdown initiated by request
+nohup: les entrées sont ignorées
+2019-05-24 12:19:51.958+0000 INFO  ======== Neo4j 3.5.5 ========
+2019-05-24 12:19:51.977+0000 INFO  Starting...
+2019-05-24 12:19:52.811+0000 ERROR Failed to start Neo4j: Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@5a2d131d' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)". Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@5a2d131d' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+org.neo4j.server.ServerStartupException: Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@5a2d131d' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+	at org.neo4j.server.exception.ServerStartupErrors.translateToServerStartupError(ServerStartupErrors.java:45)
+	at org.neo4j.server.AbstractNeoServer.start(AbstractNeoServer.java:187)
+	at org.neo4j.server.ServerBootstrapper.start(ServerBootstrapper.java:123)
+	at org.neo4j.server.ServerBootstrapper.start(ServerBootstrapper.java:90)
+	at org.neo4j.server.CommunityEntryPoint.main(CommunityEntryPoint.java:32)
+Caused by: org.neo4j.kernel.lifecycle.LifecycleException: Component 'org.neo4j.server.database.LifecycleManagingDatabase@5a2d131d' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:473)
+	at org.neo4j.kernel.lifecycle.LifeSupport.start(LifeSupport.java:111)
+	at org.neo4j.server.AbstractNeoServer.start(AbstractNeoServer.java:180)
+	... 3 more
+Caused by: java.lang.RuntimeException: Error starting org.neo4j.graphdb.facade.GraphDatabaseFacadeFactory, /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases
+	at org.neo4j.graphdb.facade.GraphDatabaseFacadeFactory.initFacade(GraphDatabaseFacadeFactory.java:229)
+	at org.neo4j.graphdb.facade.GraphDatabaseFacadeFactory.newFacade(GraphDatabaseFacadeFactory.java:146)
+	at org.neo4j.server.database.CommunityGraphFactory.newGraphDatabase(CommunityGraphFactory.java:41)
+	at org.neo4j.server.database.LifecycleManagingDatabase.start(LifecycleManagingDatabase.java:90)
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:452)
+	... 5 more
+Caused by: org.neo4j.kernel.lifecycle.LifecycleException: Component 'org.neo4j.kernel.internal.locker.StoreLockerLifecycleAdapter@1fc32e4f' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:473)
+	at org.neo4j.kernel.lifecycle.LifeSupport.start(LifeSupport.java:111)
+	at org.neo4j.graphdb.facade.GraphDatabaseFacadeFactory.initFacade(GraphDatabaseFacadeFactory.java:224)
+	... 9 more
+Caused by: org.neo4j.kernel.StoreLockException: Store and its lock file has been locked by another process: /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)
+	at org.neo4j.kernel.internal.locker.StoreLocker.storeLockException(StoreLocker.java:116)
+	at org.neo4j.kernel.internal.locker.StoreLocker.checkLock(StoreLocker.java:92)
+	at org.neo4j.kernel.internal.locker.GlobalStoreLocker.checkLock(GlobalStoreLocker.java:61)
+	at org.neo4j.kernel.internal.locker.StoreLockerLifecycleAdapter.start(StoreLockerLifecycleAdapter.java:36)
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:452)
+	... 11 more
+2019-05-24 12:19:52.812+0000 INFO  Neo4j Server shutdown initiated by request
+nohup: les entrées sont ignorées
+2019-05-24 12:23:52.618+0000 INFO  ======== Neo4j 3.5.5 ========
+2019-05-24 12:23:52.635+0000 INFO  Starting...
+2019-05-24 12:23:53.503+0000 ERROR Failed to start Neo4j: Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@5a2d131d' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)". Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@5a2d131d' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+org.neo4j.server.ServerStartupException: Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@5a2d131d' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+	at org.neo4j.server.exception.ServerStartupErrors.translateToServerStartupError(ServerStartupErrors.java:45)
+	at org.neo4j.server.AbstractNeoServer.start(AbstractNeoServer.java:187)
+	at org.neo4j.server.ServerBootstrapper.start(ServerBootstrapper.java:123)
+	at org.neo4j.server.ServerBootstrapper.start(ServerBootstrapper.java:90)
+	at org.neo4j.server.CommunityEntryPoint.main(CommunityEntryPoint.java:32)
+Caused by: org.neo4j.kernel.lifecycle.LifecycleException: Component 'org.neo4j.server.database.LifecycleManagingDatabase@5a2d131d' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:473)
+	at org.neo4j.kernel.lifecycle.LifeSupport.start(LifeSupport.java:111)
+	at org.neo4j.server.AbstractNeoServer.start(AbstractNeoServer.java:180)
+	... 3 more
+Caused by: java.lang.RuntimeException: Error starting org.neo4j.graphdb.facade.GraphDatabaseFacadeFactory, /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases
+	at org.neo4j.graphdb.facade.GraphDatabaseFacadeFactory.initFacade(GraphDatabaseFacadeFactory.java:229)
+	at org.neo4j.graphdb.facade.GraphDatabaseFacadeFactory.newFacade(GraphDatabaseFacadeFactory.java:146)
+	at org.neo4j.server.database.CommunityGraphFactory.newGraphDatabase(CommunityGraphFactory.java:41)
+	at org.neo4j.server.database.LifecycleManagingDatabase.start(LifecycleManagingDatabase.java:90)
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:452)
+	... 5 more
+Caused by: org.neo4j.kernel.lifecycle.LifecycleException: Component 'org.neo4j.kernel.internal.locker.StoreLockerLifecycleAdapter@1fc32e4f' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:473)
+	at org.neo4j.kernel.lifecycle.LifeSupport.start(LifeSupport.java:111)
+	at org.neo4j.graphdb.facade.GraphDatabaseFacadeFactory.initFacade(GraphDatabaseFacadeFactory.java:224)
+	... 9 more
+Caused by: org.neo4j.kernel.StoreLockException: Store and its lock file has been locked by another process: /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)
+	at org.neo4j.kernel.internal.locker.StoreLocker.storeLockException(StoreLocker.java:116)
+	at org.neo4j.kernel.internal.locker.StoreLocker.checkLock(StoreLocker.java:92)
+	at org.neo4j.kernel.internal.locker.GlobalStoreLocker.checkLock(GlobalStoreLocker.java:61)
+	at org.neo4j.kernel.internal.locker.StoreLockerLifecycleAdapter.start(StoreLockerLifecycleAdapter.java:36)
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:452)
+	... 11 more
+2019-05-24 12:23:53.504+0000 INFO  Neo4j Server shutdown initiated by request
+nohup: les entrées sont ignorées
+2019-05-24 12:25:01.096+0000 INFO  ======== Neo4j 3.5.5 ========
+2019-05-24 12:25:01.108+0000 INFO  Starting...
+2019-05-24 12:25:01.927+0000 ERROR Failed to start Neo4j: Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@5a2d131d' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)". Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@5a2d131d' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+org.neo4j.server.ServerStartupException: Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@5a2d131d' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+	at org.neo4j.server.exception.ServerStartupErrors.translateToServerStartupError(ServerStartupErrors.java:45)
+	at org.neo4j.server.AbstractNeoServer.start(AbstractNeoServer.java:187)
+	at org.neo4j.server.ServerBootstrapper.start(ServerBootstrapper.java:123)
+	at org.neo4j.server.ServerBootstrapper.start(ServerBootstrapper.java:90)
+	at org.neo4j.server.CommunityEntryPoint.main(CommunityEntryPoint.java:32)
+Caused by: org.neo4j.kernel.lifecycle.LifecycleException: Component 'org.neo4j.server.database.LifecycleManagingDatabase@5a2d131d' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:473)
+	at org.neo4j.kernel.lifecycle.LifeSupport.start(LifeSupport.java:111)
+	at org.neo4j.server.AbstractNeoServer.start(AbstractNeoServer.java:180)
+	... 3 more
+Caused by: java.lang.RuntimeException: Error starting org.neo4j.graphdb.facade.GraphDatabaseFacadeFactory, /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases
+	at org.neo4j.graphdb.facade.GraphDatabaseFacadeFactory.initFacade(GraphDatabaseFacadeFactory.java:229)
+	at org.neo4j.graphdb.facade.GraphDatabaseFacadeFactory.newFacade(GraphDatabaseFacadeFactory.java:146)
+	at org.neo4j.server.database.CommunityGraphFactory.newGraphDatabase(CommunityGraphFactory.java:41)
+	at org.neo4j.server.database.LifecycleManagingDatabase.start(LifecycleManagingDatabase.java:90)
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:452)
+	... 5 more
+Caused by: org.neo4j.kernel.lifecycle.LifecycleException: Component 'org.neo4j.kernel.internal.locker.StoreLockerLifecycleAdapter@1fc32e4f' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:473)
+	at org.neo4j.kernel.lifecycle.LifeSupport.start(LifeSupport.java:111)
+	at org.neo4j.graphdb.facade.GraphDatabaseFacadeFactory.initFacade(GraphDatabaseFacadeFactory.java:224)
+	... 9 more
+Caused by: org.neo4j.kernel.StoreLockException: Store and its lock file has been locked by another process: /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)
+	at org.neo4j.kernel.internal.locker.StoreLocker.storeLockException(StoreLocker.java:116)
+	at org.neo4j.kernel.internal.locker.StoreLocker.checkLock(StoreLocker.java:92)
+	at org.neo4j.kernel.internal.locker.GlobalStoreLocker.checkLock(GlobalStoreLocker.java:61)
+	at org.neo4j.kernel.internal.locker.StoreLockerLifecycleAdapter.start(StoreLockerLifecycleAdapter.java:36)
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:452)
+	... 11 more
+2019-05-24 12:25:01.927+0000 INFO  Neo4j Server shutdown initiated by request
+nohup: les entrées sont ignorées
+2019-05-24 12:25:46.714+0000 INFO  ======== Neo4j 3.5.5 ========
+2019-05-24 12:25:46.727+0000 INFO  Starting...
+2019-05-24 12:25:47.557+0000 ERROR Failed to start Neo4j: Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@5a2d131d' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)". Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@5a2d131d' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+org.neo4j.server.ServerStartupException: Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@5a2d131d' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+	at org.neo4j.server.exception.ServerStartupErrors.translateToServerStartupError(ServerStartupErrors.java:45)
+	at org.neo4j.server.AbstractNeoServer.start(AbstractNeoServer.java:187)
+	at org.neo4j.server.ServerBootstrapper.start(ServerBootstrapper.java:123)
+	at org.neo4j.server.ServerBootstrapper.start(ServerBootstrapper.java:90)
+	at org.neo4j.server.CommunityEntryPoint.main(CommunityEntryPoint.java:32)
+Caused by: org.neo4j.kernel.lifecycle.LifecycleException: Component 'org.neo4j.server.database.LifecycleManagingDatabase@5a2d131d' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:473)
+	at org.neo4j.kernel.lifecycle.LifeSupport.start(LifeSupport.java:111)
+	at org.neo4j.server.AbstractNeoServer.start(AbstractNeoServer.java:180)
+	... 3 more
+Caused by: java.lang.RuntimeException: Error starting org.neo4j.graphdb.facade.GraphDatabaseFacadeFactory, /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases
+	at org.neo4j.graphdb.facade.GraphDatabaseFacadeFactory.initFacade(GraphDatabaseFacadeFactory.java:229)
+	at org.neo4j.graphdb.facade.GraphDatabaseFacadeFactory.newFacade(GraphDatabaseFacadeFactory.java:146)
+	at org.neo4j.server.database.CommunityGraphFactory.newGraphDatabase(CommunityGraphFactory.java:41)
+	at org.neo4j.server.database.LifecycleManagingDatabase.start(LifecycleManagingDatabase.java:90)
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:452)
+	... 5 more
+Caused by: org.neo4j.kernel.lifecycle.LifecycleException: Component 'org.neo4j.kernel.internal.locker.StoreLockerLifecycleAdapter@1fc32e4f' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:473)
+	at org.neo4j.kernel.lifecycle.LifeSupport.start(LifeSupport.java:111)
+	at org.neo4j.graphdb.facade.GraphDatabaseFacadeFactory.initFacade(GraphDatabaseFacadeFactory.java:224)
+	... 9 more
+Caused by: org.neo4j.kernel.StoreLockException: Store and its lock file has been locked by another process: /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)
+	at org.neo4j.kernel.internal.locker.StoreLocker.storeLockException(StoreLocker.java:116)
+	at org.neo4j.kernel.internal.locker.StoreLocker.checkLock(StoreLocker.java:92)
+	at org.neo4j.kernel.internal.locker.GlobalStoreLocker.checkLock(GlobalStoreLocker.java:61)
+	at org.neo4j.kernel.internal.locker.StoreLockerLifecycleAdapter.start(StoreLockerLifecycleAdapter.java:36)
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:452)
+	... 11 more
+2019-05-24 12:25:47.558+0000 INFO  Neo4j Server shutdown initiated by request
+nohup: les entrées sont ignorées
+2019-05-24 12:26:21.564+0000 INFO  ======== Neo4j 3.5.5 ========
+2019-05-24 12:26:21.576+0000 INFO  Starting...
+2019-05-24 12:26:22.380+0000 ERROR Failed to start Neo4j: Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@5a2d131d' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)". Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@5a2d131d' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+org.neo4j.server.ServerStartupException: Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@5a2d131d' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+	at org.neo4j.server.exception.ServerStartupErrors.translateToServerStartupError(ServerStartupErrors.java:45)
+	at org.neo4j.server.AbstractNeoServer.start(AbstractNeoServer.java:187)
+	at org.neo4j.server.ServerBootstrapper.start(ServerBootstrapper.java:123)
+	at org.neo4j.server.ServerBootstrapper.start(ServerBootstrapper.java:90)
+	at org.neo4j.server.CommunityEntryPoint.main(CommunityEntryPoint.java:32)
+Caused by: org.neo4j.kernel.lifecycle.LifecycleException: Component 'org.neo4j.server.database.LifecycleManagingDatabase@5a2d131d' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:473)
+	at org.neo4j.kernel.lifecycle.LifeSupport.start(LifeSupport.java:111)
+	at org.neo4j.server.AbstractNeoServer.start(AbstractNeoServer.java:180)
+	... 3 more
+Caused by: java.lang.RuntimeException: Error starting org.neo4j.graphdb.facade.GraphDatabaseFacadeFactory, /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases
+	at org.neo4j.graphdb.facade.GraphDatabaseFacadeFactory.initFacade(GraphDatabaseFacadeFactory.java:229)
+	at org.neo4j.graphdb.facade.GraphDatabaseFacadeFactory.newFacade(GraphDatabaseFacadeFactory.java:146)
+	at org.neo4j.server.database.CommunityGraphFactory.newGraphDatabase(CommunityGraphFactory.java:41)
+	at org.neo4j.server.database.LifecycleManagingDatabase.start(LifecycleManagingDatabase.java:90)
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:452)
+	... 5 more
+Caused by: org.neo4j.kernel.lifecycle.LifecycleException: Component 'org.neo4j.kernel.internal.locker.StoreLockerLifecycleAdapter@1fc32e4f' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:473)
+	at org.neo4j.kernel.lifecycle.LifeSupport.start(LifeSupport.java:111)
+	at org.neo4j.graphdb.facade.GraphDatabaseFacadeFactory.initFacade(GraphDatabaseFacadeFactory.java:224)
+	... 9 more
+Caused by: org.neo4j.kernel.StoreLockException: Store and its lock file has been locked by another process: /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)
+	at org.neo4j.kernel.internal.locker.StoreLocker.storeLockException(StoreLocker.java:116)
+	at org.neo4j.kernel.internal.locker.StoreLocker.checkLock(StoreLocker.java:92)
+	at org.neo4j.kernel.internal.locker.GlobalStoreLocker.checkLock(GlobalStoreLocker.java:61)
+	at org.neo4j.kernel.internal.locker.StoreLockerLifecycleAdapter.start(StoreLockerLifecycleAdapter.java:36)
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:452)
+	... 11 more
+2019-05-24 12:26:22.380+0000 INFO  Neo4j Server shutdown initiated by request
+nohup: les entrées sont ignorées
+2019-05-24 12:26:41.725+0000 INFO  ======== Neo4j 3.5.5 ========
+2019-05-24 12:26:41.737+0000 INFO  Starting...
+2019-05-24 12:26:42.522+0000 ERROR Failed to start Neo4j: Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@5a2d131d' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)". Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@5a2d131d' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+org.neo4j.server.ServerStartupException: Starting Neo4j failed: Component 'org.neo4j.server.database.LifecycleManagingDatabase@5a2d131d' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+	at org.neo4j.server.exception.ServerStartupErrors.translateToServerStartupError(ServerStartupErrors.java:45)
+	at org.neo4j.server.AbstractNeoServer.start(AbstractNeoServer.java:187)
+	at org.neo4j.server.ServerBootstrapper.start(ServerBootstrapper.java:123)
+	at org.neo4j.server.ServerBootstrapper.start(ServerBootstrapper.java:90)
+	at org.neo4j.server.CommunityEntryPoint.main(CommunityEntryPoint.java:32)
+Caused by: org.neo4j.kernel.lifecycle.LifecycleException: Component 'org.neo4j.server.database.LifecycleManagingDatabase@5a2d131d' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:473)
+	at org.neo4j.kernel.lifecycle.LifeSupport.start(LifeSupport.java:111)
+	at org.neo4j.server.AbstractNeoServer.start(AbstractNeoServer.java:180)
+	... 3 more
+Caused by: java.lang.RuntimeException: Error starting org.neo4j.graphdb.facade.GraphDatabaseFacadeFactory, /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases
+	at org.neo4j.graphdb.facade.GraphDatabaseFacadeFactory.initFacade(GraphDatabaseFacadeFactory.java:229)
+	at org.neo4j.graphdb.facade.GraphDatabaseFacadeFactory.newFacade(GraphDatabaseFacadeFactory.java:146)
+	at org.neo4j.server.database.CommunityGraphFactory.newGraphDatabase(CommunityGraphFactory.java:41)
+	at org.neo4j.server.database.LifecycleManagingDatabase.start(LifecycleManagingDatabase.java:90)
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:452)
+	... 5 more
+Caused by: org.neo4j.kernel.lifecycle.LifecycleException: Component 'org.neo4j.kernel.internal.locker.StoreLockerLifecycleAdapter@1fc32e4f' was successfully initialized, but failed to start. Please see the attached cause exception "Store and its lock file has been locked by another process: /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)".
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:473)
+	at org.neo4j.kernel.lifecycle.LifeSupport.start(LifeSupport.java:111)
+	at org.neo4j.graphdb.facade.GraphDatabaseFacadeFactory.initFacade(GraphDatabaseFacadeFactory.java:224)
+	... 9 more
+Caused by: org.neo4j.kernel.StoreLockException: Store and its lock file has been locked by another process: /home/jean_clement/neo4j/neo4j-community-3.5.5/data/databases/store_lock. Please ensure no other process is using this database, and that the directory is writable (required even for read-only access)
+	at org.neo4j.kernel.internal.locker.StoreLocker.storeLockException(StoreLocker.java:116)
+	at org.neo4j.kernel.internal.locker.StoreLocker.checkLock(StoreLocker.java:92)
+	at org.neo4j.kernel.internal.locker.GlobalStoreLocker.checkLock(GlobalStoreLocker.java:61)
+	at org.neo4j.kernel.internal.locker.StoreLockerLifecycleAdapter.start(StoreLockerLifecycleAdapter.java:36)
+	at org.neo4j.kernel.lifecycle.LifeSupport$LifecycleInstance.start(LifeSupport.java:452)
+	... 11 more
+2019-05-24 12:26:42.523+0000 INFO  Neo4j Server shutdown initiated by request
+nohup: les entrées sont ignorées
+2019-05-24 12:28:37.513+0000 INFO  ======== Neo4j 3.5.5 ========
+2019-05-24 12:28:37.526+0000 INFO  Starting...
+2019-05-24 12:28:39.485+0000 INFO  Bolt enabled on 127.0.0.1:7687.
+2019-05-24 12:28:40.899+0000 INFO  Started.
+2019-05-24 12:28:42.029+0000 INFO  Remote interface available at http://localhost:7474/
+2019-05-24 12:28:44.218+0000 WARN  The client is unauthorized due to authentication failure.
+2019-05-24 12:28:52.250+0000 INFO  Neo4j Server shutdown initiated by request
+2019-05-24 12:28:52.268+0000 INFO  Stopping...
+2019-05-24 12:28:52.352+0000 INFO  Stopped.
+nohup: les entrées sont ignorées
+2019-05-24 12:39:13.724+0000 INFO  ======== Neo4j 3.5.5 ========
+2019-05-24 12:39:13.740+0000 INFO  Starting...
+2019-05-24 12:39:15.679+0000 INFO  Bolt enabled on 127.0.0.1:7687.
+2019-05-24 12:39:17.097+0000 INFO  Started.
+2019-05-24 12:39:18.058+0000 INFO  Remote interface available at http://localhost:7474/
+2019-05-24 12:40:03.123+0000 WARN  The client is unauthorized due to authentication failure.
+2019-05-24 12:40:16.174+0000 INFO  Neo4j Server shutdown initiated by request
+2019-05-24 12:40:16.195+0000 INFO  Stopping...
+2019-05-24 12:40:16.282+0000 INFO  Stopped.
+nohup: les entrées sont ignorées
+2019-05-24 12:51:43.969+0000 INFO  ======== Neo4j 3.5.5 ========
+2019-05-24 12:51:43.979+0000 INFO  Starting...
+2019-05-24 12:51:45.891+0000 INFO  Bolt enabled on 127.0.0.1:7687.
+2019-05-24 12:51:47.336+0000 INFO  Started.
+2019-05-24 12:51:48.316+0000 INFO  Remote interface available at http://localhost:7474/
+2019-05-24 12:51:52.081+0000 WARN  The client is unauthorized due to authentication failure.
+2019-05-24 12:52:17.742+0000 INFO  Neo4j Server shutdown initiated by request
+2019-05-24 12:52:17.760+0000 INFO  Stopping...
+2019-05-24 12:52:17.852+0000 INFO  Stopped.
+nohup: les entrées sont ignorées
+2019-05-24 13:13:16.917+0000 INFO  ======== Neo4j 3.5.5 ========
+2019-05-24 13:13:16.927+0000 INFO  Starting...
+2019-05-24 13:13:18.768+0000 INFO  Bolt enabled on 127.0.0.1:7687.
+2019-05-24 13:13:20.180+0000 INFO  Started.
+2019-05-24 13:13:21.115+0000 INFO  Remote interface available at http://localhost:7474/
+2019-05-24 13:13:23.280+0000 WARN  The client is unauthorized due to authentication failure.
+2019-05-24 13:13:33.249+0000 INFO  Neo4j Server shutdown initiated by request
+2019-05-24 13:13:33.265+0000 INFO  Stopping...
+2019-05-24 13:13:33.347+0000 INFO  Stopped.
+nohup: les entrées sont ignorées
+2019-05-24 13:14:37.645+0000 INFO  ======== Neo4j 3.5.5 ========
+2019-05-24 13:14:37.655+0000 INFO  Starting...
+2019-05-24 13:14:39.508+0000 INFO  Bolt enabled on 127.0.0.1:7687.
+2019-05-24 13:14:40.408+0000 INFO  Neo4j Server shutdown initiated by request
+2019-05-24 13:14:40.898+0000 INFO  Started.
+2019-05-24 13:14:41.829+0000 INFO  Remote interface available at http://localhost:7474/
+2019-05-24 13:14:41.850+0000 INFO  Stopping...
+2019-05-24 13:14:41.947+0000 INFO  Stopped.
+nohup: les entrées sont ignorées
+2019-05-24 13:15:05.618+0000 INFO  ======== Neo4j 3.5.5 ========
+2019-05-24 13:15:05.628+0000 INFO  Starting...
+2019-05-24 13:15:07.479+0000 INFO  Bolt enabled on 127.0.0.1:7687.
+2019-05-24 13:15:08.832+0000 INFO  Started.
+2019-05-24 13:15:08.922+0000 INFO  Neo4j Server shutdown initiated by request
+2019-05-24 13:15:09.790+0000 INFO  Remote interface available at http://localhost:7474/
+2019-05-24 13:15:09.804+0000 INFO  Stopping...
+2019-05-24 13:15:09.900+0000 INFO  Stopped.
+nohup: les entrées sont ignorées
+2019-05-24 13:22:37.744+0000 INFO  ======== Neo4j 3.5.5 ========
+2019-05-24 13:22:37.754+0000 INFO  Starting...
+2019-05-24 13:22:39.706+0000 INFO  Bolt enabled on 127.0.0.1:7687.
+2019-05-24 13:22:41.136+0000 INFO  Started.
+2019-05-24 13:22:42.116+0000 INFO  Remote interface available at http://localhost:7474/
+2019-05-24 13:22:45.522+0000 WARN  The client is unauthorized due to authentication failure.
+2019-05-24 13:25:13.718+0000 INFO  Neo4j Server shutdown initiated by request
+2019-05-24 13:25:13.734+0000 INFO  Stopping...
+2019-05-24 13:25:13.826+0000 INFO  Stopped.
+nohup: les entrées sont ignorées
+2019-05-24 13:25:42.676+0000 INFO  ======== Neo4j 3.5.5 ========
+2019-05-24 13:25:42.687+0000 INFO  Starting...
+2019-05-24 13:25:44.981+0000 INFO  Bolt enabled on 127.0.0.1:7687.
+2019-05-24 13:25:46.482+0000 INFO  Started.
+2019-05-24 13:25:47.452+0000 INFO  Remote interface available at http://localhost:7474/
+2019-05-24 13:47:16.895+0000 INFO  Neo4j Server shutdown initiated by request
+2019-05-24 13:47:16.914+0000 INFO  Stopping...
+2019-05-24 13:47:17.000+0000 INFO  Stopped.
+nohup: les entrées sont ignorées
+nohup: les entrées sont ignorées
+nohup: les entrées sont ignorées
+2019-05-24 14:26:27.113+0000 INFO  ======== Neo4j 3.5.5 ========
+2019-05-24 14:26:27.123+0000 INFO  Starting...
+2019-05-24 14:26:29.061+0000 INFO  Bolt enabled on 127.0.0.1:7687.
+2019-05-24 14:26:30.772+0000 INFO  Started.
+2019-05-24 14:26:31.757+0000 INFO  Remote interface available at http://localhost:7474/
+2019-05-24 14:26:45.992+0000 WARN  The client is unauthorized due to authentication failure.
+2019-05-24 14:44:49.884+0000 INFO  Neo4j Server shutdown initiated by request
+2019-05-24 14:44:49.899+0000 INFO  Stopping...
+2019-05-24 14:44:49.980+0000 INFO  Stopped.
+nohup: les entrées sont ignorées
+2019-05-24 14:44:54.719+0000 INFO  ======== Neo4j 3.5.5 ========
+2019-05-24 14:44:54.729+0000 INFO  Starting...
+2019-05-24 14:44:56.622+0000 INFO  Bolt enabled on 127.0.0.1:7687.
+2019-05-24 14:44:58.434+0000 INFO  Started.
+2019-05-24 14:44:59.393+0000 INFO  Remote interface available at http://localhost:7474/
+2019-05-24 14:45:06.785+0000 WARN  The client is unauthorized due to authentication failure.
+2019-05-24 14:51:50.262+0000 INFO  Neo4j Server shutdown initiated by request
+2019-05-24 14:51:50.285+0000 INFO  Stopping...
+2019-05-24 14:51:50.408+0000 INFO  Stopped.
+nohup: les entrées sont ignorées
+2019-05-27 07:47:13.760+0000 INFO  ======== Neo4j 3.5.5 ========
+2019-05-27 07:47:13.771+0000 INFO  Starting...
+2019-05-27 07:47:15.957+0000 INFO  Bolt enabled on 127.0.0.1:7687.
+2019-05-27 07:47:18.115+0000 INFO  Started.
+2019-05-27 07:47:19.258+0000 INFO  Remote interface available at http://localhost:7474/
+2019-05-27 07:47:37.086+0000 WARN  The client is unauthorized due to authentication failure.
+2019-05-27 07:59:20.471+0000 WARN  The client is unauthorized due to authentication failure.
+2019-05-27 08:12:26.936+0000 INFO  Neo4j Server shutdown initiated by request
+2019-05-27 08:12:26.951+0000 INFO  Stopping...
+2019-05-27 08:12:27.081+0000 INFO  Stopped.
+nohup: les entrées sont ignorées
+2019-05-27 08:15:47.590+0000 INFO  ======== Neo4j 3.5.5 ========
+2019-05-27 08:15:47.604+0000 INFO  Starting...
+2019-05-27 08:15:50.024+0000 INFO  Bolt enabled on 127.0.0.1:7687.
+2019-05-27 08:15:51.771+0000 INFO  Started.
+2019-05-27 08:15:52.770+0000 INFO  Remote interface available at http://localhost:7474/
+2019-05-27 08:24:10.619+0000 INFO  Neo4j Server shutdown initiated by request
+2019-05-27 08:24:10.657+0000 INFO  Stopping...
+2019-05-27 08:24:10.768+0000 INFO  Stopped.
+nohup: les entrées sont ignorées
+2019-05-27 08:24:52.862+0000 INFO  ======== Neo4j 3.5.5 ========
+2019-05-27 08:24:52.872+0000 INFO  Starting...
+2019-05-27 08:24:55.402+0000 INFO  Bolt enabled on 127.0.0.1:7687.
+2019-05-27 08:24:57.564+0000 INFO  Started.
+2019-05-27 08:24:58.582+0000 INFO  Remote interface available at http://localhost:7474/
+2019-05-27 08:25:08.273+0000 WARN  The client is unauthorized due to authentication failure.

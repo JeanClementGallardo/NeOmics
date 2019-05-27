@@ -6,9 +6,13 @@
 </head>
 
 <body>
+{% load static %}
 <h1>Select parameter for the graph</h1>
     <a href="/">Home</a>
-
-<script type="text/javascript" src="neo4j.js"></script>
+<script src="https://rawgit.com/neo4j-contrib/neovis.js/master/dist/neovis.js"></script>
+<script src="https://unpkg.com/neo4j-driver"></script>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="{% static 'viewer/neo4j.js' %}"></script>
+<h2 id="test"></h2>
 </body>
 </html>
