@@ -1,12 +1,10 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic
-from django.conf import settings
-
+from .static.ComputeGraph.loadcsv import LoadCSV
 
 from ImportRaw.models import RawData
-from ComputeGraph.models import AnalysisFamily, Analysis
+from ComputeGraph.models import AnalysisFamily, Analysis, GraphManager, Graph
 import json
-import os
 
 
 # Create your views here.
@@ -28,7 +26,6 @@ class StatView(generic.ListView):
 
 def stat_params(request, organism, name):
     analysis = get_object_or_404(Analysis, name=name)
-
     raw_data = get_object_or_404(RawData, organism=organism)
     with open(analysis.parameters_json_file.path, 'r') as param_file:
         params = json.load(param_file)
@@ -40,13 +37,23 @@ def stat_params(request, organism, name):
                 return render(request, "ComputeGraph/stat_params.html", locals())
 
     if request.POST:
-        os.system("python3 /home/jean_clement/PycharmProjects/NeOmics/ComputeGraph/static/ComputeGraph/loadcsv.py")
         return render(request, "ComputeGraph/stat_load.html", locals())
 
     return render(request, "ComputeGraph/stat_params.html", locals())
 
 
 def stat_load(request, organism, name):
+    """Execute R script and register new graph"""
     raw_data = get_object_or_404(RawData, organism=organism)
     analysis = get_object_or_404(Analysis, name=name)
+
+    # Script execution
+    working_file_path = "./"
+    with open(working_file_path, 'w') as working_file:
+        pass  # Execute R script with working file as output
+
+    # Results loading on neo4j
+    gm = GraphManager(request.get_host())
+    graph = gm.create_graph(raw_data, analysis)
+    LoadCSV(graph.neo4j_uri, graph.neo4j_user, graph.neo4j_password, working_file_path)
     return render(request, "ComputeGraph/stat_load.html")

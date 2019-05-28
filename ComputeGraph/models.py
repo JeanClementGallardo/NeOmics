@@ -1,5 +1,6 @@
 from django.db import models
 from ImportRaw.models import RawData
+import socket
 
 
 # Create your models here.
@@ -29,3 +30,30 @@ class Graph(models.Model):
 
     def __str__(self):
         return "{} analysis results on {}".format(self.analysis_family.name, self.organism.organism)
+
+
+class GraphManager(models.Manager):
+    def __init__(self, host: str):
+        self.host = host
+        self.address = ':'.join(host.split(':')[:-1])
+        super().__init__()
+
+    def create_graph(self, organism, analysis_family) -> Graph:
+        """Generate new graph if it doesn't already exist, and gives it otherwise"""
+        try:
+            graph = Graph.objects.get(organism=organism, analysis_family=analysis_family)
+        except Graph.DoesNotExist:
+            # Get new free port
+            sock = socket.socket()
+            sock.bind(('', 0))
+            new_port = sock.getsockname()[1]
+            sock.close()
+
+            new_uri = self.address + new_port
+
+            # TODO Generate new instance of neo4j
+            # See http://fooo.fr/~vjeux/github/github-recommandation/db/doc/manual/html/server-installation.html
+
+            return self.create(organism=organism, analysis_family=analysis_family, neo4j_uri=new_uri)
+        else:
+            return graph
