@@ -11,128 +11,65 @@ class LoadCSV:
         self.create_edges()
 
     # Fonctions parcourant le fichier csv
-    @property
-    def attributes_length(self):
-        idx_line = 0
-        with open(self.file) as csvfile:
-            reader = csv.reader(csvfile, delimiter=",")
-            for row in reader:
-                if idx_line == 0:
-                    idx_line += 1
-                    return len(row)
-
-    @property
-    def label_index(self):
-        idx_line = 0
-        with open(self.file) as csvfile:
-            reader = csv.reader(csvfile, delimiter=",")
-            for row in reader:
-                if idx_line == 0:
-                    for i in range(self.attributes_length):
-                        if row[i] == "_labels":
-                            return i
-                    idx_line += 1
-                if idx_line > 0:
-                    break
-
-    @property
-    def type_index(self):
-        idx_line = 0
-        with open(self.file) as csvfile:
-            reader = csv.reader(csvfile, delimiter=",")
-            for row in reader:
-                if idx_line == 0:
-                    for i in range(self.attributes_length):
-                        if row[i] == "_type":
-                            return i
-                    idx_line += 1
-                if idx_line > 0:
-                    break
-
-    def list_special(self):
+    def index(self):
+        dict_index = {}
+        list_attribut = []
         line = 0
-        specials = []
         with open(self.file) as csvfile:
             reader = csv.reader(csvfile, delimiter=",")
             for row in reader:
                 if line == 0:
-                    specials = row
-                    line += 1
+                    for i in range(len(row)):
+                        if row[i] == "_labels":
+                            dict_index["labels"] = i
+                        elif row[i] == "_type":
+                            dict_index["type"] = i
+                        elif row[i] == "_start":
+                            dict_index["start"] = i
+                        elif row[i] == "_end":
+                            dict_index["end"] = i
+                        elif row[i] == "_id":
+                            dict_index["id"] = i
+                        else :
+                            list_attribut.append(i)
+                    line+=1
                 if line > 0:
-                    continue
-            return specials
+                    break
+            dict_index["attributs"] = list_attribut
+            return dict_index
 
-    def index_special(self):
-        list = self.list_special()
-        list_index = []
-        idx = 0
-        for i in list:
-            if i == "_labels" or i == "_id" or i == "_type":
-                list_index.append(idx)
-            idx += 1
-        return list_index
 
-    def attribut(self, row):
-        idx = self.list_special()
-        dict_properties = {}
-        list_index = self.index_special()
-        for i in range(self.attributes_length):
-            if i in list_index:
-                continue
-            if i not in list_index and row[i] != "":
-                dict_properties[idx[i]] = row[i]
-        return dict_properties
 
-    def check_start(self, row):
-        idx_line = 0
-        with open(self.file) as csvfile:
-            reader = csv.reader(csvfile, delimiter=",")
-            for line in reader:
-                if idx_line == 0:
-                    for i in range(self.attributes_length):
-                        if line[i] == "_start":
-                            idx_start = i
-                    idx_line += 1
-        start = row[idx_start]
-        return start
 
-    def check_end(self, row):
-        idx_line = 0
-        with open(self.file) as csvfile:
-            reader = csv.reader(csvfile, delimiter=",")
-            for line in reader:
-                if idx_line == 0:
-                    for i in range(self.attributes_length):
-                        if line[i] == "_end":
-                            idx_end = i
-                    idx_line += 1
-        end = row[idx_end]
-        return end
 
     # Fonctions de créations du graphes
     def create_nodes(self):
         line = 0
         dict_id = {}
-        tx = self.graph.begin()
+        dict_index = self.index()
+        dict_attributs = {}
         with open(self.file) as csvfile:
             reader = csv.reader(csvfile, delimiter=",")
             for row in reader:
                 if line == 0:
+                    for i in range(len(row)):
+                        if i in dict_index["attributs"]:
+                            dict_attributs[i] = row[i]
                     line += 1
                     continue
                 if line > 0:
-                    if row[self.label_index] != "":
-                        properties = self.attribut(row)
-                        node = Node(row[self.label_index])
-                        for property in properties:
-                            node[property] = properties[property]
+                    if row[dict_index["labels"]] != "":
+                        node = Node(row[dict_index["labels"]])
+                        for i in range(len(row)):
+                            if i in dict_index["attributs"] and row[i] != "":
+                                node[dict_attributs[i]] = row[i]
                         self.graph.create(node)
                         dict_id[row[0]] = node
         return dict_id
 
     def create_edges(self):
         line = 0
-        tx = self.graph.begin()
+        dict_index = self.index()
         with open(self.file) as csvfile:
             reader = csv.reader(csvfile, delimiter=",")
             for row in reader:
@@ -140,12 +77,12 @@ class LoadCSV:
                     line += 1
                     continue
                 if line > 0:
-                    if row[self.type_index] != "":
-                        start = self.dict_id[self.check_start(row)]
-                        type = row[self.type_index]
-                        end = self.dict_id[self.check_end(row)]
+                    if row[dict_index["type"]] != "":
+                        start = self.dict_id[row[dict_index["start"]]]
+                        type = row[dict_index["type"]]
+                        end = self.dict_id[row[dict_index["end"]]]
                         self.graph.create(Relationship(start, type, end))
 
 
 if __name__ == "__main__":
-    LoadCSV("bolt://localhost:7687", "neo4j", "admin", "path_to_csv")
+    LoadCSV("bolt://localhost:7687", "neo4j", "admin", "/home/jean_clement/PycharmProjects/NeOmics/media/Scripts/sous_graph.csv")
