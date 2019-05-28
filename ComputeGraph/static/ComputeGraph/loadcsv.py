@@ -30,17 +30,13 @@ class LoadCSV:
                             dict_index["end"] = i
                         elif row[i] == "_id":
                             dict_index["id"] = i
-                        else :
+                        else:
                             list_attribut.append(i)
-                    line+=1
+                    line += 1
                 if line > 0:
                     break
             dict_index["attributs"] = list_attribut
             return dict_index
-
-
-
-
 
     # Fonctions de créations du graphes
     def create_nodes(self):
@@ -85,4 +81,5 @@ class LoadCSV:
 
 
 if __name__ == "__main__":
-    LoadCSV("bolt://localhost:7687", "neo4j", "admin", "/home/jean_clement/PycharmProjects/NeOmics/media/Scripts/sous_graph.csv")
+    LoadCSV("bolt://localhost:7687", "neo4j", "admin",
+            "/home/jean_clement/PycharmProjects/NeOmics/media/Scripts/sous_graph.csv")
