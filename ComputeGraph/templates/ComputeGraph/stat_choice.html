@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Neomics</title>
+     {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'ComputeGraph/../../static/Common/bootstrap.css' %}">
+
+</head>
+<body>
+<a href="/"><img src="{% static 'Common/home-icon-silhouette.svg' %}" alt="Home"> Home</a>
+<h1>Compute graph</h1>
+    {%  if families %}
+        {% for family in families %}
+            {% if family.analysis_set.all %}
+                <h2>{{ family.name }}</h2>
+                <ul>
+                    {% for analysis in family.analysis_set.all %}
+                        <li><a href="{{ request.path }}/{{ analysis.name }}">{{ analysis.name }}</a></li>
+                    {% endfor %}
+                </ul>
+
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+<a href="/"><img src="{% static 'Common/home-icon-silhouette.svg' %}" height='2em'> Home</a>
+</body>
+</html>

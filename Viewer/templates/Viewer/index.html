@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Neomics</title>
+</head>
+<body>
+{% load static %}
+<h1>Graph Viewer</h1>
+{% if graph_list %}
+    <ul>
+        {% for graph in graph_list %}
+            <li><a href="{% url 'Viewer:graph' graph %}">{{ graph }}</a></li>
+        {% endfor %}
+    </ul>
+{% endif %}
+<a href="/">Home</a>
+<script src="https://rawgit.com/neo4j-contrib/neovis.js/master/dist/neovis.js"></script>
+<script src="https://unpkg.com/neo4j-driver"></script>
+
+</body>
+</html>

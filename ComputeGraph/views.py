@@ -1,0 +1,52 @@
+from django.shortcuts import render, get_object_or_404
+from django.views import generic
+from django.conf import settings
+
+
+from ImportRaw.models import RawData
+from ComputeGraph.models import AnalysisFamily, Analysis
+import json
+import os
+
+
+# Create your views here.
+class IndexView(generic.ListView):
+    template_name = "ComputeGraph/index.html"
+    context_object_name = "organism_list"
+
+    def get_queryset(self):
+        return RawData.objects.order_by("organism")
+
+
+class StatView(generic.ListView):
+    template_name = "ComputeGraph/stat_choice.html"
+    context_object_name = "families"
+
+    def get_queryset(self):
+        return AnalysisFamily.objects.order_by("name")
+
+
+def stat_params(request, organism, name):
+    analysis = get_object_or_404(Analysis, name=name)
+
+    raw_data = get_object_or_404(RawData, organism=organism)
+    with open(analysis.parameters_json_file.path, 'r') as param_file:
+        params = json.load(param_file)
+
+    for parameter in params:
+        if parameter["name"] in request.POST:
+            if request.POST[parameter["name"]] == "":
+                error_message = "Please fill ALL the fields"
+                return render(request, "ComputeGraph/stat_params.html", locals())
+
+    if request.POST:
+        os.system("python3 /home/jean_clement/PycharmProjects/NeOmics/ComputeGraph/static/ComputeGraph/loadcsv.py")
+        return render(request, "ComputeGraph/stat_load.html", locals())
+
+    return render(request, "ComputeGraph/stat_params.html", locals())
+
+
+def stat_load(request, organism, name):
+    raw_data = get_object_or_404(RawData, organism=organism)
+    analysis = get_object_or_404(Analysis, name=name)
+    return render(request, "ComputeGraph/stat_load.html")

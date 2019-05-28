@@ -30,10 +30,10 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'import_raw.apps.ImportRawConfig',
-    'compute_graph.apps.ComputeGraphConfig',
-    'viewer.apps.ViewerConfig',
-    'navigator.apps.NavigatorConfig',
+    'ImportRaw.apps.ImportRawConfig',
+    'ComputeGraph.apps.ComputeGraphConfig',
+    'Viewer.apps.ViewerConfig',
+    'Navigator.apps.NavigatorConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -57,7 +57,7 @@ ROOT_URLCONF = 'NeOmics.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'viewer/templates')]
+        'DIRS': [os.path.join(BASE_DIR, 'Viewer/templates')]
         ,
         'APP_DIRS': True,
         'OPTIONS': {
@@ -118,7 +118,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-START = BASE_DIR+'/NeOmics/neo4j/bin/neo4j'+" start"
-STOP = BASE_DIR+'/NeOmics/neo4j/bin/neo4j'+" stop"
+START = BASE_DIR + '/NeOmics/neo4j/bin/neo4j' + " start"
+STOP = BASE_DIR + '/NeOmics/neo4j/bin/neo4j' + " stop"
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

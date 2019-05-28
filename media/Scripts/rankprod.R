@@ -64,8 +64,8 @@ bindNodes <- function(...) {
   outDF = data.frame()
   for (df in dataFramesList) { # For each df given as argument
     outDF = tryCatch({
-      full_join(outDF, df) # Try to join df to the output by common columns
-    }, error = function(error_condition) { # If no common columns (first df)
+      full_join(outDF, df) # Try to join df to the output by Common columns
+    }, error = function(error_condition) { # If no Common columns (first df)
       outDF = rbind(outDF, df) # simply add df to current outDF
     })
   }
