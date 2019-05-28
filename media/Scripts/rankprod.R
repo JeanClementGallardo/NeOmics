@@ -6,8 +6,8 @@ BiocRequire <- function(pkg) {
 
 BiocRequire("RankProd")
 library(RankProd)
-setwd("~/Documents/Travail/M1/Projets/NeOmics/")
-data = read.csv("./data/GSE7631_loc.csv", header = T, row.names = 1)
+setwd("./NeOmics/media/Scripts/Params")
+data = read.csv("./NeOmics/media/Scripts/Params/GSE7631_loc.csv", header = T, row.names = 1)
 
 
 lateral_root_cap = data[, 1 : 6]

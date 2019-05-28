@@ -1168,3 +1168,642 @@ MATCH ()-[]->() RETURN { name:'relationships', data: count(*)} AS result
 2019-05-27 14:59:30.870+0000 INFO [o.n.k.i.s.c.CountsTracker] Rotated counts store at transaction 22 to [/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/data/databases/graph.db/neostore.counts.db.a], from [/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/data/databases/graph.db/neostore.counts.db.b].
 2019-05-27 14:59:30.891+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Checkpoint triggered by scheduler for time threshold @ txId: 22 checkpoint completed in 36ms
 2019-05-27 14:59:30.892+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] No log version pruned, last checkpoint was made in version 0
+2019-05-27 15:01:46.039+0000 INFO [o.n.k.a.DatabaseAvailabilityGuard] Database graph.db is unavailable.
+2019-05-27 15:01:46.078+0000 INFO [o.n.g.f.GraphDatabaseFacadeFactory] Shutdown started
+2019-05-27 15:01:46.092+0000 INFO [o.n.g.f.GraphDatabaseFacadeFactory] Shutting down 'graph.db' database.
+2019-05-27 15:01:46.092+0000 INFO [o.n.g.f.GraphDatabaseFacadeFactory] Shutdown started
+2019-05-27 15:01:46.109+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Checkpoint triggered by database shutdown @ txId: 23 checkpoint started...
+2019-05-27 15:01:46.116+0000 INFO [o.n.k.i.s.c.CountsTracker] Rotated counts store at transaction 23 to [/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/data/databases/graph.db/neostore.counts.db.b], from [/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/data/databases/graph.db/neostore.counts.db.a].
+2019-05-27 15:01:46.129+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Checkpoint triggered by database shutdown @ txId: 23 checkpoint completed in 20ms
+2019-05-27 15:01:46.129+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] No log version pruned, last checkpoint was made in version 0
+2019-05-27 15:01:46.224+0000 INFO [o.n.i.d.DiagnosticsManager] --- STOPPING diagnostics START ---
+2019-05-27 15:01:46.224+0000 INFO [o.n.i.d.DiagnosticsManager] --- STOPPING diagnostics END ---
+2019-05-28 07:21:49.529+0000 WARN [o.n.i.p.PageCache] The dbms.memory.pagecache.size setting has not been configured. It is recommended that this setting is always explicitly configured, to ensure the system has a balanced configuration. Until then, a computed heuristic value of 6256508928 bytes will be used instead. Run `neo4j-admin memrec` for memory configuration suggestions.
+2019-05-28 07:21:49.759+0000 WARN [o.n.i.p.PageCache] The dbms.memory.pagecache.size setting has not been configured. It is recommended that this setting is always explicitly configured, to ensure the system has a balanced configuration. Until then, a computed heuristic value of 6256508928 bytes will be used instead. Run `neo4j-admin memrec` for memory configuration suggestions.
+2019-05-28 07:21:49.974+0000 INFO [o.n.g.f.m.e.CommunityEditionModule] No locking implementation specified, defaulting to 'community'
+2019-05-28 07:21:50.132+0000 INFO [o.n.g.f.m.e.CommunityEditionModule] No locking implementation specified, defaulting to 'community'
+2019-05-28 07:21:50.288+0000 INFO [o.n.g.f.GraphDatabaseFacadeFactory] Creating 'graph.db' database.
+2019-05-28 07:21:50.346+0000 INFO [o.n.k.a.DatabaseAvailabilityGuard] Requirement `Database available` makes database graph.db unavailable.
+2019-05-28 07:21:50.348+0000 INFO [o.n.k.a.DatabaseAvailabilityGuard] Database graph.db is unavailable.
+2019-05-28 07:21:50.411+0000 INFO [o.n.g.f.GraphDatabaseFacadeFactory] Creating 'graph.db' database.
+2019-05-28 07:21:50.462+0000 INFO [o.n.k.a.DatabaseAvailabilityGuard] Requirement `Database available` makes database graph.db unavailable.
+2019-05-28 07:21:50.464+0000 INFO [o.n.k.a.DatabaseAvailabilityGuard] Database graph.db is unavailable.
+2019-05-28 07:21:50.436+0000 INFO [o.n.i.d.DiagnosticsManager] --- INITIALIZED diagnostics START ---
+2019-05-28 07:21:50.437+0000 INFO [o.n.i.d.DiagnosticsManager] Neo4j Kernel properties:
+2019-05-28 07:21:50.437+0000 INFO [o.n.i.d.DiagnosticsManager] dbms.connector.http.enabled=true
+2019-05-28 07:21:50.437+0000 INFO [o.n.i.d.DiagnosticsManager] unsupported.dbms.edition=community
+2019-05-28 07:21:50.437+0000 INFO [o.n.i.d.DiagnosticsManager] dbms.security.auth_enabled=true
+2019-05-28 07:21:50.438+0000 INFO [o.n.i.d.DiagnosticsManager] dbms.windows_service_name=neo4j
+2019-05-28 07:21:50.438+0000 INFO [o.n.i.d.DiagnosticsManager] dbms.connector.bolt.enabled=true
+2019-05-28 07:21:50.438+0000 INFO [o.n.i.d.DiagnosticsManager] unsupported.dbms.directories.neo4j_home=/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j
+2019-05-28 07:21:50.438+0000 INFO [o.n.i.d.DiagnosticsManager] dbms.connector.https.enabled=true
+2019-05-28 07:21:50.438+0000 INFO [o.n.i.d.DiagnosticsManager] dbms.directories.import=import
+2019-05-28 07:21:50.438+0000 INFO [o.n.i.d.DiagnosticsManager] dbms.jvm.additional=-XX:+UseG1GC
+2019-05-28 07:21:50.439+0000 INFO [o.n.i.d.DiagnosticsManager] dbms.tx_log.rotation.retention_policy=1 days
+2019-05-28 07:21:50.439+0000 INFO [o.n.i.d.DiagnosticsManager] Diagnostics providers:
+2019-05-28 07:21:50.439+0000 INFO [o.n.i.d.DiagnosticsManager] org.neo4j.kernel.configuration.Config
+2019-05-28 07:21:50.439+0000 INFO [o.n.i.d.DiagnosticsManager] org.neo4j.internal.diagnostics.DiagnosticsManager
+2019-05-28 07:21:50.439+0000 INFO [o.n.i.d.DiagnosticsManager] SYSTEM_MEMORY
+2019-05-28 07:21:50.439+0000 INFO [o.n.i.d.DiagnosticsManager] JAVA_MEMORY
+2019-05-28 07:21:50.439+0000 INFO [o.n.i.d.DiagnosticsManager] OPERATING_SYSTEM
+2019-05-28 07:21:50.440+0000 INFO [o.n.i.d.DiagnosticsManager] JAVA_VIRTUAL_MACHINE
+2019-05-28 07:21:50.440+0000 INFO [o.n.i.d.DiagnosticsManager] CLASSPATH
+2019-05-28 07:21:50.440+0000 INFO [o.n.i.d.DiagnosticsManager] LIBRARY_PATH
+2019-05-28 07:21:50.440+0000 INFO [o.n.i.d.DiagnosticsManager] SYSTEM_PROPERTIES
+2019-05-28 07:21:50.440+0000 INFO [o.n.i.d.DiagnosticsManager] TIMEZONE_DATABASE
+2019-05-28 07:21:50.440+0000 INFO [o.n.i.d.DiagnosticsManager] LINUX_SCHEDULERS
+2019-05-28 07:21:50.440+0000 INFO [o.n.i.d.DiagnosticsManager] NETWORK
+2019-05-28 07:21:50.441+0000 INFO [o.n.i.d.DiagnosticsManager] System memory information:
+2019-05-28 07:21:50.445+0000 INFO [o.n.i.d.DiagnosticsManager] Total Physical memory: 15.54 GB
+2019-05-28 07:21:50.446+0000 INFO [o.n.i.d.DiagnosticsManager] Free Physical memory: 10.79 GB
+2019-05-28 07:21:50.446+0000 INFO [o.n.i.d.DiagnosticsManager] Committed virtual memory: 7.59 GB
+2019-05-28 07:21:50.446+0000 INFO [o.n.i.d.DiagnosticsManager] Total swap space: 15.87 GB
+2019-05-28 07:21:50.446+0000 INFO [o.n.i.d.DiagnosticsManager] Free swap space: 15.87 GB
+2019-05-28 07:21:50.447+0000 INFO [o.n.i.d.DiagnosticsManager] JVM memory information:
+2019-05-28 07:21:50.447+0000 INFO [o.n.i.d.DiagnosticsManager] Free  memory: 228.50 MB
+2019-05-28 07:21:50.447+0000 INFO [o.n.i.d.DiagnosticsManager] Total memory: 250.00 MB
+2019-05-28 07:21:50.447+0000 INFO [o.n.i.d.DiagnosticsManager] Max   memory: 3.88 GB
+2019-05-28 07:21:50.451+0000 INFO [o.n.i.d.DiagnosticsManager] Garbage Collector: G1 Young Generation: [G1 Eden Space, G1 Survivor Space, G1 Old Gen]
+2019-05-28 07:21:50.451+0000 INFO [o.n.i.d.DiagnosticsManager] Garbage Collector: G1 Old Generation: [G1 Eden Space, G1 Survivor Space, G1 Old Gen]
+2019-05-28 07:21:50.452+0000 INFO [o.n.i.d.DiagnosticsManager] Memory Pool: Code Cache (Non-heap memory): committed=6.31 MB, used=6.26 MB, max=240.00 MB, threshold=0.00 B
+2019-05-28 07:21:50.453+0000 INFO [o.n.i.d.DiagnosticsManager] Memory Pool: Metaspace (Non-heap memory): committed=21.17 MB, used=20.28 MB, max=-1.00 B, threshold=0.00 B
+2019-05-28 07:21:50.453+0000 INFO [o.n.i.d.DiagnosticsManager] Memory Pool: Compressed Class Space (Non-heap memory): committed=2.67 MB, used=2.36 MB, max=1.00 GB, threshold=0.00 B
+2019-05-28 07:21:50.453+0000 INFO [o.n.i.d.DiagnosticsManager] Memory Pool: G1 Eden Space (Heap memory): committed=146.00 MB, used=3.00 MB, max=-1.00 B, threshold=?
+2019-05-28 07:21:50.454+0000 INFO [o.n.i.d.DiagnosticsManager] Memory Pool: G1 Survivor Space (Heap memory): committed=12.00 MB, used=12.00 MB, max=-1.00 B, threshold=?
+2019-05-28 07:21:50.454+0000 INFO [o.n.i.d.DiagnosticsManager] Memory Pool: G1 Old Gen (Heap memory): committed=92.00 MB, used=4.99 MB, max=3.88 GB, threshold=0.00 B
+2019-05-28 07:21:50.454+0000 INFO [o.n.i.d.DiagnosticsManager] Operating system information:
+2019-05-28 07:21:50.455+0000 INFO [o.n.i.d.DiagnosticsManager] Operating System: Linux; version: 4.15.0-50-generic; arch: amd64; cpus: 8
+2019-05-28 07:21:50.455+0000 INFO [o.n.i.d.DiagnosticsManager] Max number of file descriptors: 1048576
+2019-05-28 07:21:50.455+0000 INFO [o.n.i.d.DiagnosticsManager] Number of open file descriptors: 140
+2019-05-28 07:21:50.457+0000 INFO [o.n.i.d.DiagnosticsManager] Process id: 4879@patricia-Precision-M4700
+2019-05-28 07:21:50.457+0000 INFO [o.n.i.d.DiagnosticsManager] Byte order: LITTLE_ENDIAN
+2019-05-28 07:21:50.461+0000 INFO [o.n.i.d.DiagnosticsManager] Local timezone: UTC
+2019-05-28 07:21:50.461+0000 INFO [o.n.i.d.DiagnosticsManager] JVM information:
+2019-05-28 07:21:50.461+0000 INFO [o.n.i.d.DiagnosticsManager] VM Name: OpenJDK 64-Bit Server VM
+2019-05-28 07:21:50.461+0000 INFO [o.n.i.d.DiagnosticsManager] VM Vendor: Oracle Corporation
+2019-05-28 07:21:50.461+0000 INFO [o.n.i.d.DiagnosticsManager] VM Version: 25.212-b03
+2019-05-28 07:21:50.462+0000 INFO [o.n.i.d.DiagnosticsManager] JIT compiler: HotSpot 64-Bit Tiered Compilers
+2019-05-28 07:21:50.463+0000 INFO [o.n.i.d.DiagnosticsManager] VM Arguments: [-XX:+UseG1GC, -XX:-OmitStackTraceInFastThrow, -XX:+AlwaysPreTouch, -XX:+UnlockExperimentalVMOptions, -XX:+TrustFinalNonStaticFields, -XX:+DisableExplicitGC, -Djdk.tls.ephemeralDHKeySize=2048, -Djdk.tls.rejectClientInitiatedRenegotiation=true, -Dunsupported.dbms.udc.source=tarball, -Dfile.encoding=UTF-8]
+2019-05-28 07:21:50.463+0000 INFO [o.n.i.d.DiagnosticsManager] Java classpath:
+2019-05-28 07:21:50.465+0000 INFO [o.n.i.d.DiagnosticsManager]  [bootstrap] /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar
+2019-05-28 07:21:50.466+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/jackson-jaxrs-1.9.13.jar
+2019-05-28 07:21:50.466+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-cypher-compiler-2.3-2.3.12.jar
+2019-05-28 07:21:50.466+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/concurrentlinkedhashmap-lru-1.4.2.jar
+2019-05-28 07:21:50.466+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/javax.servlet-api-3.1.0.jar
+2019-05-28 07:21:50.466+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/jersey-servlet-1.19.3.jar
+2019-05-28 07:21:50.466+0000 INFO [o.n.i.d.DiagnosticsManager]  [loader.1] file:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/nashorn.jar
+2019-05-28 07:21:50.466+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-jmx-3.5.5.jar
+2019-05-28 07:21:50.466+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-graph-algo-3.5.5.jar
+2019-05-28 07:21:50.466+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/bcpkix-jdk15on-1.60.jar
+2019-05-28 07:21:50.466+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/lucene-analyzers-common-5.5.5.jar
+2019-05-28 07:21:50.466+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/plugins/*
+2019-05-28 07:21:50.466+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-cypher-compiler-3.1-3.1.9.jar
+2019-05-28 07:21:50.467+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/parboiled-scala_2.11-1.1.7.jar
+2019-05-28 07:21:50.467+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-front-end-3.5-3.5.5.jar
+2019-05-28 07:21:50.467+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/jetty-security-9.4.11.v20180605.jar
+2019-05-28 07:21:50.467+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/netty-all-4.1.32.Final.jar
+2019-05-28 07:21:50.467+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/jersey-server-1.19.3.jar
+2019-05-28 07:21:50.467+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/commons-lang3-3.8.jar
+2019-05-28 07:21:50.467+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/caffeine-2.6.2.jar
+2019-05-28 07:21:50.467+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-lucene-upgrade-3.5.5.jar
+2019-05-28 07:21:50.467+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-cypher-frontend-3.1-3.1.9.jar
+2019-05-28 07:21:50.467+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-diagnostics-3.5.5.jar
+2019-05-28 07:21:50.467+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/jetty-server-9.4.11.v20180605.jar
+2019-05-28 07:21:50.467+0000 INFO [o.n.i.d.DiagnosticsManager]  [bootstrap] /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar
+2019-05-28 07:21:50.468+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/lucene-queryparser-5.5.5.jar
+2019-05-28 07:21:50.468+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-graphdb-api-3.5.5.jar
+2019-05-28 07:21:50.468+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/commons-compress-1.18.jar
+2019-05-28 07:21:50.468+0000 INFO [o.n.i.d.DiagnosticsManager]  [loader.1] file:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/localedata.jar
+2019-05-28 07:21:50.468+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/jackson-mapper-asl-1.9.13.jar
+2019-05-28 07:21:50.468+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/eclipse-collections-api-9.2.0.jar
+2019-05-28 07:21:50.468+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/commons-lang-2.6.jar
+2019-05-28 07:21:50.468+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-cypher-util-3.4-3.4.12.jar
+2019-05-28 07:21:50.468+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-legacy-3.5.5.jar
+2019-05-28 07:21:50.468+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-fulltext-index-3.5.5.jar
+2019-05-28 07:21:50.468+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-annotation-processors-3.5.5.jar
+2019-05-28 07:21:50.468+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-logging-3.5.5.jar
+2019-05-28 07:21:50.469+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-expressions-3.5-3.5.5.jar
+2019-05-28 07:21:50.469+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-cypher-planner-spi-3.4-3.4.12.jar
+2019-05-28 07:21:50.469+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/jaxb-api-2.3.0.jar
+2019-05-28 07:21:50.469+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/jetty-webapp-9.4.11.v20180605.jar
+2019-05-28 07:21:50.469+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-dbms-3.5.5.jar
+2019-05-28 07:21:50.469+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-cypher-interpreted-runtime-3.5.5.jar
+2019-05-28 07:21:50.469+0000 INFO [o.n.i.d.DiagnosticsManager]  [loader.1] file:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/cldrdata.jar
+2019-05-28 07:21:50.469+0000 INFO [o.n.i.d.DiagnosticsManager]  [bootstrap] /usr/lib/jvm/java-8-openjdk-amd64/jre/classes
+2019-05-28 07:21:50.469+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-collections-3.5.5.jar
+2019-05-28 07:21:50.469+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-resource-3.5.5.jar
+2019-05-28 07:21:50.469+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-server-3.5.5.jar
+2019-05-28 07:21:50.469+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-cypher-ir-3.5-3.5.5.jar
+2019-05-28 07:21:50.470+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/parboiled-core-1.1.7.jar
+2019-05-28 07:21:50.470+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/jProcesses-1.6.4.jar
+2019-05-28 07:21:50.470+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/jetty-http-9.4.11.v20180605.jar
+2019-05-28 07:21:50.470+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/commons-logging-1.1.1.jar
+2019-05-28 07:21:50.470+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-cypher-frontend-2.3-2.3.12.jar
+2019-05-28 07:21:50.470+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/lucene-codecs-5.5.5.jar
+2019-05-28 07:21:50.470+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-concurrent-3.5.5.jar
+2019-05-28 07:21:50.470+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/jetty-util-9.4.11.v20180605.jar
+2019-05-28 07:21:50.470+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-data-collector-3.5.5.jar
+2019-05-28 07:21:50.470+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/jetty-xml-9.4.11.v20180605.jar
+2019-05-28 07:21:50.470+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-ssl-3.5.5.jar
+2019-05-28 07:21:50.471+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/opencsv-2.3.jar
+2019-05-28 07:21:50.471+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-cypher-logical-plans-3.5-3.5.5.jar
+2019-05-28 07:21:50.471+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-cypher-planner-3.5-3.5.5.jar
+2019-05-28 07:21:50.471+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/jersey-core-1.19.3.jar
+2019-05-28 07:21:50.471+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/jaxb-core-2.3.0.1.jar
+2019-05-28 07:21:50.471+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-cypher-ir-3.4-3.4.12.jar
+2019-05-28 07:21:50.471+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/commons-configuration-1.10.jar
+2019-05-28 07:21:50.471+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/jetty-io-9.4.11.v20180605.jar
+2019-05-28 07:21:50.471+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-cypher-planner-3.4-3.4.12.jar
+2019-05-28 07:21:50.471+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-ast-3.5-3.5.5.jar
+2019-05-28 07:21:50.471+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-cypher-3.5.5.jar
+2019-05-28 07:21:50.472+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/jsr311-api-1.1.2.r612.jar
+2019-05-28 07:21:50.472+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/scala-library-2.11.12.jar
+2019-05-28 07:21:50.472+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-import-tool-3.5.5.jar
+2019-05-28 07:21:50.472+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/lucene-core-5.5.5.jar
+2019-05-28 07:21:50.472+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/FastInfoset-1.2.13.jar
+2019-05-28 07:21:50.472+0000 INFO [o.n.i.d.DiagnosticsManager]  [loader.1] file:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/icedtea-sound.jar
+2019-05-28 07:21:50.472+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-bolt-3.5.5.jar
+2019-05-28 07:21:50.472+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/bcprov-jdk15on-1.60.jar
+2019-05-28 07:21:50.472+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-configuration-3.5.5.jar
+2019-05-28 07:21:50.472+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/zstd-proxy-3.5.5.jar
+2019-05-28 07:21:50.472+0000 INFO [o.n.i.d.DiagnosticsManager]  [loader.1] file:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunjce_provider.jar
+2019-05-28 07:21:50.472+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/openCypher-frontend-1-3.4.12.jar
+2019-05-28 07:21:50.472+0000 INFO [o.n.i.d.DiagnosticsManager]  [bootstrap] /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/sunrsasign.jar
+2019-05-28 07:21:50.473+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-rewriting-3.5-3.5.5.jar
+2019-05-28 07:21:50.473+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-command-line-3.5.5.jar
+2019-05-28 07:21:50.473+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-index-3.5.5.jar
+2019-05-28 07:21:50.473+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/stax-ex-1.7.8.jar
+2019-05-28 07:21:50.473+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-3.5.5.jar
+2019-05-28 07:21:50.473+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-graph-matching-3.1.9.jar
+2019-05-28 07:21:50.473+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-io-3.5.5.jar
+2019-05-28 07:21:50.473+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-unsafe-3.5.5.jar
+2019-05-28 07:21:50.473+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-procedure-api-3.5.5.jar
+2019-05-28 07:21:50.473+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/commons-io-2.6.jar
+2019-05-28 07:21:50.473+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/jaxb-runtime-2.3.0.1.jar
+2019-05-28 07:21:50.473+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/activation-1.1.1.jar
+2019-05-28 07:21:50.473+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-csv-3.5.5.jar
+2019-05-28 07:21:50.474+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-cypher-logical-plans-3.4-3.4.12.jar
+2019-05-28 07:21:50.474+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/plugins/
+2019-05-28 07:21:50.474+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/server-api-3.5.5.jar
+2019-05-28 07:21:50.474+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/jPowerShell-1.9.jar
+2019-05-28 07:21:50.474+0000 INFO [o.n.i.d.DiagnosticsManager]  [loader.1] file:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/jaccess.jar
+2019-05-28 07:21:50.474+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/scala-reflect-2.11.12.jar
+2019-05-28 07:21:50.474+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-common-3.5.5.jar
+2019-05-28 07:21:50.474+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-cypher-expression-3.4-3.4.12.jar
+2019-05-28 07:21:50.474+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/jackson-core-asl-1.9.13.jar
+2019-05-28 07:21:50.474+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/conf/
+2019-05-28 07:21:50.475+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/eclipse-collections-9.2.0.jar
+2019-05-28 07:21:50.475+0000 INFO [o.n.i.d.DiagnosticsManager]  [loader.1] file:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunpkcs11.jar
+2019-05-28 07:21:50.475+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-browser-3.2.18.jar
+2019-05-28 07:21:50.475+0000 INFO [o.n.i.d.DiagnosticsManager]  [loader.1] file:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunec.jar
+2019-05-28 07:21:50.475+0000 INFO [o.n.i.d.DiagnosticsManager]  [bootstrap] /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jfr.jar
+2019-05-28 07:21:50.475+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-spatial-index-3.5.5.jar
+2019-05-28 07:21:50.475+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/txw2-2.3.0.1.jar
+2019-05-28 07:21:50.475+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-values-3.5.5.jar
+2019-05-28 07:21:50.475+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-codegen-3.5.5.jar
+2019-05-28 07:21:50.475+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/zstd-jni-1.3.8-6.jar
+2019-05-28 07:21:50.475+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-util-3.5-3.5.5.jar
+2019-05-28 07:21:50.475+0000 INFO [o.n.i.d.DiagnosticsManager]  [loader.1] file:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/zipfs.jar
+2019-05-28 07:21:50.476+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-udc-3.5.5.jar
+2019-05-28 07:21:50.476+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-kernel-api-3.5.5.jar
+2019-05-28 07:21:50.476+0000 INFO [o.n.i.d.DiagnosticsManager]  [bootstrap] /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/resources.jar
+2019-05-28 07:21:50.476+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/commons-text-1.4.jar
+2019-05-28 07:21:50.476+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-cypher-expression-evaluator-3.5.5.jar
+2019-05-28 07:21:50.476+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-parser-3.5-3.5.5.jar
+2019-05-28 07:21:50.476+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-kernel-3.5.5.jar
+2019-05-28 07:21:50.476+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-lucene-index-3.5.5.jar
+2019-05-28 07:21:50.476+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-security-3.5.5.jar
+2019-05-28 07:21:50.476+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/WMI4Java-1.6.1.jar
+2019-05-28 07:21:50.476+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-cypher-planner-spi-3.5-3.5.5.jar
+2019-05-28 07:21:50.476+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-cypher-runtime-util-3.5.5.jar
+2019-05-28 07:21:50.476+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-consistency-check-3.5.5.jar
+2019-05-28 07:21:50.476+0000 INFO [o.n.i.d.DiagnosticsManager]  [loader.1] file:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/dnsns.jar
+2019-05-28 07:21:50.477+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/jetty-servlet-9.4.11.v20180605.jar
+2019-05-28 07:21:50.477+0000 INFO [o.n.i.d.DiagnosticsManager]  [bootstrap] /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/charsets.jar
+2019-05-28 07:21:50.477+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/istack-commons-runtime-3.0.5.jar
+2019-05-28 07:21:50.477+0000 INFO [o.n.i.d.DiagnosticsManager]  [bootstrap] /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar
+2019-05-28 07:21:50.477+0000 INFO [o.n.i.d.DiagnosticsManager] Library path:
+2019-05-28 07:21:50.477+0000 INFO [o.n.i.d.DiagnosticsManager] /usr/java/packages/lib/amd64
+2019-05-28 07:21:50.477+0000 INFO [o.n.i.d.DiagnosticsManager] /usr/lib/x86_64-linux-gnu/jni
+2019-05-28 07:21:50.477+0000 INFO [o.n.i.d.DiagnosticsManager] /lib/x86_64-linux-gnu
+2019-05-28 07:21:50.477+0000 INFO [o.n.i.d.DiagnosticsManager] /usr/lib/x86_64-linux-gnu
+2019-05-28 07:21:50.478+0000 INFO [o.n.i.d.DiagnosticsManager] /usr/lib/jni
+2019-05-28 07:21:50.478+0000 INFO [o.n.i.d.DiagnosticsManager] /lib
+2019-05-28 07:21:50.478+0000 INFO [o.n.i.d.DiagnosticsManager] /usr/lib
+2019-05-28 07:21:50.478+0000 INFO [o.n.i.d.DiagnosticsManager] System.properties:
+2019-05-28 07:21:50.478+0000 INFO [o.n.i.d.DiagnosticsManager] sun.boot.library.path = /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64
+2019-05-28 07:21:50.478+0000 INFO [o.n.i.d.DiagnosticsManager] jdk.tls.rejectClientInitiatedRenegotiation = true
+2019-05-28 07:21:50.478+0000 INFO [o.n.i.d.DiagnosticsManager] path.separator = :
+2019-05-28 07:21:50.478+0000 INFO [o.n.i.d.DiagnosticsManager] file.encoding.pkg = sun.io
+2019-05-28 07:21:50.478+0000 INFO [o.n.i.d.DiagnosticsManager] user.country = FR
+2019-05-28 07:21:50.478+0000 INFO [o.n.i.d.DiagnosticsManager] sun.java.launcher = SUN_STANDARD
+2019-05-28 07:21:50.479+0000 INFO [o.n.i.d.DiagnosticsManager] sun.os.patch.level = unknown
+2019-05-28 07:21:50.479+0000 INFO [o.n.i.d.DiagnosticsManager] user.dir = /home/jean_clement/PycharmProjects/NeOmics
+2019-05-28 07:21:50.479+0000 INFO [o.n.i.d.DiagnosticsManager] sun.jnu.encoding = UTF-8
+2019-05-28 07:21:50.479+0000 INFO [o.n.i.d.DiagnosticsManager] unsupported.dbms.udc.source = tarball
+2019-05-28 07:21:50.479+0000 INFO [o.n.i.d.DiagnosticsManager] sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+2019-05-28 07:21:50.479+0000 INFO [o.n.i.d.DiagnosticsManager] user.home = /home/jean_clement
+2019-05-28 07:21:50.479+0000 INFO [o.n.i.d.DiagnosticsManager] user.timezone = UTC
+2019-05-28 07:21:50.479+0000 INFO [o.n.i.d.DiagnosticsManager] file.encoding = UTF-8
+2019-05-28 07:21:50.479+0000 INFO [o.n.i.d.DiagnosticsManager] user.name = jean_clement
+2019-05-28 07:21:50.479+0000 INFO [o.n.i.d.DiagnosticsManager] sun.java.command = org.neo4j.server.CommunityEntryPoint --home-dir=/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j --config-dir=/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/conf
+2019-05-28 07:21:50.479+0000 INFO [o.n.i.d.DiagnosticsManager] sun.arch.data.model = 64
+2019-05-28 07:21:50.479+0000 INFO [o.n.i.d.DiagnosticsManager] user.language = fr
+2019-05-28 07:21:50.479+0000 INFO [o.n.i.d.DiagnosticsManager] awt.toolkit = sun.awt.X11.XToolkit
+2019-05-28 07:21:50.479+0000 INFO [o.n.i.d.DiagnosticsManager] jdk.tls.ephemeralDHKeySize = 2048
+2019-05-28 07:21:50.480+0000 INFO [o.n.i.d.DiagnosticsManager] file.separator = /
+2019-05-28 07:21:50.480+0000 INFO [o.n.i.d.DiagnosticsManager] sun.io.unicode.encoding = UnicodeLittle
+2019-05-28 07:21:50.480+0000 INFO [o.n.i.d.DiagnosticsManager] sun.cpu.endian = little
+2019-05-28 07:21:50.480+0000 INFO [o.n.i.d.DiagnosticsManager] sun.desktop = gnome
+2019-05-28 07:21:50.480+0000 INFO [o.n.i.d.DiagnosticsManager] sun.cpu.isalist = 
+2019-05-28 07:21:50.480+0000 INFO [o.n.i.d.DiagnosticsManager] (IANA) TimeZone Database Version:
+2019-05-28 07:21:50.537+0000 INFO [o.n.i.d.DiagnosticsManager]   TimeZone version: 2018g (available for 599 zone identifiers)
+2019-05-28 07:21:50.537+0000 INFO [o.n.i.d.DiagnosticsManager] Linux scheduler information:
+2019-05-28 07:21:50.549+0000 INFO [o.n.i.d.DiagnosticsManager] [none] 
+2019-05-28 07:21:50.550+0000 INFO [o.n.i.d.DiagnosticsManager] [none] 
+2019-05-28 07:21:50.550+0000 INFO [o.n.i.d.DiagnosticsManager] [none] 
+2019-05-28 07:21:50.550+0000 INFO [o.n.i.d.DiagnosticsManager] noop deadline [cfq] 
+2019-05-28 07:21:50.550+0000 INFO [o.n.i.d.DiagnosticsManager] [none] 
+2019-05-28 07:21:50.551+0000 INFO [o.n.i.d.DiagnosticsManager] [none] 
+2019-05-28 07:21:50.551+0000 INFO [o.n.i.d.DiagnosticsManager] [none] 
+2019-05-28 07:21:50.551+0000 INFO [o.n.i.d.DiagnosticsManager] noop deadline [cfq] 
+2019-05-28 07:21:50.552+0000 INFO [o.n.i.d.DiagnosticsManager] [none] 
+2019-05-28 07:21:50.552+0000 INFO [o.n.i.d.DiagnosticsManager] [none] 
+2019-05-28 07:21:50.552+0000 INFO [o.n.i.d.DiagnosticsManager] Network information:
+2019-05-28 07:21:50.553+0000 INFO [o.n.i.d.DiagnosticsManager] Interface wlp3s0:
+2019-05-28 07:21:50.553+0000 INFO [o.n.i.d.DiagnosticsManager]     address: fe80:0:0:0:a9d3:6d46:2ee3:a2a8%wlp3s0
+2019-05-28 07:21:50.553+0000 INFO [o.n.i.d.DiagnosticsManager]     address: 10.5.15.193
+2019-05-28 07:21:50.554+0000 INFO [o.n.i.d.DiagnosticsManager] Interface lo:
+2019-05-28 07:21:50.554+0000 INFO [o.n.i.d.DiagnosticsManager]     address: 0:0:0:0:0:0:0:1%lo
+2019-05-28 07:21:50.554+0000 INFO [o.n.i.d.DiagnosticsManager]     address: 127.0.0.1
+2019-05-28 07:21:50.554+0000 INFO [o.n.i.d.DiagnosticsManager] --- INITIALIZED diagnostics END ---
+2019-05-28 07:21:50.563+0000 INFO [o.n.i.d.DiagnosticsManager] --- INITIALIZED diagnostics START ---
+2019-05-28 07:21:50.564+0000 INFO [o.n.i.d.DiagnosticsManager] Neo4j Kernel properties:
+2019-05-28 07:21:50.564+0000 INFO [o.n.i.d.DiagnosticsManager] dbms.connector.http.enabled=true
+2019-05-28 07:21:50.564+0000 INFO [o.n.i.d.DiagnosticsManager] unsupported.dbms.edition=community
+2019-05-28 07:21:50.564+0000 INFO [o.n.i.d.DiagnosticsManager] dbms.security.auth_enabled=true
+2019-05-28 07:21:50.565+0000 INFO [o.n.i.d.DiagnosticsManager] dbms.windows_service_name=neo4j
+2019-05-28 07:21:50.565+0000 INFO [o.n.i.d.DiagnosticsManager] dbms.connector.bolt.enabled=true
+2019-05-28 07:21:50.565+0000 INFO [o.n.i.d.DiagnosticsManager] unsupported.dbms.directories.neo4j_home=/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j
+2019-05-28 07:21:50.565+0000 INFO [o.n.i.d.DiagnosticsManager] dbms.connector.https.enabled=true
+2019-05-28 07:21:50.565+0000 INFO [o.n.i.d.DiagnosticsManager] dbms.directories.import=import
+2019-05-28 07:21:50.565+0000 INFO [o.n.i.d.DiagnosticsManager] dbms.jvm.additional=-XX:+UseG1GC
+2019-05-28 07:21:50.566+0000 INFO [o.n.i.d.DiagnosticsManager] dbms.tx_log.rotation.retention_policy=1 days
+2019-05-28 07:21:50.566+0000 INFO [o.n.i.d.DiagnosticsManager] Diagnostics providers:
+2019-05-28 07:21:50.566+0000 INFO [o.n.i.d.DiagnosticsManager] org.neo4j.kernel.configuration.Config
+2019-05-28 07:21:50.566+0000 INFO [o.n.i.d.DiagnosticsManager] org.neo4j.internal.diagnostics.DiagnosticsManager
+2019-05-28 07:21:50.566+0000 INFO [o.n.i.d.DiagnosticsManager] SYSTEM_MEMORY
+2019-05-28 07:21:50.566+0000 INFO [o.n.i.d.DiagnosticsManager] JAVA_MEMORY
+2019-05-28 07:21:50.566+0000 INFO [o.n.i.d.DiagnosticsManager] OPERATING_SYSTEM
+2019-05-28 07:21:50.567+0000 INFO [o.n.i.d.DiagnosticsManager] JAVA_VIRTUAL_MACHINE
+2019-05-28 07:21:50.567+0000 INFO [o.n.i.d.DiagnosticsManager] CLASSPATH
+2019-05-28 07:21:50.567+0000 INFO [o.n.i.d.DiagnosticsManager] LIBRARY_PATH
+2019-05-28 07:21:50.567+0000 INFO [o.n.i.d.DiagnosticsManager] SYSTEM_PROPERTIES
+2019-05-28 07:21:50.567+0000 INFO [o.n.i.d.DiagnosticsManager] TIMEZONE_DATABASE
+2019-05-28 07:21:50.567+0000 INFO [o.n.i.d.DiagnosticsManager] LINUX_SCHEDULERS
+2019-05-28 07:21:50.567+0000 INFO [o.n.i.d.DiagnosticsManager] NETWORK
+2019-05-28 07:21:50.568+0000 INFO [o.n.i.d.DiagnosticsManager] System memory information:
+2019-05-28 07:21:50.571+0000 INFO [o.n.i.d.DiagnosticsManager] Total Physical memory: 15.54 GB
+2019-05-28 07:21:50.572+0000 INFO [o.n.i.d.DiagnosticsManager] Free Physical memory: 10.79 GB
+2019-05-28 07:21:50.572+0000 INFO [o.n.i.d.DiagnosticsManager] Committed virtual memory: 7.59 GB
+2019-05-28 07:21:50.572+0000 INFO [o.n.i.d.DiagnosticsManager] Total swap space: 15.87 GB
+2019-05-28 07:21:50.572+0000 INFO [o.n.i.d.DiagnosticsManager] Free swap space: 15.87 GB
+2019-05-28 07:21:50.573+0000 INFO [o.n.i.d.DiagnosticsManager] JVM memory information:
+2019-05-28 07:21:50.573+0000 INFO [o.n.i.d.DiagnosticsManager] Free  memory: 228.50 MB
+2019-05-28 07:21:50.573+0000 INFO [o.n.i.d.DiagnosticsManager] Total memory: 250.00 MB
+2019-05-28 07:21:50.573+0000 INFO [o.n.i.d.DiagnosticsManager] Max   memory: 3.88 GB
+2019-05-28 07:21:50.575+0000 INFO [o.n.i.d.DiagnosticsManager] Garbage Collector: G1 Young Generation: [G1 Eden Space, G1 Survivor Space, G1 Old Gen]
+2019-05-28 07:21:50.575+0000 INFO [o.n.i.d.DiagnosticsManager] Garbage Collector: G1 Old Generation: [G1 Eden Space, G1 Survivor Space, G1 Old Gen]
+2019-05-28 07:21:50.576+0000 INFO [o.n.i.d.DiagnosticsManager] Memory Pool: Code Cache (Non-heap memory): committed=6.19 MB, used=6.13 MB, max=240.00 MB, threshold=0.00 B
+2019-05-28 07:21:50.577+0000 INFO [o.n.i.d.DiagnosticsManager] Memory Pool: Metaspace (Non-heap memory): committed=21.17 MB, used=20.27 MB, max=-1.00 B, threshold=0.00 B
+2019-05-28 07:21:50.577+0000 INFO [o.n.i.d.DiagnosticsManager] Memory Pool: Compressed Class Space (Non-heap memory): committed=2.67 MB, used=2.36 MB, max=1.00 GB, threshold=0.00 B
+2019-05-28 07:21:50.577+0000 INFO [o.n.i.d.DiagnosticsManager] Memory Pool: G1 Eden Space (Heap memory): committed=147.00 MB, used=3.00 MB, max=-1.00 B, threshold=?
+2019-05-28 07:21:50.577+0000 INFO [o.n.i.d.DiagnosticsManager] Memory Pool: G1 Survivor Space (Heap memory): committed=11.00 MB, used=11.00 MB, max=-1.00 B, threshold=?
+2019-05-28 07:21:50.578+0000 INFO [o.n.i.d.DiagnosticsManager] Memory Pool: G1 Old Gen (Heap memory): committed=92.00 MB, used=6.00 MB, max=3.88 GB, threshold=0.00 B
+2019-05-28 07:21:50.578+0000 INFO [o.n.i.d.DiagnosticsManager] Operating system information:
+2019-05-28 07:21:50.579+0000 INFO [o.n.i.d.DiagnosticsManager] Operating System: Linux; version: 4.15.0-50-generic; arch: amd64; cpus: 8
+2019-05-28 07:21:50.579+0000 INFO [o.n.i.d.DiagnosticsManager] Max number of file descriptors: 1048576
+2019-05-28 07:21:50.580+0000 INFO [o.n.i.d.DiagnosticsManager] Number of open file descriptors: 140
+2019-05-28 07:21:50.582+0000 INFO [o.n.i.d.DiagnosticsManager] Process id: 4978@patricia-Precision-M4700
+2019-05-28 07:21:50.582+0000 INFO [o.n.i.d.DiagnosticsManager] Byte order: LITTLE_ENDIAN
+2019-05-28 07:21:50.586+0000 INFO [o.n.i.d.DiagnosticsManager] Local timezone: UTC
+2019-05-28 07:21:50.586+0000 INFO [o.n.i.d.DiagnosticsManager] JVM information:
+2019-05-28 07:21:50.586+0000 INFO [o.n.i.d.DiagnosticsManager] VM Name: OpenJDK 64-Bit Server VM
+2019-05-28 07:21:50.586+0000 INFO [o.n.i.d.DiagnosticsManager] VM Vendor: Oracle Corporation
+2019-05-28 07:21:50.586+0000 INFO [o.n.i.d.DiagnosticsManager] VM Version: 25.212-b03
+2019-05-28 07:21:50.587+0000 INFO [o.n.i.d.DiagnosticsManager] JIT compiler: HotSpot 64-Bit Tiered Compilers
+2019-05-28 07:21:50.587+0000 INFO [o.n.i.d.DiagnosticsManager] VM Arguments: [-XX:+UseG1GC, -XX:-OmitStackTraceInFastThrow, -XX:+AlwaysPreTouch, -XX:+UnlockExperimentalVMOptions, -XX:+TrustFinalNonStaticFields, -XX:+DisableExplicitGC, -Djdk.tls.ephemeralDHKeySize=2048, -Djdk.tls.rejectClientInitiatedRenegotiation=true, -Dunsupported.dbms.udc.source=tarball, -Dfile.encoding=UTF-8]
+2019-05-28 07:21:50.587+0000 INFO [o.n.i.d.DiagnosticsManager] Java classpath:
+2019-05-28 07:21:50.590+0000 INFO [o.n.i.d.DiagnosticsManager]  [bootstrap] /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar
+2019-05-28 07:21:50.590+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/jackson-jaxrs-1.9.13.jar
+2019-05-28 07:21:50.590+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-cypher-compiler-2.3-2.3.12.jar
+2019-05-28 07:21:50.590+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/concurrentlinkedhashmap-lru-1.4.2.jar
+2019-05-28 07:21:50.590+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/javax.servlet-api-3.1.0.jar
+2019-05-28 07:21:50.590+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/jersey-servlet-1.19.3.jar
+2019-05-28 07:21:50.590+0000 INFO [o.n.i.d.DiagnosticsManager]  [loader.1] file:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/nashorn.jar
+2019-05-28 07:21:50.590+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-jmx-3.5.5.jar
+2019-05-28 07:21:50.590+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-graph-algo-3.5.5.jar
+2019-05-28 07:21:50.590+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/bcpkix-jdk15on-1.60.jar
+2019-05-28 07:21:50.591+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/lucene-analyzers-common-5.5.5.jar
+2019-05-28 07:21:50.591+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/plugins/*
+2019-05-28 07:21:50.591+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-cypher-compiler-3.1-3.1.9.jar
+2019-05-28 07:21:50.591+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/parboiled-scala_2.11-1.1.7.jar
+2019-05-28 07:21:50.591+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-front-end-3.5-3.5.5.jar
+2019-05-28 07:21:50.591+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/jetty-security-9.4.11.v20180605.jar
+2019-05-28 07:21:50.591+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/netty-all-4.1.32.Final.jar
+2019-05-28 07:21:50.591+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/jersey-server-1.19.3.jar
+2019-05-28 07:21:50.591+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/commons-lang3-3.8.jar
+2019-05-28 07:21:50.591+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/caffeine-2.6.2.jar
+2019-05-28 07:21:50.591+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-lucene-upgrade-3.5.5.jar
+2019-05-28 07:21:50.592+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-cypher-frontend-3.1-3.1.9.jar
+2019-05-28 07:21:50.592+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-diagnostics-3.5.5.jar
+2019-05-28 07:21:50.592+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/jetty-server-9.4.11.v20180605.jar
+2019-05-28 07:21:50.592+0000 INFO [o.n.i.d.DiagnosticsManager]  [bootstrap] /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar
+2019-05-28 07:21:50.592+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/lucene-queryparser-5.5.5.jar
+2019-05-28 07:21:50.592+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-graphdb-api-3.5.5.jar
+2019-05-28 07:21:50.592+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/commons-compress-1.18.jar
+2019-05-28 07:21:50.592+0000 INFO [o.n.i.d.DiagnosticsManager]  [loader.1] file:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/localedata.jar
+2019-05-28 07:21:50.592+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/jackson-mapper-asl-1.9.13.jar
+2019-05-28 07:21:50.592+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/eclipse-collections-api-9.2.0.jar
+2019-05-28 07:21:50.592+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/commons-lang-2.6.jar
+2019-05-28 07:21:50.593+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-cypher-util-3.4-3.4.12.jar
+2019-05-28 07:21:50.593+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-legacy-3.5.5.jar
+2019-05-28 07:21:50.593+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-fulltext-index-3.5.5.jar
+2019-05-28 07:21:50.593+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-annotation-processors-3.5.5.jar
+2019-05-28 07:21:50.593+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-logging-3.5.5.jar
+2019-05-28 07:21:50.593+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-expressions-3.5-3.5.5.jar
+2019-05-28 07:21:50.593+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-cypher-planner-spi-3.4-3.4.12.jar
+2019-05-28 07:21:50.593+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/jaxb-api-2.3.0.jar
+2019-05-28 07:21:50.593+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/jetty-webapp-9.4.11.v20180605.jar
+2019-05-28 07:21:50.593+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-dbms-3.5.5.jar
+2019-05-28 07:21:50.593+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-cypher-interpreted-runtime-3.5.5.jar
+2019-05-28 07:21:50.594+0000 INFO [o.n.i.d.DiagnosticsManager]  [loader.1] file:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/cldrdata.jar
+2019-05-28 07:21:50.594+0000 INFO [o.n.i.d.DiagnosticsManager]  [bootstrap] /usr/lib/jvm/java-8-openjdk-amd64/jre/classes
+2019-05-28 07:21:50.594+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-collections-3.5.5.jar
+2019-05-28 07:21:50.594+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-resource-3.5.5.jar
+2019-05-28 07:21:50.594+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-server-3.5.5.jar
+2019-05-28 07:21:50.594+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-cypher-ir-3.5-3.5.5.jar
+2019-05-28 07:21:50.594+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/parboiled-core-1.1.7.jar
+2019-05-28 07:21:50.594+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/jProcesses-1.6.4.jar
+2019-05-28 07:21:50.594+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/jetty-http-9.4.11.v20180605.jar
+2019-05-28 07:21:50.594+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/commons-logging-1.1.1.jar
+2019-05-28 07:21:50.594+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-cypher-frontend-2.3-2.3.12.jar
+2019-05-28 07:21:50.594+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/lucene-codecs-5.5.5.jar
+2019-05-28 07:21:50.595+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-concurrent-3.5.5.jar
+2019-05-28 07:21:50.595+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/jetty-util-9.4.11.v20180605.jar
+2019-05-28 07:21:50.595+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-data-collector-3.5.5.jar
+2019-05-28 07:21:50.595+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/jetty-xml-9.4.11.v20180605.jar
+2019-05-28 07:21:50.595+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-ssl-3.5.5.jar
+2019-05-28 07:21:50.595+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/opencsv-2.3.jar
+2019-05-28 07:21:50.595+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-cypher-logical-plans-3.5-3.5.5.jar
+2019-05-28 07:21:50.595+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-cypher-planner-3.5-3.5.5.jar
+2019-05-28 07:21:50.595+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/jersey-core-1.19.3.jar
+2019-05-28 07:21:50.596+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/jaxb-core-2.3.0.1.jar
+2019-05-28 07:21:50.596+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-cypher-ir-3.4-3.4.12.jar
+2019-05-28 07:21:50.596+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/commons-configuration-1.10.jar
+2019-05-28 07:21:50.596+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/jetty-io-9.4.11.v20180605.jar
+2019-05-28 07:21:50.596+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-cypher-planner-3.4-3.4.12.jar
+2019-05-28 07:21:50.596+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-ast-3.5-3.5.5.jar
+2019-05-28 07:21:50.596+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-cypher-3.5.5.jar
+2019-05-28 07:21:50.596+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/jsr311-api-1.1.2.r612.jar
+2019-05-28 07:21:50.596+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/scala-library-2.11.12.jar
+2019-05-28 07:21:50.596+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-import-tool-3.5.5.jar
+2019-05-28 07:21:50.596+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/lucene-core-5.5.5.jar
+2019-05-28 07:21:50.596+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/FastInfoset-1.2.13.jar
+2019-05-28 07:21:50.597+0000 INFO [o.n.i.d.DiagnosticsManager]  [loader.1] file:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/icedtea-sound.jar
+2019-05-28 07:21:50.597+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-bolt-3.5.5.jar
+2019-05-28 07:21:50.597+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/bcprov-jdk15on-1.60.jar
+2019-05-28 07:21:50.597+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-configuration-3.5.5.jar
+2019-05-28 07:21:50.597+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/zstd-proxy-3.5.5.jar
+2019-05-28 07:21:50.597+0000 INFO [o.n.i.d.DiagnosticsManager]  [loader.1] file:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunjce_provider.jar
+2019-05-28 07:21:50.597+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/openCypher-frontend-1-3.4.12.jar
+2019-05-28 07:21:50.597+0000 INFO [o.n.i.d.DiagnosticsManager]  [bootstrap] /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/sunrsasign.jar
+2019-05-28 07:21:50.597+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-rewriting-3.5-3.5.5.jar
+2019-05-28 07:21:50.597+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-command-line-3.5.5.jar
+2019-05-28 07:21:50.597+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-index-3.5.5.jar
+2019-05-28 07:21:50.597+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/stax-ex-1.7.8.jar
+2019-05-28 07:21:50.597+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-3.5.5.jar
+2019-05-28 07:21:50.598+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-graph-matching-3.1.9.jar
+2019-05-28 07:21:50.598+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-io-3.5.5.jar
+2019-05-28 07:21:50.598+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-unsafe-3.5.5.jar
+2019-05-28 07:21:50.598+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-procedure-api-3.5.5.jar
+2019-05-28 07:21:50.598+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/commons-io-2.6.jar
+2019-05-28 07:21:50.598+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/jaxb-runtime-2.3.0.1.jar
+2019-05-28 07:21:50.598+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/activation-1.1.1.jar
+2019-05-28 07:21:50.598+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-csv-3.5.5.jar
+2019-05-28 07:21:50.598+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-cypher-logical-plans-3.4-3.4.12.jar
+2019-05-28 07:21:50.598+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/plugins/
+2019-05-28 07:21:50.598+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/server-api-3.5.5.jar
+2019-05-28 07:21:50.598+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/jPowerShell-1.9.jar
+2019-05-28 07:21:50.598+0000 INFO [o.n.i.d.DiagnosticsManager]  [loader.1] file:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/jaccess.jar
+2019-05-28 07:21:50.599+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/scala-reflect-2.11.12.jar
+2019-05-28 07:21:50.599+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-common-3.5.5.jar
+2019-05-28 07:21:50.599+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-cypher-expression-3.4-3.4.12.jar
+2019-05-28 07:21:50.599+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/jackson-core-asl-1.9.13.jar
+2019-05-28 07:21:50.599+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/conf/
+2019-05-28 07:21:50.599+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/eclipse-collections-9.2.0.jar
+2019-05-28 07:21:50.599+0000 INFO [o.n.i.d.DiagnosticsManager]  [loader.1] file:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunpkcs11.jar
+2019-05-28 07:21:50.599+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-browser-3.2.18.jar
+2019-05-28 07:21:50.599+0000 INFO [o.n.i.d.DiagnosticsManager]  [loader.1] file:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunec.jar
+2019-05-28 07:21:50.599+0000 INFO [o.n.i.d.DiagnosticsManager]  [bootstrap] /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jfr.jar
+2019-05-28 07:21:50.599+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-spatial-index-3.5.5.jar
+2019-05-28 07:21:50.600+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/txw2-2.3.0.1.jar
+2019-05-28 07:21:50.600+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-values-3.5.5.jar
+2019-05-28 07:21:50.600+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-codegen-3.5.5.jar
+2019-05-28 07:21:50.600+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/zstd-jni-1.3.8-6.jar
+2019-05-28 07:21:50.600+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-util-3.5-3.5.5.jar
+2019-05-28 07:21:50.600+0000 INFO [o.n.i.d.DiagnosticsManager]  [loader.1] file:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/zipfs.jar
+2019-05-28 07:21:50.600+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-udc-3.5.5.jar
+2019-05-28 07:21:50.600+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-kernel-api-3.5.5.jar
+2019-05-28 07:21:50.600+0000 INFO [o.n.i.d.DiagnosticsManager]  [bootstrap] /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/resources.jar
+2019-05-28 07:21:50.600+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/commons-text-1.4.jar
+2019-05-28 07:21:50.600+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-cypher-expression-evaluator-3.5.5.jar
+2019-05-28 07:21:50.600+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-parser-3.5-3.5.5.jar
+2019-05-28 07:21:50.600+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-kernel-3.5.5.jar
+2019-05-28 07:21:50.600+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-lucene-index-3.5.5.jar
+2019-05-28 07:21:50.600+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-security-3.5.5.jar
+2019-05-28 07:21:50.601+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/WMI4Java-1.6.1.jar
+2019-05-28 07:21:50.601+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-cypher-planner-spi-3.5-3.5.5.jar
+2019-05-28 07:21:50.601+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-cypher-runtime-util-3.5.5.jar
+2019-05-28 07:21:50.601+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/neo4j-consistency-check-3.5.5.jar
+2019-05-28 07:21:50.601+0000 INFO [o.n.i.d.DiagnosticsManager]  [loader.1] file:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/dnsns.jar
+2019-05-28 07:21:50.601+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/jetty-servlet-9.4.11.v20180605.jar
+2019-05-28 07:21:50.601+0000 INFO [o.n.i.d.DiagnosticsManager]  [bootstrap] /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/charsets.jar
+2019-05-28 07:21:50.601+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath + loader.0] file:/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/lib/istack-commons-runtime-3.0.5.jar
+2019-05-28 07:21:50.601+0000 INFO [o.n.i.d.DiagnosticsManager]  [bootstrap] /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar
+2019-05-28 07:21:50.601+0000 INFO [o.n.i.d.DiagnosticsManager] Library path:
+2019-05-28 07:21:50.602+0000 INFO [o.n.i.d.DiagnosticsManager] /usr/java/packages/lib/amd64
+2019-05-28 07:21:50.602+0000 INFO [o.n.i.d.DiagnosticsManager] /usr/lib/x86_64-linux-gnu/jni
+2019-05-28 07:21:50.602+0000 INFO [o.n.i.d.DiagnosticsManager] /lib/x86_64-linux-gnu
+2019-05-28 07:21:50.602+0000 INFO [o.n.i.d.DiagnosticsManager] /usr/lib/x86_64-linux-gnu
+2019-05-28 07:21:50.602+0000 INFO [o.n.i.d.DiagnosticsManager] /usr/lib/jni
+2019-05-28 07:21:50.602+0000 INFO [o.n.i.d.DiagnosticsManager] /lib
+2019-05-28 07:21:50.602+0000 INFO [o.n.i.d.DiagnosticsManager] /usr/lib
+2019-05-28 07:21:50.602+0000 INFO [o.n.i.d.DiagnosticsManager] System.properties:
+2019-05-28 07:21:50.603+0000 INFO [o.n.i.d.DiagnosticsManager] sun.boot.library.path = /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64
+2019-05-28 07:21:50.603+0000 INFO [o.n.i.d.DiagnosticsManager] jdk.tls.rejectClientInitiatedRenegotiation = true
+2019-05-28 07:21:50.603+0000 INFO [o.n.i.d.DiagnosticsManager] path.separator = :
+2019-05-28 07:21:50.603+0000 INFO [o.n.i.d.DiagnosticsManager] file.encoding.pkg = sun.io
+2019-05-28 07:21:50.603+0000 INFO [o.n.i.d.DiagnosticsManager] user.country = FR
+2019-05-28 07:21:50.603+0000 INFO [o.n.i.d.DiagnosticsManager] sun.java.launcher = SUN_STANDARD
+2019-05-28 07:21:50.603+0000 INFO [o.n.i.d.DiagnosticsManager] sun.os.patch.level = unknown
+2019-05-28 07:21:50.603+0000 INFO [o.n.i.d.DiagnosticsManager] user.dir = /home/jean_clement/PycharmProjects/NeOmics
+2019-05-28 07:21:50.603+0000 INFO [o.n.i.d.DiagnosticsManager] sun.jnu.encoding = UTF-8
+2019-05-28 07:21:50.603+0000 INFO [o.n.i.d.DiagnosticsManager] unsupported.dbms.udc.source = tarball
+2019-05-28 07:21:50.603+0000 INFO [o.n.i.d.DiagnosticsManager] sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+2019-05-28 07:21:50.604+0000 INFO [o.n.i.d.DiagnosticsManager] user.home = /home/jean_clement
+2019-05-28 07:21:50.604+0000 INFO [o.n.i.d.DiagnosticsManager] user.timezone = UTC
+2019-05-28 07:21:50.604+0000 INFO [o.n.i.d.DiagnosticsManager] file.encoding = UTF-8
+2019-05-28 07:21:50.604+0000 INFO [o.n.i.d.DiagnosticsManager] user.name = jean_clement
+2019-05-28 07:21:50.604+0000 INFO [o.n.i.d.DiagnosticsManager] sun.java.command = org.neo4j.server.CommunityEntryPoint --home-dir=/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j --config-dir=/home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/conf
+2019-05-28 07:21:50.604+0000 INFO [o.n.i.d.DiagnosticsManager] sun.arch.data.model = 64
+2019-05-28 07:21:50.604+0000 INFO [o.n.i.d.DiagnosticsManager] user.language = fr
+2019-05-28 07:21:50.604+0000 INFO [o.n.i.d.DiagnosticsManager] awt.toolkit = sun.awt.X11.XToolkit
+2019-05-28 07:21:50.604+0000 INFO [o.n.i.d.DiagnosticsManager] jdk.tls.ephemeralDHKeySize = 2048
+2019-05-28 07:21:50.604+0000 INFO [o.n.i.d.DiagnosticsManager] file.separator = /
+2019-05-28 07:21:50.604+0000 INFO [o.n.i.d.DiagnosticsManager] sun.io.unicode.encoding = UnicodeLittle
+2019-05-28 07:21:50.604+0000 INFO [o.n.i.d.DiagnosticsManager] sun.cpu.endian = little
+2019-05-28 07:21:50.605+0000 INFO [o.n.i.d.DiagnosticsManager] sun.desktop = gnome
+2019-05-28 07:21:50.605+0000 INFO [o.n.i.d.DiagnosticsManager] sun.cpu.isalist = 
+2019-05-28 07:21:50.605+0000 INFO [o.n.i.d.DiagnosticsManager] (IANA) TimeZone Database Version:
+2019-05-28 07:21:50.682+0000 INFO [o.n.i.d.DiagnosticsManager]   TimeZone version: 2018g (available for 599 zone identifiers)
+2019-05-28 07:21:50.682+0000 INFO [o.n.i.d.DiagnosticsManager] Linux scheduler information:
+2019-05-28 07:21:50.690+0000 INFO [o.n.i.d.DiagnosticsManager] [none] 
+2019-05-28 07:21:50.690+0000 INFO [o.n.i.d.DiagnosticsManager] [none] 
+2019-05-28 07:21:50.690+0000 INFO [o.n.i.d.DiagnosticsManager] [none] 
+2019-05-28 07:21:50.691+0000 INFO [o.n.i.d.DiagnosticsManager] noop deadline [cfq] 
+2019-05-28 07:21:50.691+0000 INFO [o.n.i.d.DiagnosticsManager] [none] 
+2019-05-28 07:21:50.691+0000 INFO [o.n.i.d.DiagnosticsManager] [none] 
+2019-05-28 07:21:50.691+0000 INFO [o.n.i.d.DiagnosticsManager] [none] 
+2019-05-28 07:21:50.692+0000 INFO [o.n.i.d.DiagnosticsManager] noop deadline [cfq] 
+2019-05-28 07:21:50.692+0000 INFO [o.n.i.d.DiagnosticsManager] [none] 
+2019-05-28 07:21:50.692+0000 INFO [o.n.i.d.DiagnosticsManager] [none] 
+2019-05-28 07:21:50.692+0000 INFO [o.n.i.d.DiagnosticsManager] Network information:
+2019-05-28 07:21:50.693+0000 INFO [o.n.i.d.DiagnosticsManager] Interface wlp3s0:
+2019-05-28 07:21:50.694+0000 INFO [o.n.i.d.DiagnosticsManager]     address: fe80:0:0:0:a9d3:6d46:2ee3:a2a8%wlp3s0
+2019-05-28 07:21:50.694+0000 INFO [o.n.i.d.DiagnosticsManager]     address: 10.5.15.193
+2019-05-28 07:21:50.694+0000 INFO [o.n.i.d.DiagnosticsManager] Interface lo:
+2019-05-28 07:21:50.694+0000 INFO [o.n.i.d.DiagnosticsManager]     address: 0:0:0:0:0:0:0:1%lo
+2019-05-28 07:21:50.694+0000 INFO [o.n.i.d.DiagnosticsManager]     address: 127.0.0.1
+2019-05-28 07:21:50.694+0000 INFO [o.n.i.d.DiagnosticsManager] --- INITIALIZED diagnostics END ---
+2019-05-28 07:21:50.721+0000 INFO [o.n.g.f.GraphDatabaseFacadeFactory] Shutdown started
+2019-05-28 07:21:50.722+0000 INFO [o.n.i.d.DiagnosticsManager] --- SHUTDOWN diagnostics START ---
+2019-05-28 07:21:50.722+0000 INFO [o.n.i.d.DiagnosticsManager] --- SHUTDOWN diagnostics END ---
+2019-05-28 07:21:50.864+0000 INFO [o.n.k.i.s.f.RecordFormatSelector] Selected RecordFormat:StandardV3_4[v0.A.9] record format from store /home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/data/databases/graph.db
+2019-05-28 07:21:50.895+0000 INFO [o.n.k.i.s.f.RecordFormatSelector] Selected RecordFormat:StandardV3_4[v0.A.9] record format from store /home/jean_clement/PycharmProjects/NeOmics/NeOmics/neo4j/data/databases/graph.db
+2019-05-28 07:21:50.895+0000 INFO [o.n.k.i.s.f.RecordFormatSelector] Format not configured. Selected format from the store: RecordFormat:StandardV3_4[v0.A.9]
+2019-05-28 07:21:51.442+0000 INFO [o.n.k.NeoStoreDataSource] No commits found after last check point (which is at LogPosition{logVersion=0, byteOffset=78227})
+2019-05-28 07:21:51.466+0000 INFO [o.n.i.d.DiagnosticsManager] --- STARTED diagnostics for KernelDiagnostics:Versions START ---
+2019-05-28 07:21:51.466+0000 INFO [o.n.i.d.DiagnosticsManager] Graph Database: community single StoreId{creationTime=1558690238939, randomId=1535834920478770103, storeVersion=16094931155187206, upgradeTime=1558690238939, upgradeId=1}
+2019-05-28 07:21:51.466+0000 INFO [o.n.i.d.DiagnosticsManager] Kernel version: 3.5.5,9d75f7445ec02ec013d2de528c396096efedc3a5
+2019-05-28 07:21:51.467+0000 INFO [o.n.i.d.DiagnosticsManager] --- STARTED diagnostics for KernelDiagnostics:Versions END ---
+2019-05-28 07:21:51.468+0000 INFO [o.n.i.d.DiagnosticsManager] --- STARTED diagnostics for NEO_STORE_VERSIONS START ---
+2019-05-28 07:21:51.468+0000 INFO [o.n.i.d.DiagnosticsManager] Store versions:
+2019-05-28 07:21:51.469+0000 INFO [o.n.i.d.DiagnosticsManager]   ArrayPropertyStore v0.A.9
+2019-05-28 07:21:51.469+0000 INFO [o.n.i.d.DiagnosticsManager]   NodeStore v0.A.9
+2019-05-28 07:21:51.469+0000 INFO [o.n.i.d.DiagnosticsManager]   StringPropertyStore v0.A.9
+2019-05-28 07:21:51.469+0000 INFO [o.n.i.d.DiagnosticsManager]   PropertyIndexStore v0.A.9
+2019-05-28 07:21:51.469+0000 INFO [o.n.i.d.DiagnosticsManager]   StringPropertyStore v0.A.9
+2019-05-28 07:21:51.469+0000 INFO [o.n.i.d.DiagnosticsManager]   ArrayPropertyStore v0.A.9
+2019-05-28 07:21:51.469+0000 INFO [o.n.i.d.DiagnosticsManager]   PropertyStore v0.A.9
+2019-05-28 07:21:51.469+0000 INFO [o.n.i.d.DiagnosticsManager]   RelationshipStore v0.A.9
+2019-05-28 07:21:51.469+0000 INFO [o.n.i.d.DiagnosticsManager]   StringPropertyStore v0.A.9
+2019-05-28 07:21:51.469+0000 INFO [o.n.i.d.DiagnosticsManager]   RelationshipTypeStore v0.A.9
+2019-05-28 07:21:51.469+0000 INFO [o.n.i.d.DiagnosticsManager]   StringPropertyStore v0.A.9
+2019-05-28 07:21:51.469+0000 INFO [o.n.i.d.DiagnosticsManager]   LabelTokenStore v0.A.9
+2019-05-28 07:21:51.469+0000 INFO [o.n.i.d.DiagnosticsManager]   SchemaStore v0.A.9
+2019-05-28 07:21:51.470+0000 INFO [o.n.i.d.DiagnosticsManager]   RelationshipGroupStore v0.A.9
+2019-05-28 07:21:51.470+0000 INFO [o.n.i.d.DiagnosticsManager]   NeoStore v0.A.9
+2019-05-28 07:21:51.470+0000 INFO [o.n.i.d.DiagnosticsManager] --- STARTED diagnostics for NEO_STORE_VERSIONS END ---
+2019-05-28 07:21:51.470+0000 INFO [o.n.i.d.DiagnosticsManager] --- STARTED diagnostics for NEO_STORE_ID_USAGE START ---
+2019-05-28 07:21:51.470+0000 INFO [o.n.i.d.DiagnosticsManager] Id usage:
+2019-05-28 07:21:51.470+0000 INFO [o.n.i.d.DiagnosticsManager]   ArrayPropertyStore: used=1 high=0
+2019-05-28 07:21:51.470+0000 INFO [o.n.i.d.DiagnosticsManager]   NodeStore: used=190 high=189
+2019-05-28 07:21:51.470+0000 INFO [o.n.i.d.DiagnosticsManager]   StringPropertyStore: used=9 high=8
+2019-05-28 07:21:51.470+0000 INFO [o.n.i.d.DiagnosticsManager]   PropertyIndexStore: used=8 high=7
+2019-05-28 07:21:51.471+0000 INFO [o.n.i.d.DiagnosticsManager]   StringPropertyStore: used=26 high=25
+2019-05-28 07:21:51.471+0000 INFO [o.n.i.d.DiagnosticsManager]   ArrayPropertyStore: used=173 high=172
+2019-05-28 07:21:51.471+0000 INFO [o.n.i.d.DiagnosticsManager]   PropertyStore: used=402 high=401
+2019-05-28 07:21:51.471+0000 INFO [o.n.i.d.DiagnosticsManager]   RelationshipStore: used=253 high=252
+2019-05-28 07:21:51.471+0000 INFO [o.n.i.d.DiagnosticsManager]   StringPropertyStore: used=7 high=6
+2019-05-28 07:21:51.471+0000 INFO [o.n.i.d.DiagnosticsManager]   RelationshipTypeStore: used=6 high=5
+2019-05-28 07:21:51.471+0000 INFO [o.n.i.d.DiagnosticsManager]   StringPropertyStore: used=3 high=2
+2019-05-28 07:21:51.471+0000 INFO [o.n.i.d.DiagnosticsManager]   LabelTokenStore: used=2 high=1
+2019-05-28 07:21:51.471+0000 INFO [o.n.i.d.DiagnosticsManager]   SchemaStore: used=1 high=0
+2019-05-28 07:21:51.471+0000 INFO [o.n.i.d.DiagnosticsManager]   RelationshipGroupStore: used=1 high=0
+2019-05-28 07:21:51.471+0000 INFO [o.n.i.d.DiagnosticsManager]   NeoStore: used=15 high=14
+2019-05-28 07:21:51.471+0000 INFO [o.n.i.d.DiagnosticsManager] --- STARTED diagnostics for NEO_STORE_ID_USAGE END ---
+2019-05-28 07:21:51.472+0000 INFO [o.n.i.d.DiagnosticsManager] --- STARTED diagnostics for NEO_STORE_RECORDS START ---
+2019-05-28 07:21:51.472+0000 INFO [o.n.i.d.DiagnosticsManager] Neostore records:
+2019-05-28 07:21:51.472+0000 INFO [o.n.i.d.DiagnosticsManager] TIME (Creation time): 1558690238939
+2019-05-28 07:21:51.472+0000 INFO [o.n.i.d.DiagnosticsManager] RANDOM_NUMBER (Random number for store id): 1535834920478770103
+2019-05-28 07:21:51.472+0000 INFO [o.n.i.d.DiagnosticsManager] LOG_VERSION (Current log version): 0
+2019-05-28 07:21:51.472+0000 INFO [o.n.i.d.DiagnosticsManager] LAST_TRANSACTION_ID (Last committed transaction): 23
+2019-05-28 07:21:51.472+0000 INFO [o.n.i.d.DiagnosticsManager] STORE_VERSION (Store format version): 16094931155187206
+2019-05-28 07:21:51.473+0000 INFO [o.n.i.d.DiagnosticsManager] FIRST_GRAPH_PROPERTY (First property record containing graph properties): -1
+2019-05-28 07:21:51.473+0000 INFO [o.n.i.d.DiagnosticsManager] LAST_CONSTRAINT_TRANSACTION (Last committed transaction containing constraint changes): 0
+2019-05-28 07:21:51.473+0000 INFO [o.n.i.d.DiagnosticsManager] UPGRADE_TRANSACTION_ID (Transaction id most recent upgrade was performed at): 1
+2019-05-28 07:21:51.473+0000 INFO [o.n.i.d.DiagnosticsManager] UPGRADE_TIME (Time of last upgrade): 1558690238939
+2019-05-28 07:21:51.473+0000 INFO [o.n.i.d.DiagnosticsManager] LAST_TRANSACTION_CHECKSUM (Checksum of last committed transaction): -161671513419
+2019-05-28 07:21:51.473+0000 INFO [o.n.i.d.DiagnosticsManager] UPGRADE_TRANSACTION_CHECKSUM (Checksum of transaction id the most recent upgrade was performed at): 0
+2019-05-28 07:21:51.473+0000 INFO [o.n.i.d.DiagnosticsManager] LAST_CLOSED_TRANSACTION_LOG_VERSION (Log version where the last transaction commit entry has been written into): 0
+2019-05-28 07:21:51.473+0000 INFO [o.n.i.d.DiagnosticsManager] LAST_CLOSED_TRANSACTION_LOG_BYTE_OFFSET (Byte offset in the log file where the last transaction commit entry has been written into): 168237
+2019-05-28 07:21:51.473+0000 INFO [o.n.i.d.DiagnosticsManager] LAST_TRANSACTION_COMMIT_TIMESTAMP (Commit time timestamp for last committed transaction): 1558969174133
+2019-05-28 07:21:51.473+0000 INFO [o.n.i.d.DiagnosticsManager] UPGRADE_TRANSACTION_COMMIT_TIMESTAMP (Commit timestamp of transaction the most recent upgrade was performed at): 0
+2019-05-28 07:21:51.473+0000 INFO [o.n.i.d.DiagnosticsManager] --- STARTED diagnostics for NEO_STORE_RECORDS END ---
+2019-05-28 07:21:51.474+0000 INFO [o.n.i.d.DiagnosticsManager] --- STARTED diagnostics for TRANSACTION_RANGE START ---
+2019-05-28 07:21:51.475+0000 INFO [o.n.i.d.DiagnosticsManager] Transaction log:
+2019-05-28 07:21:51.475+0000 INFO [o.n.i.d.DiagnosticsManager] Oldest transaction 2 found in log with version 0
+2019-05-28 07:21:51.475+0000 INFO [o.n.i.d.DiagnosticsManager] --- STARTED diagnostics for TRANSACTION_RANGE END ---
+2019-05-28 07:21:51.480+0000 INFO [o.n.i.d.DiagnosticsManager] --- STARTED diagnostics for KernelDiagnostics:StoreFiles START ---
+2019-05-28 07:21:51.480+0000 INFO [o.n.i.d.DiagnosticsManager] Disk space on partition (Total / Free / Free %): 486633742336 / 461653622784 / 94
+2019-05-28 07:21:51.480+0000 INFO [o.n.i.d.DiagnosticsManager] Storage files: (filename : modification date - size)
+2019-05-28 07:21:51.483+0000 INFO [o.n.i.d.DiagnosticsManager]   index:
+2019-05-28 07:21:51.484+0000 INFO [o.n.i.d.DiagnosticsManager]   - Total: 2019-05-24T09:30:39+0000 - 0.00 B
+2019-05-28 07:21:51.484+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore: 2019-05-27T15:01:46+0000 - 8.00 kB
+2019-05-28 07:21:51.484+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.counts.db.a: 2019-05-27T14:59:30+0000 - 192.00 B
+2019-05-28 07:21:51.485+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.counts.db.b: 2019-05-27T15:01:46+0000 - 96.00 B
+2019-05-28 07:21:51.485+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.id: 2019-05-28T07:21:51+0000 - 9.00 B
+2019-05-28 07:21:51.485+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.labelscanstore.db: 2019-05-28T07:21:51+0000 - 48.00 kB
+2019-05-28 07:21:51.485+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.labeltokenstore.db: 2019-05-27T08:12:26+0000 - 8.00 kB
+2019-05-28 07:21:51.485+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.labeltokenstore.db.id: 2019-05-28T07:21:50+0000 - 9.00 B
+2019-05-28 07:21:51.485+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.labeltokenstore.db.names: 2019-05-27T08:12:26+0000 - 8.00 kB
+2019-05-28 07:21:51.486+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.labeltokenstore.db.names.id: 2019-05-28T07:21:50+0000 - 9.00 B
+2019-05-28 07:21:51.486+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.nodestore.db: 2019-05-27T15:01:46+0000 - 8.00 kB
+2019-05-28 07:21:51.486+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.nodestore.db.id: 2019-05-28T07:21:50+0000 - 9.00 B
+2019-05-28 07:21:51.486+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.nodestore.db.labels: 2019-05-24T09:30:38+0000 - 8.00 kB
+2019-05-28 07:21:51.486+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.nodestore.db.labels.id: 2019-05-28T07:21:50+0000 - 9.00 B
+2019-05-28 07:21:51.487+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.propertystore.db: 2019-05-27T15:01:46+0000 - 23.90 kB
+2019-05-28 07:21:51.487+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.propertystore.db.arrays: 2019-05-27T14:59:30+0000 - 24.00 kB
+2019-05-28 07:21:51.487+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.propertystore.db.arrays.id: 2019-05-28T07:21:50+0000 - 9.00 B
+2019-05-28 07:21:51.487+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.propertystore.db.id: 2019-05-28T07:21:50+0000 - 9.00 B
+2019-05-28 07:21:51.487+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.propertystore.db.index: 2019-05-27T08:12:26+0000 - 8.00 kB
+2019-05-28 07:21:51.488+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.propertystore.db.index.id: 2019-05-28T07:21:50+0000 - 9.00 B
+2019-05-28 07:21:51.488+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.propertystore.db.index.keys: 2019-05-27T08:12:26+0000 - 8.00 kB
+2019-05-28 07:21:51.488+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.propertystore.db.index.keys.id: 2019-05-28T07:21:50+0000 - 9.00 B
+2019-05-28 07:21:51.488+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.propertystore.db.strings: 2019-05-27T15:01:46+0000 - 8.00 kB
+2019-05-28 07:21:51.488+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.propertystore.db.strings.id: 2019-05-28T07:21:50+0000 - 9.00 B
+2019-05-28 07:21:51.488+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.relationshipgroupstore.db: 2019-05-24T09:30:38+0000 - 8.00 kB
+2019-05-28 07:21:51.489+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.relationshipgroupstore.db.id: 2019-05-28T07:21:51+0000 - 9.00 B
+2019-05-28 07:21:51.489+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.relationshipstore.db: 2019-05-27T14:59:30+0000 - 15.94 kB
+2019-05-28 07:21:51.489+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.relationshipstore.db.id: 2019-05-28T07:21:50+0000 - 9.00 B
+2019-05-28 07:21:51.489+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.relationshiptypestore.db: 2019-05-27T08:12:26+0000 - 8.00 kB
+2019-05-28 07:21:51.489+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.relationshiptypestore.db.id: 2019-05-28T07:21:50+0000 - 9.00 B
+2019-05-28 07:21:51.489+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.relationshiptypestore.db.names: 2019-05-27T08:12:26+0000 - 8.00 kB
+2019-05-28 07:21:51.490+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.relationshiptypestore.db.names.id: 2019-05-28T07:21:50+0000 - 9.00 B
+2019-05-28 07:21:51.490+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.schemastore.db: 2019-05-24T09:30:38+0000 - 8.00 kB
+2019-05-28 07:21:51.490+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.schemastore.db.id: 2019-05-28T07:21:50+0000 - 9.00 B
+2019-05-28 07:21:51.490+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.transaction.db.0: 2019-05-27T14:18:37+0000 - 76.50 kB
+2019-05-28 07:21:51.490+0000 INFO [o.n.i.d.DiagnosticsManager] Storage summary: 
+2019-05-28 07:21:51.490+0000 INFO [o.n.i.d.DiagnosticsManager]   Total size of store: 284.75 kB
+2019-05-28 07:21:51.490+0000 INFO [o.n.i.d.DiagnosticsManager]   Total size of mapped files: 207.83 kB
+2019-05-28 07:21:51.490+0000 INFO [o.n.i.d.DiagnosticsManager] --- STARTED diagnostics for KernelDiagnostics:StoreFiles END ---
+2019-05-28 07:21:51.491+0000 INFO [o.n.k.a.DatabaseAvailabilityGuard] Fulfilling of requirement 'Database available' makes database graph.db available.
+2019-05-28 07:21:51.491+0000 INFO [o.n.k.a.DatabaseAvailabilityGuard] Database graph.db is ready.
+2019-05-28 07:21:51.491+0000 INFO [o.n.k.i.DatabaseHealth] Database health set to OK
+2019-05-28 07:21:51.750+0000 INFO [o.n.b.BoltServer] Bolt server loaded
+2019-05-28 07:21:51.898+0000 INFO [o.n.b.BoltServer] Bolt enabled on 127.0.0.1:7687.
+2019-05-28 07:21:53.545+0000 INFO [o.n.i.d.DiagnosticsManager] --- SERVER STARTED START ---
+2019-05-28 07:21:54.549+0000 INFO [o.n.i.d.DiagnosticsManager] --- SERVER STARTED END ---
+2019-05-28 07:22:28.326+0000 WARN [o.n.b.r.DefaultBoltConnection] The client is unauthorized due to authentication failure.
+2019-05-28 07:55:53.884+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=2289, gcTime=0, gcCount=0}
