@@ -151,9 +151,9 @@ def create_edges(file, dict_id):
 
 # Main
 def main():
-    os.system('/home/jean_clement/PycharmProjects/NeOmics/media/Scripts/rankprod.R')
-    dict_id = create_nodes("graph.csv")
-    create_edges("graph.csv", dict_id)
+    # os.system('/home/jean_clement/PycharmProjects/NeOmics/media/Scripts/rankprod.R')
+    dict_id = create_nodes("/home/jean_clement/PycharmProjects/NeOmics/media/Scripts/sous_graph.csv")
+    create_edges("/home/jean_clement/PycharmProjects/NeOmics/media/Scripts/sous_graph.csv", dict_id)
 
 
 if __name__ == "__main__":

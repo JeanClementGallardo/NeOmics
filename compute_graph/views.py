@@ -1,9 +1,11 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic
+from django.conf import settings
 
 from import_raw.models import RawData
 from compute_graph.models import AnalysisFamily, Analysis
 import json
+import os
 
 
 # Create your views here.
@@ -31,8 +33,16 @@ def stat_params(request, organism, name):
                 error_message = "Please fill ALL the fields"
                 return render(request, "compute_graph/stat_params.html", locals())
 
+    if request.POST:
+        os.system("python3 /home/jean_clement/PycharmProjects/NeOmics/compute_graph/static/compute_graph/loadcsv.py")
+        return render(request, "compute_graph/stat_load.html", locals())
+
     return render(request, "compute_graph/stat_params.html", locals())
 
+def stat_load(request, organism, name):
+    raw_data = get_object_or_404(RawData, organism=organism)
+    analysis = get_object_or_404(Analysis, name = name)
+    return render(request, "compute_graph/stat_load.html")
 
 class IndexView(generic.ListView):
     template_name = "compute_graph/index.html"
