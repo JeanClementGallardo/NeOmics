@@ -3,8 +3,6 @@
 import os
 import sys
 
-from django.conf import settings
-
 
 def main():
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'NeOmics.settings')
@@ -16,12 +14,17 @@ def main():
             "available on your PYTHONPATH environment variable? Did you "
             "forget to activate a virtual environment?"
         ) from exc
-    if "runserver" in sys.argv:
-        os.system(settings.START)
     execute_from_command_line(sys.argv)
 
 
 if __name__ == '__main__':
     main()
     if "runserver" in sys.argv:
-        os.system(settings.STOP)
+
+        from ComputeGraph.models import Graph
+
+        for graph in Graph.objects.all():
+            try:
+                graph.stop()
+            except:
+                pass

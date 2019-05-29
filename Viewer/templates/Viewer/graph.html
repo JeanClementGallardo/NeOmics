@@ -38,9 +38,9 @@
         function draw() {
             var config = {
                 container_id: "viz",
-                server_url: "bolt://localhost:7687",
-                server_user: "neo4j",
-                server_password: "admin",
+                server_url: "{{ graph.uri }}",
+                server_user: "{{ graph.user }}",
+                server_password: "{{ graph.password }}",
                 labels: {
                     "Person": {
                         "caption": "name",

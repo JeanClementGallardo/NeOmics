@@ -3,8 +3,8 @@ from django.views import generic
 from .static.ComputeGraph.loadcsv import LoadCSV
 
 from ImportRaw.models import RawData
-from ComputeGraph.models import AnalysisFamily, Analysis, GraphManager, Graph
-import json, os
+from ComputeGraph.models import AnalysisFamily, Analysis, Graph
+import json
 
 
 # Create your views here.
@@ -39,13 +39,11 @@ def stat_params(request, organism, name):
     if request.POST:
         # Script execution
         working_file_path = "./home/jean_clement/PycharmProjects/NeOmics/media/Scripts/" + name + ".R"
-        os.system(working_file_path)
-
+        # os.system(working_file_path)
         # Results loading on neo4j
-        # gm = GraphManager(request.get_host())
-        # graph = gm.create_graph(raw_data, AnalysisFamily)
-        LoadCSV("bolt://localhost:7687", "neo4j", "admin",
-                "/home/jean_clement/PycharmProjects/NeOmics/media/Scripts/sous_graph.csv")
+        graph = Graph.create(request.get_host(), raw_data, analysis.family)
+        # LoadCSV(graph.uri, graph.user, graph.password,
+        #         "/home/jean_clement/PycharmProjects/NeOmics/media/Scripts/sous_graph.csv")
         return render(request, "ComputeGraph/stat_load.html")
 
     return render(request, "ComputeGraph/stat_params.html", locals())

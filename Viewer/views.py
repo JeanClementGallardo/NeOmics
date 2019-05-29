@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views import generic
-
+from django.shortcuts import get_object_or_404
 from ComputeGraph.models import Graph
 
 
@@ -16,4 +16,5 @@ class IndexView(generic.ListView):
 
 
 def graph(request, graph):
-    return render(request, "Viewer/graph.html")
+    graph = get_object_or_404(Graph, name=graph)
+    return render(request, "Viewer/graph.html", locals())

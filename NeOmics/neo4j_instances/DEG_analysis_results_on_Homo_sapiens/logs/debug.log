@@ -1,0 +1,385 @@
+2019-05-29 16:39:16.940+0000 WARN [o.n.k.i.JvmChecker] You are using an unsupported version of the Java runtime. Please use Oracle(R) Java(TM) Runtime Environment 8, OpenJDK(TM) 8 or IBM J9.
+2019-05-29 16:39:16.972+0000 WARN [o.n.i.p.PageCache] The dbms.memory.pagecache.size setting has not been configured. It is recommended that this setting is always explicitly configured, to ensure the system has a balanced configuration. Until then, a computed heuristic value of 3089786880 bytes will be used instead. Run `neo4j-admin memrec` for memory configuration suggestions.
+2019-05-29 16:39:17.387+0000 INFO [o.n.g.f.m.e.CommunityEditionModule] No locking implementation specified, defaulting to 'community'
+2019-05-29 16:39:17.599+0000 INFO [o.n.g.f.GraphDatabaseFacadeFactory] Creating 'DEG_analysis_results_on_Homo_sapiens.db' database.
+2019-05-29 16:39:17.633+0000 INFO [o.n.k.a.DatabaseAvailabilityGuard] Requirement `Database available` makes database DEG_analysis_results_on_Homo_sapiens.db unavailable.
+2019-05-29 16:39:17.633+0000 INFO [o.n.k.a.DatabaseAvailabilityGuard] Database DEG_analysis_results_on_Homo_sapiens.db is unavailable.
+2019-05-29 16:39:17.651+0000 INFO [o.n.i.d.DiagnosticsManager] --- INITIALIZED diagnostics START ---
+2019-05-29 16:39:17.652+0000 INFO [o.n.i.d.DiagnosticsManager] Neo4j Kernel properties:
+2019-05-29 16:39:17.652+0000 INFO [o.n.i.d.DiagnosticsManager] dbms.connector.http.enabled=true
+2019-05-29 16:39:17.652+0000 INFO [o.n.i.d.DiagnosticsManager] dbms.active_database=DEG_analysis_results_on_Homo_sapiens.db
+2019-05-29 16:39:17.652+0000 INFO [o.n.i.d.DiagnosticsManager] dbms.security.auth_enabled=true
+2019-05-29 16:39:17.652+0000 INFO [o.n.i.d.DiagnosticsManager] dbms.windows_service_name=neo4j
+2019-05-29 16:39:17.652+0000 INFO [o.n.i.d.DiagnosticsManager] dbms.connector.http.listen_address=:47081
+2019-05-29 16:39:17.652+0000 INFO [o.n.i.d.DiagnosticsManager] unsupported.dbms.directories.neo4j_home=/home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens
+2019-05-29 16:39:17.652+0000 INFO [o.n.i.d.DiagnosticsManager] dbms.connector.bolt.listen_address=:59337
+2019-05-29 16:39:17.653+0000 INFO [o.n.i.d.DiagnosticsManager] dbms.directories.import=import
+2019-05-29 16:39:17.653+0000 INFO [o.n.i.d.DiagnosticsManager] unsupported.dbms.edition=community
+2019-05-29 16:39:17.653+0000 INFO [o.n.i.d.DiagnosticsManager] dbms.connector.bolt.enabled=true
+2019-05-29 16:39:17.653+0000 INFO [o.n.i.d.DiagnosticsManager] dbms.connector.https.enabled=false
+2019-05-29 16:39:17.653+0000 INFO [o.n.i.d.DiagnosticsManager] dbms.jvm.additional=-XX:+UseG1GC
+2019-05-29 16:39:17.653+0000 INFO [o.n.i.d.DiagnosticsManager] dbms.connectors.default_listen_address=127.0.0.1
+2019-05-29 16:39:17.653+0000 INFO [o.n.i.d.DiagnosticsManager] dbms.tx_log.rotation.retention_policy=1 days
+2019-05-29 16:39:17.653+0000 INFO [o.n.i.d.DiagnosticsManager] Diagnostics providers:
+2019-05-29 16:39:17.653+0000 INFO [o.n.i.d.DiagnosticsManager] org.neo4j.kernel.configuration.Config
+2019-05-29 16:39:17.654+0000 INFO [o.n.i.d.DiagnosticsManager] org.neo4j.internal.diagnostics.DiagnosticsManager
+2019-05-29 16:39:17.654+0000 INFO [o.n.i.d.DiagnosticsManager] SYSTEM_MEMORY
+2019-05-29 16:39:17.654+0000 INFO [o.n.i.d.DiagnosticsManager] JAVA_MEMORY
+2019-05-29 16:39:17.654+0000 INFO [o.n.i.d.DiagnosticsManager] OPERATING_SYSTEM
+2019-05-29 16:39:17.654+0000 INFO [o.n.i.d.DiagnosticsManager] JAVA_VIRTUAL_MACHINE
+2019-05-29 16:39:17.654+0000 INFO [o.n.i.d.DiagnosticsManager] CLASSPATH
+2019-05-29 16:39:17.654+0000 INFO [o.n.i.d.DiagnosticsManager] LIBRARY_PATH
+2019-05-29 16:39:17.654+0000 INFO [o.n.i.d.DiagnosticsManager] SYSTEM_PROPERTIES
+2019-05-29 16:39:17.654+0000 INFO [o.n.i.d.DiagnosticsManager] TIMEZONE_DATABASE
+2019-05-29 16:39:17.654+0000 INFO [o.n.i.d.DiagnosticsManager] LINUX_SCHEDULERS
+2019-05-29 16:39:17.654+0000 INFO [o.n.i.d.DiagnosticsManager] NETWORK
+2019-05-29 16:39:17.654+0000 INFO [o.n.i.d.DiagnosticsManager] System memory information:
+2019-05-29 16:39:17.656+0000 INFO [o.n.i.d.DiagnosticsManager] Total Physical memory: 7.68 GB
+2019-05-29 16:39:17.657+0000 INFO [o.n.i.d.DiagnosticsManager] Free Physical memory: 129.40 MB
+2019-05-29 16:39:17.657+0000 INFO [o.n.i.d.DiagnosticsManager] Committed virtual memory: 4.99 GB
+2019-05-29 16:39:17.657+0000 INFO [o.n.i.d.DiagnosticsManager] Total swap space: 2.00 GB
+2019-05-29 16:39:17.657+0000 INFO [o.n.i.d.DiagnosticsManager] Free swap space: 1.98 GB
+2019-05-29 16:39:17.657+0000 INFO [o.n.i.d.DiagnosticsManager] JVM memory information:
+2019-05-29 16:39:17.657+0000 INFO [o.n.i.d.DiagnosticsManager] Free  memory: 73.96 MB
+2019-05-29 16:39:17.658+0000 INFO [o.n.i.d.DiagnosticsManager] Total memory: 126.00 MB
+2019-05-29 16:39:17.658+0000 INFO [o.n.i.d.DiagnosticsManager] Max   memory: 1.92 GB
+2019-05-29 16:39:17.674+0000 INFO [o.n.i.d.DiagnosticsManager] Garbage Collector: G1 Young Generation: [G1 Eden Space, G1 Survivor Space, G1 Old Gen]
+2019-05-29 16:39:17.674+0000 INFO [o.n.i.d.DiagnosticsManager] Garbage Collector: G1 Old Generation: [G1 Eden Space, G1 Survivor Space, G1 Old Gen]
+2019-05-29 16:39:17.676+0000 INFO [o.n.i.d.DiagnosticsManager] Memory Pool: CodeHeap 'non-nmethods' (Non-heap memory): committed=2.44 MB, used=1.11 MB, max=5.57 MB, threshold=0.00 B
+2019-05-29 16:39:17.678+0000 INFO [o.n.i.d.DiagnosticsManager] Memory Pool: Metaspace (Non-heap memory): committed=17.75 MB, used=16.94 MB, max=-1.00 B, threshold=0.00 B
+2019-05-29 16:39:17.678+0000 INFO [o.n.i.d.DiagnosticsManager] Memory Pool: CodeHeap 'profiled nmethods' (Non-heap memory): committed=4.06 MB, used=4.05 MB, max=117.21 MB, threshold=0.00 B
+2019-05-29 16:39:17.679+0000 INFO [o.n.i.d.DiagnosticsManager] Memory Pool: Compressed Class Space (Non-heap memory): committed=2.25 MB, used=1.95 MB, max=1.00 GB, threshold=0.00 B
+2019-05-29 16:39:17.679+0000 INFO [o.n.i.d.DiagnosticsManager] Memory Pool: G1 Eden Space (Heap memory): committed=46.00 MB, used=32.00 MB, max=-1.00 B, threshold=?
+2019-05-29 16:39:17.679+0000 INFO [o.n.i.d.DiagnosticsManager] Memory Pool: G1 Old Gen (Heap memory): committed=75.00 MB, used=14.54 MB, max=1.92 GB, threshold=0.00 B
+2019-05-29 16:39:17.680+0000 INFO [o.n.i.d.DiagnosticsManager] Memory Pool: G1 Survivor Space (Heap memory): committed=5.00 MB, used=5.00 MB, max=-1.00 B, threshold=?
+2019-05-29 16:39:17.680+0000 INFO [o.n.i.d.DiagnosticsManager] Memory Pool: CodeHeap 'non-profiled nmethods' (Non-heap memory): committed=2.44 MB, used=769.63 kB, max=117.22 MB, threshold=0.00 B
+2019-05-29 16:39:17.680+0000 INFO [o.n.i.d.DiagnosticsManager] Operating system information:
+2019-05-29 16:39:17.681+0000 INFO [o.n.i.d.DiagnosticsManager] Operating System: Linux; version: 4.18.0-20-generic; arch: amd64; cpus: 8
+2019-05-29 16:39:17.682+0000 INFO [o.n.i.d.DiagnosticsManager] Max number of file descriptors: 1048576
+2019-05-29 16:39:17.683+0000 INFO [o.n.i.d.DiagnosticsManager] Number of open file descriptors: 125
+2019-05-29 16:39:17.707+0000 INFO [o.n.i.d.DiagnosticsManager] Process id: 6709@PC
+2019-05-29 16:39:17.707+0000 INFO [o.n.i.d.DiagnosticsManager] Byte order: LITTLE_ENDIAN
+2019-05-29 16:39:17.730+0000 INFO [o.n.i.d.DiagnosticsManager] Local timezone: UTC
+2019-05-29 16:39:17.730+0000 INFO [o.n.i.d.DiagnosticsManager] JVM information:
+2019-05-29 16:39:17.730+0000 INFO [o.n.i.d.DiagnosticsManager] VM Name: OpenJDK 64-Bit Server VM
+2019-05-29 16:39:17.730+0000 INFO [o.n.i.d.DiagnosticsManager] VM Vendor: Oracle Corporation
+2019-05-29 16:39:17.730+0000 INFO [o.n.i.d.DiagnosticsManager] VM Version: 11.0.3+7-Ubuntu-1ubuntu218.04.1
+2019-05-29 16:39:17.731+0000 INFO [o.n.i.d.DiagnosticsManager] JIT compiler: HotSpot 64-Bit Tiered Compilers
+2019-05-29 16:39:17.731+0000 INFO [o.n.i.d.DiagnosticsManager] VM Arguments: [-XX:+UseG1GC, -XX:-OmitStackTraceInFastThrow, -XX:+AlwaysPreTouch, -XX:+UnlockExperimentalVMOptions, -XX:+TrustFinalNonStaticFields, -XX:+DisableExplicitGC, -Djdk.tls.ephemeralDHKeySize=2048, -Djdk.tls.rejectClientInitiatedRenegotiation=true, -Dunsupported.dbms.udc.source=tarball, -Dfile.encoding=UTF-8]
+2019-05-29 16:39:17.731+0000 INFO [o.n.i.d.DiagnosticsManager] Java classpath:
+2019-05-29 16:39:17.732+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-lucene-upgrade-3.5.6.jar
+2019-05-29 16:39:17.732+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/WMI4Java-1.6.1.jar
+2019-05-29 16:39:17.732+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/jackson-mapper-asl-1.9.13.jar
+2019-05-29 16:39:17.732+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-cypher-ir-3.5-3.5.6.jar
+2019-05-29 16:39:17.732+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-cypher-compiler-2.3-2.3.12.jar
+2019-05-29 16:39:17.732+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/plugins/*
+2019-05-29 16:39:17.732+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/scala-library-2.11.12.jar
+2019-05-29 16:39:17.733+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/jackson-core-asl-1.9.13.jar
+2019-05-29 16:39:17.733+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-cypher-planner-spi-3.4-3.4.13.jar
+2019-05-29 16:39:17.733+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-cypher-expression-evaluator-3.5.6.jar
+2019-05-29 16:39:17.733+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/jsr311-api-1.1.2.r612.jar
+2019-05-29 16:39:17.733+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-consistency-check-3.5.6.jar
+2019-05-29 16:39:17.733+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-cypher-runtime-util-3.5.6.jar
+2019-05-29 16:39:17.733+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/jackson-jaxrs-1.9.13.jar
+2019-05-29 16:39:17.733+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-index-3.5.6.jar
+2019-05-29 16:39:17.733+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/server-api-3.5.6.jar
+2019-05-29 16:39:17.733+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-server-3.5.6.jar
+2019-05-29 16:39:17.733+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/commons-configuration-1.10.jar
+2019-05-29 16:39:17.733+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-fulltext-index-3.5.6.jar
+2019-05-29 16:39:17.733+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-bolt-3.5.6.jar
+2019-05-29 16:39:17.733+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-udc-3.5.6.jar
+2019-05-29 16:39:17.734+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/netty-all-4.1.32.Final.jar
+2019-05-29 16:39:17.734+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/commons-lang3-3.8.jar
+2019-05-29 16:39:17.734+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-jmx-3.5.6.jar
+2019-05-29 16:39:17.734+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/plugins
+2019-05-29 16:39:17.734+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/concurrentlinkedhashmap-lru-1.4.2.jar
+2019-05-29 16:39:17.734+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-kernel-api-3.5.6.jar
+2019-05-29 16:39:17.734+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-cypher-ir-3.4-3.4.13.jar
+2019-05-29 16:39:17.734+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/txw2-2.3.0.1.jar
+2019-05-29 16:39:17.734+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-diagnostics-3.5.6.jar
+2019-05-29 16:39:17.734+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-codegen-3.5.6.jar
+2019-05-29 16:39:17.734+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-graphdb-api-3.5.6.jar
+2019-05-29 16:39:17.734+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/jProcesses-1.6.4.jar
+2019-05-29 16:39:17.734+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/scala-reflect-2.11.12.jar
+2019-05-29 16:39:17.734+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/jersey-server-1.19.3.jar
+2019-05-29 16:39:17.734+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/commons-io-2.6.jar
+2019-05-29 16:39:17.734+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-cypher-interpreted-runtime-3.5.6.jar
+2019-05-29 16:39:17.735+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/commons-text-1.4.jar
+2019-05-29 16:39:17.735+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/commons-logging-1.1.1.jar
+2019-05-29 16:39:17.735+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/jetty-security-9.4.17.v20190418.jar
+2019-05-29 16:39:17.735+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/jersey-core-1.19.3.jar
+2019-05-29 16:39:17.735+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/openCypher-frontend-1-3.4.13.jar
+2019-05-29 16:39:17.735+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-cypher-frontend-2.3-2.3.12.jar
+2019-05-29 16:39:17.735+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/eclipse-collections-9.2.0.jar
+2019-05-29 16:39:17.735+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-data-collector-3.5.6.jar
+2019-05-29 16:39:17.735+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-front-end-3.5-3.5.6.jar
+2019-05-29 16:39:17.735+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-cypher-3.5.6.jar
+2019-05-29 16:39:17.735+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-dbms-3.5.6.jar
+2019-05-29 16:39:17.735+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/jetty-servlet-9.4.17.v20190418.jar
+2019-05-29 16:39:17.735+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-rewriting-3.5-3.5.6.jar
+2019-05-29 16:39:17.735+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/zstd-jni-1.3.8-6.jar
+2019-05-29 16:39:17.735+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-parser-3.5-3.5.6.jar
+2019-05-29 16:39:17.735+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/jetty-xml-9.4.17.v20190418.jar
+2019-05-29 16:39:17.735+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/jaxb-api-2.3.0.jar
+2019-05-29 16:39:17.736+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-command-line-3.5.6.jar
+2019-05-29 16:39:17.736+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-cypher-util-3.4-3.4.13.jar
+2019-05-29 16:39:17.736+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/jetty-webapp-9.4.17.v20190418.jar
+2019-05-29 16:39:17.736+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/opencsv-2.3.jar
+2019-05-29 16:39:17.736+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/bcpkix-jdk15on-1.60.jar
+2019-05-29 16:39:17.736+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-security-3.5.6.jar
+2019-05-29 16:39:17.736+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-util-3.5-3.5.6.jar
+2019-05-29 16:39:17.736+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/parboiled-core-1.1.7.jar
+2019-05-29 16:39:17.736+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/activation-1.1.1.jar
+2019-05-29 16:39:17.736+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/caffeine-2.6.2.jar
+2019-05-29 16:39:17.736+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/jersey-servlet-1.19.3.jar
+2019-05-29 16:39:17.736+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-cypher-planner-spi-3.5-3.5.6.jar
+2019-05-29 16:39:17.736+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-import-tool-3.5.6.jar
+2019-05-29 16:39:17.736+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-3.5.6.jar
+2019-05-29 16:39:17.736+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-graph-algo-3.5.6.jar
+2019-05-29 16:39:17.736+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-ast-3.5-3.5.6.jar
+2019-05-29 16:39:17.736+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/conf
+2019-05-29 16:39:17.737+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-cypher-frontend-3.1-3.1.9.jar
+2019-05-29 16:39:17.737+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/lucene-core-5.5.5.jar
+2019-05-29 16:39:17.737+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/javax.servlet-api-3.1.0.jar
+2019-05-29 16:39:17.737+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-csv-3.5.6.jar
+2019-05-29 16:39:17.737+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-lucene-index-3.5.6.jar
+2019-05-29 16:39:17.737+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-annotation-processors-3.5.6.jar
+2019-05-29 16:39:17.737+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-cypher-compiler-3.1-3.1.9.jar
+2019-05-29 16:39:17.737+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/jetty-io-9.4.17.v20190418.jar
+2019-05-29 16:39:17.737+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/bcprov-jdk15on-1.60.jar
+2019-05-29 16:39:17.737+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-kernel-3.5.6.jar
+2019-05-29 16:39:17.737+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/parboiled-scala_2.11-1.1.7.jar
+2019-05-29 16:39:17.737+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-logging-3.5.6.jar
+2019-05-29 16:39:17.737+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/commons-compress-1.18.jar
+2019-05-29 16:39:17.737+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-cypher-logical-plans-3.4-3.4.13.jar
+2019-05-29 16:39:17.737+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-cypher-logical-plans-3.5-3.5.6.jar
+2019-05-29 16:39:17.737+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-io-3.5.6.jar
+2019-05-29 16:39:17.737+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/jaxb-runtime-2.3.0.1.jar
+2019-05-29 16:39:17.737+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-collections-3.5.6.jar
+2019-05-29 16:39:17.738+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-values-3.5.6.jar
+2019-05-29 16:39:17.738+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-cypher-planner-3.4-3.4.13.jar
+2019-05-29 16:39:17.738+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/lucene-queryparser-5.5.5.jar
+2019-05-29 16:39:17.738+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/stax-ex-1.7.8.jar
+2019-05-29 16:39:17.738+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-resource-3.5.6.jar
+2019-05-29 16:39:17.738+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-ssl-3.5.6.jar
+2019-05-29 16:39:17.738+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/lucene-analyzers-common-5.5.5.jar
+2019-05-29 16:39:17.738+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/istack-commons-runtime-3.0.5.jar
+2019-05-29 16:39:17.738+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-cypher-planner-3.5-3.5.6.jar
+2019-05-29 16:39:17.738+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/jaxb-core-2.3.0.1.jar
+2019-05-29 16:39:17.738+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-cypher-expression-3.4-3.4.13.jar
+2019-05-29 16:39:17.738+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-configuration-3.5.6.jar
+2019-05-29 16:39:17.738+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-concurrent-3.5.6.jar
+2019-05-29 16:39:17.738+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/commons-lang-2.6.jar
+2019-05-29 16:39:17.738+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/FastInfoset-1.2.13.jar
+2019-05-29 16:39:17.738+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/jetty-server-9.4.17.v20190418.jar
+2019-05-29 16:39:17.738+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-graph-matching-3.1.9.jar
+2019-05-29 16:39:17.738+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-common-3.5.6.jar
+2019-05-29 16:39:17.739+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-expressions-3.5-3.5.6.jar
+2019-05-29 16:39:17.739+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-procedure-api-3.5.6.jar
+2019-05-29 16:39:17.739+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/eclipse-collections-api-9.2.0.jar
+2019-05-29 16:39:17.739+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-browser-3.2.20.jar
+2019-05-29 16:39:17.739+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/jPowerShell-1.9.jar
+2019-05-29 16:39:17.739+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-spatial-index-3.5.6.jar
+2019-05-29 16:39:17.739+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-unsafe-3.5.6.jar
+2019-05-29 16:39:17.739+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/lucene-codecs-5.5.5.jar
+2019-05-29 16:39:17.739+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/zstd-proxy-3.5.6.jar
+2019-05-29 16:39:17.739+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/neo4j-legacy-3.5.6.jar
+2019-05-29 16:39:17.739+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/jetty-http-9.4.17.v20190418.jar
+2019-05-29 16:39:17.739+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/jetty-util-9.4.17.v20190418.jar
+2019-05-29 16:39:17.739+0000 INFO [o.n.i.d.DiagnosticsManager] Library path:
+2019-05-29 16:39:17.739+0000 INFO [o.n.i.d.DiagnosticsManager] /usr/java/packages/lib
+2019-05-29 16:39:17.740+0000 INFO [o.n.i.d.DiagnosticsManager] /usr/lib/x86_64-linux-gnu/jni
+2019-05-29 16:39:17.740+0000 INFO [o.n.i.d.DiagnosticsManager] /lib/x86_64-linux-gnu
+2019-05-29 16:39:17.740+0000 INFO [o.n.i.d.DiagnosticsManager] /usr/lib/x86_64-linux-gnu
+2019-05-29 16:39:17.740+0000 INFO [o.n.i.d.DiagnosticsManager] /usr/lib/jni
+2019-05-29 16:39:17.740+0000 INFO [o.n.i.d.DiagnosticsManager] /lib
+2019-05-29 16:39:17.740+0000 INFO [o.n.i.d.DiagnosticsManager] /usr/lib
+2019-05-29 16:39:17.740+0000 INFO [o.n.i.d.DiagnosticsManager] System.properties:
+2019-05-29 16:39:17.741+0000 INFO [o.n.i.d.DiagnosticsManager] awt.toolkit = sun.awt.X11.XToolkit
+2019-05-29 16:39:17.741+0000 INFO [o.n.i.d.DiagnosticsManager] jdk.tls.rejectClientInitiatedRenegotiation = true
+2019-05-29 16:39:17.741+0000 INFO [o.n.i.d.DiagnosticsManager] sun.cpu.isalist = 
+2019-05-29 16:39:17.741+0000 INFO [o.n.i.d.DiagnosticsManager] sun.jnu.encoding = UTF-8
+2019-05-29 16:39:17.741+0000 INFO [o.n.i.d.DiagnosticsManager] sun.arch.data.model = 64
+2019-05-29 16:39:17.741+0000 INFO [o.n.i.d.DiagnosticsManager] user.timezone = UTC
+2019-05-29 16:39:17.741+0000 INFO [o.n.i.d.DiagnosticsManager] sun.java.launcher = SUN_STANDARD
+2019-05-29 16:39:17.741+0000 INFO [o.n.i.d.DiagnosticsManager] user.country = FR
+2019-05-29 16:39:17.741+0000 INFO [o.n.i.d.DiagnosticsManager] sun.boot.library.path = /usr/lib/jvm/java-11-openjdk-amd64/lib
+2019-05-29 16:39:17.741+0000 INFO [o.n.i.d.DiagnosticsManager] sun.java.command = org.neo4j.server.CommunityEntryPoint --home-dir=/home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens --config-dir=/home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/conf
+2019-05-29 16:39:17.741+0000 INFO [o.n.i.d.DiagnosticsManager] jdk.debug = release
+2019-05-29 16:39:17.741+0000 INFO [o.n.i.d.DiagnosticsManager] sun.cpu.endian = little
+2019-05-29 16:39:17.741+0000 INFO [o.n.i.d.DiagnosticsManager] user.home = /home/eliot
+2019-05-29 16:39:17.741+0000 INFO [o.n.i.d.DiagnosticsManager] user.language = fr
+2019-05-29 16:39:17.741+0000 INFO [o.n.i.d.DiagnosticsManager] file.separator = /
+2019-05-29 16:39:17.741+0000 INFO [o.n.i.d.DiagnosticsManager] unsupported.dbms.udc.source = tarball
+2019-05-29 16:39:17.741+0000 INFO [o.n.i.d.DiagnosticsManager] jdk.tls.ephemeralDHKeySize = 2048
+2019-05-29 16:39:17.741+0000 INFO [o.n.i.d.DiagnosticsManager] sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+2019-05-29 16:39:17.741+0000 INFO [o.n.i.d.DiagnosticsManager] user.name = eliot
+2019-05-29 16:39:17.742+0000 INFO [o.n.i.d.DiagnosticsManager] path.separator = :
+2019-05-29 16:39:17.742+0000 INFO [o.n.i.d.DiagnosticsManager] file.encoding = UTF-8
+2019-05-29 16:39:17.742+0000 INFO [o.n.i.d.DiagnosticsManager] user.dir = /home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics
+2019-05-29 16:39:17.742+0000 INFO [o.n.i.d.DiagnosticsManager] sun.os.patch.level = unknown
+2019-05-29 16:39:17.742+0000 INFO [o.n.i.d.DiagnosticsManager] sun.io.unicode.encoding = UnicodeLittle
+2019-05-29 16:39:17.742+0000 INFO [o.n.i.d.DiagnosticsManager] (IANA) TimeZone Database Version:
+2019-05-29 16:39:17.792+0000 INFO [o.n.i.d.DiagnosticsManager]   TimeZone version: 2018g (available for 599 zone identifiers)
+2019-05-29 16:39:17.792+0000 INFO [o.n.i.d.DiagnosticsManager] Linux scheduler information:
+2019-05-29 16:39:17.797+0000 INFO [o.n.i.d.DiagnosticsManager] [none] 
+2019-05-29 16:39:17.798+0000 INFO [o.n.i.d.DiagnosticsManager] [none] 
+2019-05-29 16:39:17.798+0000 INFO [o.n.i.d.DiagnosticsManager] [none] 
+2019-05-29 16:39:17.798+0000 INFO [o.n.i.d.DiagnosticsManager] [none] 
+2019-05-29 16:39:17.799+0000 INFO [o.n.i.d.DiagnosticsManager] noop deadline [cfq] 
+2019-05-29 16:39:17.799+0000 INFO [o.n.i.d.DiagnosticsManager] [none] 
+2019-05-29 16:39:17.799+0000 INFO [o.n.i.d.DiagnosticsManager] [none] 
+2019-05-29 16:39:17.799+0000 INFO [o.n.i.d.DiagnosticsManager] [none] 
+2019-05-29 16:39:17.800+0000 INFO [o.n.i.d.DiagnosticsManager] [none] 
+2019-05-29 16:39:17.800+0000 INFO [o.n.i.d.DiagnosticsManager] [none] 
+2019-05-29 16:39:17.800+0000 INFO [o.n.i.d.DiagnosticsManager] [none] 
+2019-05-29 16:39:17.800+0000 INFO [o.n.i.d.DiagnosticsManager] [none] 
+2019-05-29 16:39:17.801+0000 INFO [o.n.i.d.DiagnosticsManager] [none] 
+2019-05-29 16:39:17.801+0000 INFO [o.n.i.d.DiagnosticsManager] [none] 
+2019-05-29 16:39:17.801+0000 INFO [o.n.i.d.DiagnosticsManager] [none] 
+2019-05-29 16:39:17.801+0000 INFO [o.n.i.d.DiagnosticsManager] [none] 
+2019-05-29 16:39:17.802+0000 INFO [o.n.i.d.DiagnosticsManager] noop deadline [cfq] 
+2019-05-29 16:39:17.802+0000 INFO [o.n.i.d.DiagnosticsManager] [none] 
+2019-05-29 16:39:17.802+0000 INFO [o.n.i.d.DiagnosticsManager] [none] 
+2019-05-29 16:39:17.803+0000 INFO [o.n.i.d.DiagnosticsManager] [none] 
+2019-05-29 16:39:17.803+0000 INFO [o.n.i.d.DiagnosticsManager] [none] 
+2019-05-29 16:39:17.803+0000 INFO [o.n.i.d.DiagnosticsManager] [none] 
+2019-05-29 16:39:17.803+0000 INFO [o.n.i.d.DiagnosticsManager] [none] 
+2019-05-29 16:39:17.803+0000 INFO [o.n.i.d.DiagnosticsManager] Network information:
+2019-05-29 16:39:17.805+0000 INFO [o.n.i.d.DiagnosticsManager] Interface wlp2s0:
+2019-05-29 16:39:17.805+0000 INFO [o.n.i.d.DiagnosticsManager]     address: 2a01:cb19:6b9:a000:5b7b:96b9:9866:77ed%wlp2s0
+2019-05-29 16:39:17.805+0000 INFO [o.n.i.d.DiagnosticsManager]     address: 2a01:cb19:6b9:a000:4173:156b:9fc4:3716%wlp2s0
+2019-05-29 16:39:17.805+0000 INFO [o.n.i.d.DiagnosticsManager]     address: fe80:0:0:0:6ff4:6e54:cfe2:c51b%wlp2s0
+2019-05-29 16:39:17.805+0000 INFO [o.n.i.d.DiagnosticsManager]     address: 192.168.1.13
+2019-05-29 16:39:17.805+0000 INFO [o.n.i.d.DiagnosticsManager] Interface lo:
+2019-05-29 16:39:17.805+0000 INFO [o.n.i.d.DiagnosticsManager]     address: 0:0:0:0:0:0:0:1%lo
+2019-05-29 16:39:17.805+0000 INFO [o.n.i.d.DiagnosticsManager]     address: 127.0.0.1
+2019-05-29 16:39:17.805+0000 INFO [o.n.i.d.DiagnosticsManager] --- INITIALIZED diagnostics END ---
+2019-05-29 16:39:18.007+0000 INFO [o.n.k.i.s.f.RecordFormatSelector] Selected format 'RecordFormat:StandardV3_4[v0.A.9]' for the new store
+2019-05-29 16:39:18.960+0000 INFO [o.n.k.i.i.l.NativeLabelScanStore] No label index found, this might just be first use. Preparing to rebuild.
+2019-05-29 16:39:19.025+0000 INFO [o.n.k.NeoStoreDataSource] Rotated to transaction log [/home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/data/databases/DEG_analysis_results_on_Homo_sapiens.db/neostore.transaction.db.0] version=0, last transaction in previous log=1
+2019-05-29 16:39:19.028+0000 INFO [o.n.k.NeoStoreDataSource] No commits found after last check point (which is at <no log position given>)
+2019-05-29 16:39:19.045+0000 WARN [o.n.k.i.s.MetaDataStore] Missing counts store, rebuilding it.
+2019-05-29 16:39:19.052+0000 WARN [o.n.k.i.s.MetaDataStore] Counts store rebuild completed.
+2019-05-29 16:39:19.072+0000 INFO [o.n.k.i.i.l.NativeLabelScanStore] Rebuilding label index, this may take a while
+2019-05-29 16:39:19.098+0000 INFO [o.n.k.i.i.l.NativeLabelScanStore] Label index rebuilt (roughly 0 nodes)
+2019-05-29 16:39:19.105+0000 INFO [o.n.i.d.DiagnosticsManager] --- STARTED diagnostics for KernelDiagnostics:Versions START ---
+2019-05-29 16:39:19.106+0000 INFO [o.n.i.d.DiagnosticsManager] Graph Database: community single StoreId{creationTime=1559147958498, randomId=6411573875495290955, storeVersion=16094931155187206, upgradeTime=1559147958498, upgradeId=1}
+2019-05-29 16:39:19.106+0000 INFO [o.n.i.d.DiagnosticsManager] Kernel version: 3.5.6,73866e84158298d5f4a7325b6466c0189ad21d11
+2019-05-29 16:39:19.106+0000 INFO [o.n.i.d.DiagnosticsManager] --- STARTED diagnostics for KernelDiagnostics:Versions END ---
+2019-05-29 16:39:19.111+0000 INFO [o.n.i.d.DiagnosticsManager] --- STARTED diagnostics for NEO_STORE_VERSIONS START ---
+2019-05-29 16:39:19.111+0000 INFO [o.n.i.d.DiagnosticsManager] Store versions:
+2019-05-29 16:39:19.112+0000 INFO [o.n.i.d.DiagnosticsManager]   ArrayPropertyStore v0.A.9
+2019-05-29 16:39:19.112+0000 INFO [o.n.i.d.DiagnosticsManager]   NodeStore v0.A.9
+2019-05-29 16:39:19.113+0000 INFO [o.n.i.d.DiagnosticsManager]   StringPropertyStore v0.A.9
+2019-05-29 16:39:19.113+0000 INFO [o.n.i.d.DiagnosticsManager]   PropertyIndexStore v0.A.9
+2019-05-29 16:39:19.113+0000 INFO [o.n.i.d.DiagnosticsManager]   StringPropertyStore v0.A.9
+2019-05-29 16:39:19.113+0000 INFO [o.n.i.d.DiagnosticsManager]   ArrayPropertyStore v0.A.9
+2019-05-29 16:39:19.113+0000 INFO [o.n.i.d.DiagnosticsManager]   PropertyStore v0.A.9
+2019-05-29 16:39:19.113+0000 INFO [o.n.i.d.DiagnosticsManager]   RelationshipStore v0.A.9
+2019-05-29 16:39:19.113+0000 INFO [o.n.i.d.DiagnosticsManager]   StringPropertyStore v0.A.9
+2019-05-29 16:39:19.113+0000 INFO [o.n.i.d.DiagnosticsManager]   RelationshipTypeStore v0.A.9
+2019-05-29 16:39:19.114+0000 INFO [o.n.i.d.DiagnosticsManager]   StringPropertyStore v0.A.9
+2019-05-29 16:39:19.114+0000 INFO [o.n.i.d.DiagnosticsManager]   LabelTokenStore v0.A.9
+2019-05-29 16:39:19.114+0000 INFO [o.n.i.d.DiagnosticsManager]   SchemaStore v0.A.9
+2019-05-29 16:39:19.114+0000 INFO [o.n.i.d.DiagnosticsManager]   RelationshipGroupStore v0.A.9
+2019-05-29 16:39:19.114+0000 INFO [o.n.i.d.DiagnosticsManager]   NeoStore v0.A.9
+2019-05-29 16:39:19.114+0000 INFO [o.n.i.d.DiagnosticsManager] --- STARTED diagnostics for NEO_STORE_VERSIONS END ---
+2019-05-29 16:39:19.115+0000 INFO [o.n.i.d.DiagnosticsManager] --- STARTED diagnostics for NEO_STORE_ID_USAGE START ---
+2019-05-29 16:39:19.115+0000 INFO [o.n.i.d.DiagnosticsManager] Id usage:
+2019-05-29 16:39:19.117+0000 INFO [o.n.i.d.DiagnosticsManager]   ArrayPropertyStore: used=1 high=0
+2019-05-29 16:39:19.117+0000 INFO [o.n.i.d.DiagnosticsManager]   NodeStore: used=0 high=-1
+2019-05-29 16:39:19.117+0000 INFO [o.n.i.d.DiagnosticsManager]   StringPropertyStore: used=1 high=0
+2019-05-29 16:39:19.117+0000 INFO [o.n.i.d.DiagnosticsManager]   PropertyIndexStore: used=0 high=-1
+2019-05-29 16:39:19.117+0000 INFO [o.n.i.d.DiagnosticsManager]   StringPropertyStore: used=1 high=0
+2019-05-29 16:39:19.117+0000 INFO [o.n.i.d.DiagnosticsManager]   ArrayPropertyStore: used=1 high=0
+2019-05-29 16:39:19.117+0000 INFO [o.n.i.d.DiagnosticsManager]   PropertyStore: used=0 high=-1
+2019-05-29 16:39:19.117+0000 INFO [o.n.i.d.DiagnosticsManager]   RelationshipStore: used=0 high=-1
+2019-05-29 16:39:19.117+0000 INFO [o.n.i.d.DiagnosticsManager]   StringPropertyStore: used=1 high=0
+2019-05-29 16:39:19.117+0000 INFO [o.n.i.d.DiagnosticsManager]   RelationshipTypeStore: used=0 high=-1
+2019-05-29 16:39:19.118+0000 INFO [o.n.i.d.DiagnosticsManager]   StringPropertyStore: used=1 high=0
+2019-05-29 16:39:19.118+0000 INFO [o.n.i.d.DiagnosticsManager]   LabelTokenStore: used=0 high=-1
+2019-05-29 16:39:19.118+0000 INFO [o.n.i.d.DiagnosticsManager]   SchemaStore: used=1 high=0
+2019-05-29 16:39:19.118+0000 INFO [o.n.i.d.DiagnosticsManager]   RelationshipGroupStore: used=1 high=0
+2019-05-29 16:39:19.118+0000 INFO [o.n.i.d.DiagnosticsManager]   NeoStore: used=15 high=14
+2019-05-29 16:39:19.118+0000 INFO [o.n.i.d.DiagnosticsManager] --- STARTED diagnostics for NEO_STORE_ID_USAGE END ---
+2019-05-29 16:39:19.118+0000 INFO [o.n.i.d.DiagnosticsManager] --- STARTED diagnostics for NEO_STORE_RECORDS START ---
+2019-05-29 16:39:19.118+0000 INFO [o.n.i.d.DiagnosticsManager] Neostore records:
+2019-05-29 16:39:19.119+0000 INFO [o.n.i.d.DiagnosticsManager] TIME (Creation time): 1559147958498
+2019-05-29 16:39:19.119+0000 INFO [o.n.i.d.DiagnosticsManager] RANDOM_NUMBER (Random number for store id): 6411573875495290955
+2019-05-29 16:39:19.119+0000 INFO [o.n.i.d.DiagnosticsManager] LOG_VERSION (Current log version): 0
+2019-05-29 16:39:19.119+0000 INFO [o.n.i.d.DiagnosticsManager] LAST_TRANSACTION_ID (Last committed transaction): 1
+2019-05-29 16:39:19.119+0000 INFO [o.n.i.d.DiagnosticsManager] STORE_VERSION (Store format version): 16094931155187206
+2019-05-29 16:39:19.119+0000 INFO [o.n.i.d.DiagnosticsManager] FIRST_GRAPH_PROPERTY (First property record containing graph properties): -1
+2019-05-29 16:39:19.120+0000 INFO [o.n.i.d.DiagnosticsManager] LAST_CONSTRAINT_TRANSACTION (Last committed transaction containing constraint changes): 0
+2019-05-29 16:39:19.120+0000 INFO [o.n.i.d.DiagnosticsManager] UPGRADE_TRANSACTION_ID (Transaction id most recent upgrade was performed at): 1
+2019-05-29 16:39:19.120+0000 INFO [o.n.i.d.DiagnosticsManager] UPGRADE_TIME (Time of last upgrade): 1559147958498
+2019-05-29 16:39:19.120+0000 INFO [o.n.i.d.DiagnosticsManager] LAST_TRANSACTION_CHECKSUM (Checksum of last committed transaction): 0
+2019-05-29 16:39:19.121+0000 INFO [o.n.i.d.DiagnosticsManager] UPGRADE_TRANSACTION_CHECKSUM (Checksum of transaction id the most recent upgrade was performed at): 0
+2019-05-29 16:39:19.121+0000 INFO [o.n.i.d.DiagnosticsManager] LAST_CLOSED_TRANSACTION_LOG_VERSION (Log version where the last transaction commit entry has been written into): 0
+2019-05-29 16:39:19.122+0000 INFO [o.n.i.d.DiagnosticsManager] LAST_CLOSED_TRANSACTION_LOG_BYTE_OFFSET (Byte offset in the log file where the last transaction commit entry has been written into): 16
+2019-05-29 16:39:19.122+0000 INFO [o.n.i.d.DiagnosticsManager] LAST_TRANSACTION_COMMIT_TIMESTAMP (Commit time timestamp for last committed transaction): 0
+2019-05-29 16:39:19.122+0000 INFO [o.n.i.d.DiagnosticsManager] UPGRADE_TRANSACTION_COMMIT_TIMESTAMP (Commit timestamp of transaction the most recent upgrade was performed at): 0
+2019-05-29 16:39:19.123+0000 INFO [o.n.i.d.DiagnosticsManager] --- STARTED diagnostics for NEO_STORE_RECORDS END ---
+2019-05-29 16:39:19.125+0000 INFO [o.n.i.d.DiagnosticsManager] --- STARTED diagnostics for TRANSACTION_RANGE START ---
+2019-05-29 16:39:19.125+0000 INFO [o.n.i.d.DiagnosticsManager] Transaction log:
+2019-05-29 16:39:19.127+0000 INFO [o.n.i.d.DiagnosticsManager] No transactions found in any log
+2019-05-29 16:39:19.128+0000 INFO [o.n.i.d.DiagnosticsManager] --- STARTED diagnostics for TRANSACTION_RANGE END ---
+2019-05-29 16:39:19.131+0000 INFO [o.n.i.d.DiagnosticsManager] --- STARTED diagnostics for KernelDiagnostics:StoreFiles START ---
+2019-05-29 16:39:19.131+0000 INFO [o.n.i.d.DiagnosticsManager] Disk space on partition (Total / Free / Free %): 125363150848 / 83661762560 / 66
+2019-05-29 16:39:19.131+0000 INFO [o.n.i.d.DiagnosticsManager] Storage files: (filename : modification date - size)
+2019-05-29 16:39:19.135+0000 INFO [o.n.i.d.DiagnosticsManager]   index:
+2019-05-29 16:39:19.136+0000 INFO [o.n.i.d.DiagnosticsManager]   - Total: 2019-05-29T16:39:18+0000 - 0.00 B
+2019-05-29 16:39:19.136+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore: 2019-05-29T16:39:18+0000 - 8.00 kB
+2019-05-29 16:39:19.136+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.counts.db.a: 2019-05-29T16:39:19+0000 - 96.00 B
+2019-05-29 16:39:19.136+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.id: 2019-05-29T16:39:18+0000 - 9.00 B
+2019-05-29 16:39:19.137+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.labelscanstore.db: 2019-05-29T16:39:19+0000 - 40.00 kB
+2019-05-29 16:39:19.137+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.labeltokenstore.db: 2019-05-29T16:39:18+0000 - 0.00 B
+2019-05-29 16:39:19.137+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.labeltokenstore.db.id: 2019-05-29T16:39:18+0000 - 9.00 B
+2019-05-29 16:39:19.137+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.labeltokenstore.db.names: 2019-05-29T16:39:18+0000 - 8.00 kB
+2019-05-29 16:39:19.137+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.labeltokenstore.db.names.id: 2019-05-29T16:39:18+0000 - 9.00 B
+2019-05-29 16:39:19.138+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.nodestore.db: 2019-05-29T16:39:18+0000 - 0.00 B
+2019-05-29 16:39:19.138+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.nodestore.db.id: 2019-05-29T16:39:18+0000 - 9.00 B
+2019-05-29 16:39:19.138+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.nodestore.db.labels: 2019-05-29T16:39:18+0000 - 8.00 kB
+2019-05-29 16:39:19.138+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.nodestore.db.labels.id: 2019-05-29T16:39:18+0000 - 9.00 B
+2019-05-29 16:39:19.139+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.propertystore.db: 2019-05-29T16:39:18+0000 - 0.00 B
+2019-05-29 16:39:19.139+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.propertystore.db.arrays: 2019-05-29T16:39:18+0000 - 8.00 kB
+2019-05-29 16:39:19.139+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.propertystore.db.arrays.id: 2019-05-29T16:39:18+0000 - 9.00 B
+2019-05-29 16:39:19.139+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.propertystore.db.id: 2019-05-29T16:39:18+0000 - 9.00 B
+2019-05-29 16:39:19.140+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.propertystore.db.index: 2019-05-29T16:39:18+0000 - 0.00 B
+2019-05-29 16:39:19.140+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.propertystore.db.index.id: 2019-05-29T16:39:18+0000 - 9.00 B
+2019-05-29 16:39:19.140+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.propertystore.db.index.keys: 2019-05-29T16:39:18+0000 - 8.00 kB
+2019-05-29 16:39:19.141+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.propertystore.db.index.keys.id: 2019-05-29T16:39:18+0000 - 9.00 B
+2019-05-29 16:39:19.141+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.propertystore.db.strings: 2019-05-29T16:39:18+0000 - 8.00 kB
+2019-05-29 16:39:19.141+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.propertystore.db.strings.id: 2019-05-29T16:39:18+0000 - 9.00 B
+2019-05-29 16:39:19.142+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.relationshipgroupstore.db: 2019-05-29T16:39:18+0000 - 8.00 kB
+2019-05-29 16:39:19.142+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.relationshipgroupstore.db.id: 2019-05-29T16:39:18+0000 - 9.00 B
+2019-05-29 16:39:19.142+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.relationshipstore.db: 2019-05-29T16:39:18+0000 - 0.00 B
+2019-05-29 16:39:19.143+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.relationshipstore.db.id: 2019-05-29T16:39:18+0000 - 9.00 B
+2019-05-29 16:39:19.143+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.relationshiptypestore.db: 2019-05-29T16:39:18+0000 - 0.00 B
+2019-05-29 16:39:19.143+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.relationshiptypestore.db.id: 2019-05-29T16:39:18+0000 - 9.00 B
+2019-05-29 16:39:19.143+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.relationshiptypestore.db.names: 2019-05-29T16:39:18+0000 - 8.00 kB
+2019-05-29 16:39:19.143+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.relationshiptypestore.db.names.id: 2019-05-29T16:39:18+0000 - 9.00 B
+2019-05-29 16:39:19.144+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.schemastore.db: 2019-05-29T16:39:18+0000 - 8.00 kB
+2019-05-29 16:39:19.144+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.schemastore.db.id: 2019-05-29T16:39:18+0000 - 9.00 B
+2019-05-29 16:39:19.145+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.transaction.db.0: 2019-05-29T16:39:19+0000 - 16.00 B
+2019-05-29 16:39:19.145+0000 INFO [o.n.i.d.DiagnosticsManager] Storage summary: 
+2019-05-29 16:39:19.146+0000 INFO [o.n.i.d.DiagnosticsManager]   Total size of store: 112.24 kB
+2019-05-29 16:39:19.146+0000 INFO [o.n.i.d.DiagnosticsManager]   Total size of mapped files: 112.00 kB
+2019-05-29 16:39:19.146+0000 INFO [o.n.i.d.DiagnosticsManager] --- STARTED diagnostics for KernelDiagnostics:StoreFiles END ---
+2019-05-29 16:39:19.146+0000 INFO [o.n.k.a.DatabaseAvailabilityGuard] Fulfilling of requirement 'Database available' makes database DEG_analysis_results_on_Homo_sapiens.db available.
+2019-05-29 16:39:19.147+0000 INFO [o.n.k.a.DatabaseAvailabilityGuard] Database DEG_analysis_results_on_Homo_sapiens.db is ready.
+2019-05-29 16:39:19.147+0000 INFO [o.n.k.i.DatabaseHealth] Database health set to OK
+2019-05-29 16:39:20.379+0000 INFO [o.n.b.BoltServer] Bolt server loaded
+2019-05-29 16:39:20.509+0000 INFO [o.n.b.BoltServer] Bolt enabled on 127.0.0.1:59337.
+2019-05-29 16:39:22.203+0000 INFO [o.n.i.d.DiagnosticsManager] --- SERVER STARTED START ---
+2019-05-29 16:39:23.181+0000 INFO [o.n.i.d.DiagnosticsManager] --- SERVER STARTED END ---
+2019-05-29 16:40:40.057+0000 INFO [o.n.k.a.DatabaseAvailabilityGuard] Database DEG_analysis_results_on_Homo_sapiens.db is unavailable.
+2019-05-29 16:40:40.066+0000 INFO [o.n.g.f.GraphDatabaseFacadeFactory] Shutdown started
+2019-05-29 16:40:40.074+0000 INFO [o.n.g.f.GraphDatabaseFacadeFactory] Shutting down 'DEG_analysis_results_on_Homo_sapiens.db' database.
+2019-05-29 16:40:40.074+0000 INFO [o.n.g.f.GraphDatabaseFacadeFactory] Shutdown started
+2019-05-29 16:40:40.076+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Checkpoint triggered by "Database shutdown" @ txId: 1 checkpoint started...
+2019-05-29 16:40:40.098+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] Checkpoint triggered by "Database shutdown" @ txId: 1 checkpoint completed in 21ms
+2019-05-29 16:40:40.098+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] No log version pruned, last checkpoint was made in version 0
+2019-05-29 16:40:40.161+0000 INFO [o.n.i.d.DiagnosticsManager] --- STOPPING diagnostics START ---
+2019-05-29 16:40:40.161+0000 INFO [o.n.i.d.DiagnosticsManager] --- STOPPING diagnostics END ---

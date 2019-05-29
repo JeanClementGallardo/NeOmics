@@ -1,6 +1,19 @@
-from django.db import models
-from ImportRaw.models import RawData
+import os
+import re
+import subprocess
 import socket
+import uuid
+
+from django.db import models
+
+from ImportRaw.models import RawData
+from NeOmics import settings
+
+
+def simplify(string):
+    string = string.replace(' ', '_')
+    pattern = re.compile(r'\W')
+    return re.sub(pattern, '', string)
 
 
 # Create your models here.
@@ -24,36 +37,64 @@ class Analysis(models.Model):
 class Graph(models.Model):
     organism = models.ForeignKey(RawData, on_delete=models.CASCADE)
     analysis_family = models.ForeignKey(AnalysisFamily, on_delete=models.CASCADE)
-    neo4j_uri = models.CharField(default="bolt://localhost:7687", max_length=200)
-    neo4j_user = models.CharField(default="neo4j", max_length=200)
-    neo4j_password = models.CharField(default="admin", max_length=200)
+    http_port = models.IntegerField(default=7474)
+    bolt_port = models.IntegerField(default=7687)
+    name = models.CharField(default="graph", max_length=500)
+    uri = models.CharField(default="bolt://localhost:7687", max_length=200)
+    user = models.CharField(default="neo4j", max_length=200)
+    password = models.CharField(default="neo4j", max_length=200)
+    launcher = models.CharField(default="/usr/bin/neo4j", max_length=500)
 
-    def __str__(self):
-        return "{} analysis results on {}".format(self.analysis_family.name, self.organism.organism)
+    @classmethod
+    def create(cls, current_host: str, organism, analysis_family):
+        current_host = current_host
+        address = ':'.join(current_host.split(':')[:-1])
 
-
-class GraphManager(models.Manager):
-    def __init__(self, host: str):
-        self.host = host
-        self.address = ':'.join(host.split(':')[:-1])
-        super().__init__()
-
-    def create_graph(self, organism, analysis_family) -> Graph:
-        """Generate new graph if it doesn't already exist, and gives it otherwise"""
         try:
             graph = Graph.objects.get(organism=organism, analysis_family=analysis_family)
         except Graph.DoesNotExist:
+
             # Get new free port
-            sock = socket.socket()
-            sock.bind(('', 0))
-            new_port = sock.getsockname()[1]
-            sock.close()
+            s1 = socket.socket()
+            s2 = socket.socket()
+            s1.bind((address, 0))
+            s2.bind((address, 0))
+            http_port = s1.getsockname()[1]
+            bolt_port = s2.getsockname()[1]
+            s1.close()
+            s2.close()
 
-            new_uri = self.address + new_port
+            db_name = "{}_analysis_results_on_{}".format(simplify(analysis_family.name), simplify(organism.organism))
 
-            # TODO Generate new instance of neo4j
-            # See http://fooo.fr/~vjeux/github/github-recommandation/db/doc/manual/html/server-installation.html
+            uri = "bolt://{}:{}".format(address, bolt_port)
+            user = uuid.uuid4().hex
+            password = uuid.uuid4().hex
 
-            return self.create(organism=organism, analysis_family=analysis_family, neo4j_uri=new_uri)
+            root_path = settings.BASE_DIR + '/NeOmics'
+
+            subprocess.call([root_path + '/neo4j-installer.sh',
+                             root_path,
+                             db_name,
+                             address,
+                             str(bolt_port),
+                             str(http_port),
+                             user,
+                             password])
+
+            launcher = '{}/neo4j_instances/{}/bin/neo4j'.format(root_path, db_name)
+
+            graph = cls(organism=organism, analysis_family=analysis_family, name=db_name, uri=uri, user=user,
+                        password=password, http_port=http_port, bolt_port=bolt_port, launcher=launcher)
+            graph.save()
+            return graph
         else:
             return graph
+
+    def start(self):
+        subprocess.call([self.launcher, "start"])
+
+    def stop(self):
+        subprocess.call([self.launcher, "stop"])
+
+    def __str__(self):
+        return "{}_analysis_results_on_{}".format(simplify(self.analysis_family.name), simplify(self.organism.organism))
