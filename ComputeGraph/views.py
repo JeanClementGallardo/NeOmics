@@ -4,7 +4,7 @@ from .static.ComputeGraph.loadcsv import LoadCSV
 
 from ImportRaw.models import RawData
 from ComputeGraph.models import AnalysisFamily, Analysis, GraphManager, Graph
-import json
+import json, os
 
 
 # Create your views here.
@@ -37,7 +37,16 @@ def stat_params(request, organism, name):
                 return render(request, "ComputeGraph/stat_params.html", locals())
 
     if request.POST:
-        return render(request, "ComputeGraph/stat_load.html", locals())
+        # Script execution
+        working_file_path = "./home/jean_clement/PycharmProjects/NeOmics/media/Scripts/" + name + ".R"
+        os.system(working_file_path)
+
+        # Results loading on neo4j
+        # gm = GraphManager(request.get_host())
+        # graph = gm.create_graph(raw_data, AnalysisFamily)
+        LoadCSV("bolt://localhost:7687", "neo4j", "admin",
+                "/home/jean_clement/PycharmProjects/NeOmics/media/Scripts/sous_graph.csv")
+        return render(request, "ComputeGraph/stat_load.html")
 
     return render(request, "ComputeGraph/stat_params.html", locals())
 
@@ -47,13 +56,4 @@ def stat_load(request, organism, name):
     raw_data = get_object_or_404(RawData, organism=organism)
     analysis = get_object_or_404(Analysis, name=name)
 
-    # Script execution
-    working_file_path = "./"
-    with open(working_file_path, 'w') as working_file:
-        pass  # Execute R script with working file as output
-
-    # Results loading on neo4j
-    gm = GraphManager(request.get_host())
-    graph = gm.create_graph(raw_data, analysis)
-    LoadCSV(graph.neo4j_uri, graph.neo4j_user, graph.neo4j_password, working_file_path)
     return render(request, "ComputeGraph/stat_load.html")

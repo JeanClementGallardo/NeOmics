@@ -1,5 +1,5 @@
 # Import librairies
-import csv, sys, os
+import csv
 from py2neo import *
 
 

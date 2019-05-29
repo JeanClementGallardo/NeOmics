@@ -26,7 +26,7 @@ class Graph(models.Model):
     analysis_family = models.ForeignKey(AnalysisFamily, on_delete=models.CASCADE)
     neo4j_uri = models.CharField(default="bolt://localhost:7687", max_length=200)
     neo4j_user = models.CharField(default="neo4j", max_length=200)
-    neo4j_password = models.CharField(default="neo4j", max_length=200)
+    neo4j_password = models.CharField(default="admin", max_length=200)
 
     def __str__(self):
         return "{} analysis results on {}".format(self.analysis_family.name, self.organism.organism)

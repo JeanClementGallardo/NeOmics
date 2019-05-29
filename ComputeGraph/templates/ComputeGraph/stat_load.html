@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>NeOmics</title>
+    {% load static %}
 </head>
 <body>
 <h2>Vos données sont en cours d'import, cette opération peut prendre quelques minutes</h2>
 <a href="/">home</a>
+<a href="{% url 'ComputeGraph:index' %}">Nouvelle analyse</a>
 </body>
 </html>
