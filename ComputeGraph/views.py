@@ -1,6 +1,5 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic
-from .static.ComputeGraph.loadcsv import LoadCSV
 
 from ImportRaw.models import RawData
 from ComputeGraph.models import AnalysisFamily, Analysis, Graph
@@ -37,13 +36,6 @@ def stat_params(request, organism, name):
                 return render(request, "ComputeGraph/stat_params.html", locals())
 
     if request.POST:
-        # Script execution
-        working_file_path = "./home/jean_clement/PycharmProjects/NeOmics/media/Scripts/" + name + ".R"
-        # os.system(working_file_path)
-        # Results loading on neo4j
-        graph = Graph.create(request.get_host(), raw_data, analysis.family)
-        # LoadCSV(graph.uri, graph.user, graph.password,
-        #         "/home/jean_clement/PycharmProjects/NeOmics/media/Scripts/sous_graph.csv")
         return render(request, "ComputeGraph/stat_load.html")
 
     return render(request, "ComputeGraph/stat_params.html", locals())
