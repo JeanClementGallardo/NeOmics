@@ -43,7 +43,6 @@ class Graph(models.Model):
     uri = models.CharField(default="bolt://localhost:7687", max_length=200)
     user = models.CharField(default="neo4j", max_length=200)
     password = models.CharField(default="neo4j", max_length=200)
-    launcher = models.CharField(default="/usr/bin/neo4j", max_length=500)
 
     @classmethod
     def create(cls, current_host: str, organism, analysis_family):
@@ -90,6 +89,10 @@ class Graph(models.Model):
         else:
             return graph
 
+    @property
+    def launcher(self):
+        return '{}/NeOmics/neo4j_instances/{}/bin/neo4j'.format(settings.BASE_DIR, self.name)
+
     def start(self):
         subprocess.call([self.launcher, "start"])
 
@@ -98,3 +101,7 @@ class Graph(models.Model):
 
     def __str__(self):
         return "{}_analysis_results_on_{}".format(simplify(self.analysis_family.name), simplify(self.organism.organism))
+
+    def delete(self, using=None, keep_parents=False):
+        super(Graph, self).delete()
+        subprocess.call(["rm", '-rf', '/'.join(self.launcher.split('/')[:-2])])

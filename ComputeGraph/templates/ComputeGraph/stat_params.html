@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <title>Neomics</title>
     {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'ComputeGraph/../../static/Common/bootstrap.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'Common/bootstrap.css' %}">
 </head>
 <body>
 <a href="/">Home</a>
 <h1>{{ analysis.name }} on {{ raw_data.organism }}</h1>
+
 {% if error_message %}
     <em>{{ error_message }}</em>
 {% endif %}
-<form action="{% url 'ComputeGraph:stat_params' raw_data.organism analysis.name %}" method="post">
+
+<form action="{% url 'ComputeGraph:stat_load' raw_data.organism analysis.name %}" method="post">
     {% csrf_token %}
     {% for param in params %}
         <p>
