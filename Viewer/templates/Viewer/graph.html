@@ -1,79 +1,33 @@
 <!doctype html>
 <html>
 <head>
-    <title>Neovis.js Simple Example</title>
-    <style type="text/css">
-        html, body {
-            font: 16pt arial;
-        }
-
-        #cypher {
-            width: 100%;
-            height: 15vh;
-        }
-
-        #viz {
-            background-color: white;
-            width: 49vw;
-            height: 100vh;
-            border: 1px solid lightgray;
-            font: 22pt arial;
-        }
-    </style>
-
+    <title>NeOmics</title>
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'Common/bootstrap.css' %}">
-
+    <link rel="stylesheet" type="text/css" href="{% static 'Viewer/template.css' %}">
     <script src="https://rawgit.com/neo4j-contrib/neovis.js/master/dist/neovis.js"></script>
-
-
+    <script src="https://unpkg.com/neo4j-driver"></script>
     <script
-            src="https://code.jquery.com/jquery-3.2.1.min.js"
-            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-            crossorigin="anonymous"></script>
-
-    <script type="text/javascript">
-        var viz;
-
-        function draw() {
-            var config = {
-                container_id: "viz",
-                server_url: "{{ graph.uri }}",
-                server_user: "{{ graph.user }}",
-                server_password: "{{ graph.password }}",
-                labels: {
-                    "Person": {
-                        "caption": "name",
-                        "community": "cluster"
-                    }
-                },
-                relationships: {
-                    "INTERACTS": {
-                        "thickness": "weight",
-                        "caption": false
-                    }
-                },
-                initial_cypher: "MATCH (n)-[r]->(m) RETURN n,r,m"
-            };
-            viz = new NeoVis.default(config);
-            viz.render();
-            console.log(viz);
-        }
+            src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+            crossorigin="anonymous">
     </script>
 </head>
 
-<body onload="draw()">
+<body>
 <div class="container-fluid">
     <div class="row sm-flex-center">
         <div class="col-sm-6">
             <div title="Cypher box" style="height: 20vh">
                 <label for="cypher" class="">Cypher query: </label>
-                <textarea rows="4" cols=50 id="cypher"></textarea><br>
-                <input type="submit" value="Submit" id="reload" class="float-left">
-                <input type="submit" value="Stabilize" id="stabilize" class="float-right">
+                <textarea rows="4" cols=50 id="cypher">MATCH</textarea><br>
+                <input type="submit" value="Submit" id="reload" class="float-left" onclick="reload()">
+                <input type="submit" value="Stabilize" id="stabilize" class="float-right" onclick="stabilize()">
             </div>
-            <div title="Cypher creator" style="height: 80vh">
-
+            <div title="Cypher creator" style="height: 80vh" id="QM">
+                <form id="first" onload="addNode()" onchange="selectNode()"></form>
+                <button onclick="addNode()" id="add">+</button>
+                <button onclick="removeNode()" id="remove">-</button>
             </div>
         </div>
         <div class="col-sm-6 pull-right">
@@ -83,21 +37,37 @@
         </div>
     </div>
 </div>
+
 </body>
 
-<script>
+<script type="text/javascript">
 
-    $("#reload").click(function () {
-        var cypher = $("#cypher").val();
-        if (cypher.length > 3) {
-            viz.renderWithCypher(cypher);
-        } else {
-            console.log("reload");
-            viz.reload();
-        }
-    });
-    $("#stabilize").click(function () {
-        viz.stabilize();
-    })
+    let config = {
+        container_id: "viz",
+        server_url: "{{ graph.uri }}",
+        server_user: "{{ graph.user }}",
+        server_password: "{{ graph.password }}",
+        labels: {
+            "Person": {
+                "caption": "name",
+                "community": "cluster"
+            }
+        },
+        relationships: {
+            "INTERACTS": {
+                "thickness": "weight",
+                "caption": false
+            }
+        },
+        initial_cypher: "MATCH (n)-[r]->(m) RETURN n,r,m"
+    };
+    const viz = new NeoVis.default(config);
+    viz.render();
+
+    const driver = neo4j.v1.driver('{{ graph.uri }}', neo4j.v1.auth.basic('{{ graph.user }}', '{{ graph.password }}'));
+    const session = driver.session();
+
 </script>
+<script type="text/javascript" src="{% static 'Viewer/neo4j.js' %}"></script>
+
 </html>
