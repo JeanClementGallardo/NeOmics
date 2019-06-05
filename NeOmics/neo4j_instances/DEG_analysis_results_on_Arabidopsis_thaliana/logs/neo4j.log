@@ -178,3 +178,32 @@ WARNING: All illegal access operations will be denied in a future release
 2019-06-03 19:13:25.581+0000 INFO  Started.
 2019-06-03 19:13:26.827+0000 INFO  Remote interface available at http://localhost:41551/
 2019-06-03 19:13:28.303+0000 WARN  The client is unauthorized due to authentication failure.
+2019-06-04 08:30:13.127+0000 WARN  dbms.active_database is deprecated.
+2019-06-04 08:30:13.136+0000 WARN  You are using an unsupported version of the Java runtime. Please use Oracle(R) Java(TM) Runtime Environment 8, OpenJDK(TM) 8 or IBM J9.
+2019-06-04 08:30:13.145+0000 INFO  ======== Neo4j 3.5.6 ========
+2019-06-04 08:30:13.154+0000 INFO  Starting...
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.eclipse.collections.impl.utility.ArrayListIterate (file:/home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Arabidopsis_thaliana/lib/eclipse-collections-9.2.0.jar) to field java.util.ArrayList.elementData
+WARNING: Please consider reporting this to the maintainers of org.eclipse.collections.impl.utility.ArrayListIterate
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+2019-06-04 08:30:16.642+0000 INFO  Bolt enabled on 127.0.0.1:39765.
+2019-06-04 08:30:18.572+0000 INFO  Started.
+2019-06-04 08:30:19.750+0000 INFO  Remote interface available at http://localhost:41551/
+2019-06-04 11:58:27.369+0000 WARN  The client is unauthorized due to authentication failure.
+2019-06-04 11:58:32.788+0000 WARN  The client is unauthorized due to authentication failure.
+2019-06-04 15:49:08.946+0000 INFO  Neo4j Server shutdown initiated by request
+2019-06-04 15:49:09.360+0000 INFO  Stopping...
+2019-06-04 15:49:10.020+0000 INFO  Stopped.
+2019-06-05 08:12:11.581+0000 WARN  dbms.active_database is deprecated.
+2019-06-05 08:12:11.603+0000 WARN  You are using an unsupported version of the Java runtime. Please use Oracle(R) Java(TM) Runtime Environment 8, OpenJDK(TM) 8 or IBM J9.
+2019-06-05 08:12:11.619+0000 INFO  ======== Neo4j 3.5.6 ========
+2019-06-05 08:12:11.640+0000 INFO  Starting...
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.eclipse.collections.impl.utility.ArrayListIterate (file:/home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Arabidopsis_thaliana/lib/eclipse-collections-9.2.0.jar) to field java.util.ArrayList.elementData
+WARNING: Please consider reporting this to the maintainers of org.eclipse.collections.impl.utility.ArrayListIterate
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+2019-06-05 08:12:28.147+0000 INFO  Bolt enabled on 127.0.0.1:39765.
+2019-06-05 08:12:32.746+0000 INFO  Started.
+2019-06-05 08:12:35.298+0000 INFO  Remote interface available at http://localhost:41551/

@@ -7,11 +7,11 @@
     <link rel="stylesheet" type="text/css" href="{% static 'Viewer/template.css' %}">
     <script src="https://rawgit.com/neo4j-contrib/neovis.js/master/dist/neovis.js"></script>
     <script src="https://unpkg.com/neo4j-driver"></script>
-    <script
-            src="https://code.jquery.com/jquery-3.4.1.js"
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
             integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
             crossorigin="anonymous">
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/js-itertools@0.3.1/lib/src/index.min.js"></script>
 </head>
 
 <body>
@@ -25,6 +25,15 @@
                 <input type="submit" value="Stabilize" id="stabilize" class="float-right" onclick="stabilize()">
             </div>
             <div title="Cypher creator" style="height: 80vh" id="QM">
+                <label>
+                    <select>
+                        {% for option in list_options %}
+                            <option value="{{ option }}">{{ option }}</option>
+                        {% endfor %}
+                    </select>
+                </label>
+
+
                 <form id="first" onload="addNode()" onchange="selectNode()"></form>
                 <button onclick="addNode()" id="add">+</button>
                 <button onclick="removeNode()" id="remove">-</button>

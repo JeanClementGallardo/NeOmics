@@ -1,5 +1,3 @@
-//Construction du QueryMaker
-
 const resultPromise = session.run(
     'MATCH (n) return n'
 );
