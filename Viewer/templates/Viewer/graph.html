@@ -25,13 +25,13 @@
                 <input type="submit" value="Stabilize" id="stabilize" class="float-right" onclick="stabilize()">
             </div>
             <div title="Cypher creator" style="height: 80vh" id="QM">
-                <div>
+                <div id="node">
                     <select>
                         {% for option in ImportGraph.nodes %}
                             <option value="{{ option }}">{{ option }}</option>
                         {% endfor %}
                     </select>
-                    <input type="checkbox" id="return">Return</input>
+                    <input type="checkbox" id="return" value="Return">
                     <input type="text" id="name">
                 </div>
                 <button id="add">+</button>
@@ -74,6 +74,20 @@
 
     const driver = neo4j.v1.driver('{{ graph.uri }}', neo4j.v1.auth.basic('{{ graph.user }}', '{{ graph.password }}'));
     const session = driver.session();
+
+    function reload() {
+        let cypher = document.getElementById("cypher").value;
+        if (cypher.length > 3) {
+            viz.renderWithCypher(cypher);
+        } else {
+            viz.reload();
+        }
+    }
+
+    function stabilize() {
+        viz.stabilize();
+    }
+
 
 </script>
 

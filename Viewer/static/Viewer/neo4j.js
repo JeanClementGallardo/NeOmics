@@ -6,7 +6,7 @@ resultPromise.then(result => {
     session.close();
     let i = 0;
     let list = "<SELECT id ='test'><OPTION>First node selection<br>";
-    for (let row in result) {
+    for (let row of result) {
         const singleRecord = result.records[i];
         const node = singleRecord.get(0);
         list = list + "<OPTION>" + node.labels;
