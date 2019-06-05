@@ -11,32 +11,31 @@
             integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
             crossorigin="anonymous">
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/js-itertools@0.3.1/lib/src/index.min.js"></script>
 </head>
 
 <body>
 <div class="container-fluid">
     <div class="row sm-flex-center">
         <div class="col-sm-6">
+            <h1 style="text-align: center">Visualization</h1>
             <div title="Cypher box" style="height: 20vh">
                 <label for="cypher" class="">Cypher query: </label>
-                <textarea rows="4" cols=50 id="cypher">MATCH</textarea><br>
+                <input type="text" id="cypher"><br>
                 <input type="submit" value="Submit" id="reload" class="float-left" onclick="reload()">
                 <input type="submit" value="Stabilize" id="stabilize" class="float-right" onclick="stabilize()">
             </div>
             <div title="Cypher creator" style="height: 80vh" id="QM">
-                <label>
+                <div>
                     <select>
-                        {% for option in list_options %}
+                        {% for option in ImportGraph.nodes %}
                             <option value="{{ option }}">{{ option }}</option>
                         {% endfor %}
                     </select>
-                </label>
-
-
-                <form id="first" onload="addNode()" onchange="selectNode()"></form>
-                <button onclick="addNode()" id="add">+</button>
-                <button onclick="removeNode()" id="remove">-</button>
+                    <input type="checkbox" id="return">Return</input>
+                    <input type="text" id="name">
+                </div>
+                <button id="add">+</button>
+                <button id="remove">-</button>
             </div>
         </div>
         <div class="col-sm-6 pull-right">
@@ -46,7 +45,7 @@
         </div>
     </div>
 </div>
-
+<a href="/"><img src="{% static 'Common/home-icon-silhouette.svg' %}" height='40px' class="button_home"></a>
 </body>
 
 <script type="text/javascript">
@@ -77,6 +76,5 @@
     const session = driver.session();
 
 </script>
-<script type="text/javascript" src="{% static 'Viewer/neo4j.js' %}"></script>
 
 </html>

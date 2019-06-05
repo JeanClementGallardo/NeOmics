@@ -10,3 +10,10 @@
     border: 1px solid lightgray;
     font: 22pt arial;
 }
+
+.button_home {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}

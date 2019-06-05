@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.views import generic
 from django.shortcuts import get_object_or_404
 from ComputeGraph.models import Graph
-import py2neo as neo
+
 
 from string import ascii_lowercase
 import itertools
@@ -19,14 +19,17 @@ class IndexView(generic.ListView):
         return Graph.objects.order_by("organism__graph__analysis_family")
 
 
-def graph(request, graph):
+def graph(request, graph, ImportGraph):
     graph = get_object_or_404(Graph, name=graph)
     return render(request, "Viewer/graph.html", locals())
 
 
 class ImportGraph:
+    from py2neo import Graph
     query = ""
     nodes = []
+    neo_graph = Graph("bolt://127.0.0.1:39765",
+                      auth=("a98b096ac9b3460fbcdf60a44cc34e10", "528f36e2fc494336a0d1652d9c0be121"))
 
     def add_node(self):
         pass
@@ -78,7 +81,7 @@ class ImportGraph:
         self.query = matches + returned
 
     class Node:
-        def __init__(self):
+        def __init__(self, ImportGraph):
             ImportGraph.nodes.append(self)
 
             self.node_type = ""
@@ -120,10 +123,8 @@ class ImportGraph:
 
         def display_types(self):
             """Display a node selection panel and set buttons to choose the type of node"""
-            # TODO Fix the gap between MORCEAU and inner_frame
-            # TODO Fix the gap between link and next line
             types_query = self.query + "(a) RETURN DISTINCT labels(a) as type"
-            types = [result['type'][-1] for result in neo_graph.run(types_query)]
+            types = [result['type'][-1] for result in ImportGraph.neo_graph.run(types_query)]
             types.append("Unknown")
 
         def select_type(self, node_type):
@@ -142,23 +143,22 @@ class ImportGraph:
                 name_query += ":{}".format(self.node_type)
             name_query += ') RETURN a.name'
             # completion list is a set to avoid repetition
-            completion_set = {result['a.name'] for result in neo_graph.run(name_query) if
+            completion_set = {result['a.name'] for result in ImportGraph.neo_graph.run(name_query) if
                               result['a.name'] is not None}
-            self.name_box.set_completion_list(completion_set)
+            return completion_set
 
         def new_node(self):
             """Add a new node to the list"""
-            self.add_button.grid_forget()
-            self.link = Relation(self)
+            # self.link = Relation(self)
             self.link.next.update_name_list()
-            update_global_query()
+            ImportGraph.update_global_query(ImportGraph())
 
     class Relation:
-        """A relation is a link between two ndoes. It can be either simple or composed.
+        """A relation is a link between two nodes. It can be either simple or composed.
         A simple relation is a simple link between two adjacents nodes.
         A composed relation have a determined number of relations to travel through to reach the next node"""
 
-        def __init__(self, previous: Node):
+        def __init__(self, previous):
             self.simple = True
 
             self.returned = False
@@ -176,12 +176,11 @@ class ImportGraph:
         def update_type_list(self):
             """Updates type autocompletion list """
             type_query = self.previous.query + self.previous.descriptor + '-[r]-{} RETURN DISTINCT type(r) as types'.format(
-                self.next.descriptor)
-            completion_list = {result['types'] for result in neo_graph.run(type_query) if
+                self.next)
+            completion_list = {result['types'] for result in ImportGraph.neo_graph.run(type_query) if
                                result['types'] is not None}
             print(type_query)
             print(completion_list)
-            self.type_box.set_completion_list(completion_list)
 
         def switch(self):
             """Switch between simple and composed relation"""
@@ -201,7 +200,8 @@ class ImportGraph:
             if self.max < self.min:
                 self.min = self.max
 
-    init = Node()
-    init.update_name_list()
-    update_global_query()
-    root.mainloop()
+    def main(self, request):
+        init = ImportGraph.Node(self)
+        init.update_name_list()
+        ImportGraph.update_global_query(ImportGraph())
+        return render(request, "ComputeGraph/stat_load.html")
