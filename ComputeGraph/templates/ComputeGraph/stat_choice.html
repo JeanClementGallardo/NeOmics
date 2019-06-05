@@ -5,11 +5,12 @@
     <title>Neomics</title>
      {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'ComputeGraph/../../static/Common/bootstrap.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'ComputeGraph/template.css' %}">
 
 </head>
 <body>
-<a href="/"><img src="{% static 'Common/home-icon-silhouette.svg' %}" alt="Home" height="40px"></a>
 <h1>Compute graph</h1>
+<div class="text_list">
     {%  if families %}
         {% for family in families %}
             {% if family.analysis_set.all %}
@@ -23,6 +24,7 @@
             {% endif %}
         {% endfor %}
     {% endif %}
-<a href="/"><img src="{% static 'Common/home-icon-silhouette.svg' %}" height='40px'></a>
+</div>
+<a href="/"><img src="{% static 'Common/home-icon-silhouette.svg' %}" height='40px' class="button_home"></a>
 </body>
 </html>

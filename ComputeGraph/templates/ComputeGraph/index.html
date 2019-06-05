@@ -5,18 +5,20 @@
     <title>NeOmics</title>
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'Common/bootstrap.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'ComputeGraph/template.css' %}">
 
 </head>
 <body>
-<a href="/">Home</a>
 <h1>Compute graph</h1>
+<div>
 {% if organism_list %}
-    <ul>
+    <ul class="text_list">
         {% for organism in organism_list %}
             <li><a href="{% url 'ComputeGraph:stat_choice' organism.organism %}">{{ organism.organism }}</a></li>
         {% endfor %}
     </ul>
 {% endif %}
-
+</div>
+<a href="/"><img src="{% static 'Common/home-icon-silhouette.svg' %}" height='40px' class="button_home"></a>
 </body>
 </html>

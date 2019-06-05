@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <title>NeOmics</title>
     {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'Common/bootstrap.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'ComputeGraph/template.css' %}">
 </head>
 <body>
 <h2>Vos données sont en cours d'import, cette opération peut prendre quelques minutes</h2>
-<a href="/">home</a>
-<a href="{% url 'ComputeGraph:index' %}">Nouvelle analyse</a>
+<a href="{% url 'ComputeGraph:index' %}" class="button_home">Nouvelle analyse</a>
+<a href="/"><img src="{% static 'Common/home-icon-silhouette.svg' %}" height='40px' class="button_home"></a>
 </body>
 </html>

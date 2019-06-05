@@ -5,9 +5,9 @@
     <title>Neomics</title>
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'Common/bootstrap.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'ComputeGraph/template.css' %}">
 </head>
 <body>
-<a href="/">Home</a>
 <h1>{{ analysis.name }} on {{ raw_data.organism }}</h1>
 
 {% if error_message %}
@@ -29,5 +29,6 @@
     <button type="submit">Calculate and Import to neo4j</button>
 </form>
 
+<a href="/"><img src="{% static 'Common/home-icon-silhouette.svg' %}" height='40px' class="button_home"></a>
 </body>
 </html>
