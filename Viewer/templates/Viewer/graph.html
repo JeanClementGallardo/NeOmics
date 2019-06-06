@@ -11,6 +11,7 @@
             integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
             crossorigin="anonymous">
     </script>
+    <script src="{% static 'Viewer/js2neo.min.js' %}"></script>
 </head>
 
 <body>
@@ -25,16 +26,7 @@
                 <input type="submit" value="Stabilize" id="stabilize" class="float-right" onclick="stabilize()">
             </div>
             <div title="Cypher creator" style="height: 80vh" id="QM">
-                <div id="node">
-                    <select>
-                        {% for option in ImportGraph.nodes %}
-                            <option value="{{ option }}">{{ option }}</option>
-                        {% endfor %}
-                    </select>
-                    <input type="checkbox" id="return" value="Return">
-                    <input type="text" id="name">
-                </div>
-                <button id="add">+</button>
+                <button id="add" onclick="new Node()">+</button>
                 <button id="remove">-</button>
             </div>
         </div>
@@ -67,12 +59,18 @@
                 "caption": false
             }
         },
-        initial_cypher: "MATCH (n)-[r]->(m) RETURN n,r,m"
+        initial_cypher: ""
     };
     const viz = new NeoVis.default(config);
     viz.render();
 
     const driver = neo4j.v1.driver('{{ graph.uri }}', neo4j.v1.auth.basic('{{ graph.user }}', '{{ graph.password }}'));
+    var cx = js2neo.open({
+        host: '{{ graph.host }}',
+        port: '{{ graph.bolt_port }}',
+        user: '{{ graph.user }}',
+        password: '{{ graph.password }}'
+    });
     const session = driver.session();
 
     function reload() {
@@ -90,5 +88,5 @@
 
 
 </script>
-
+<script type="text/javascript" src="{% static 'Viewer/QueryMaker.js' %}"></script>
 </html>

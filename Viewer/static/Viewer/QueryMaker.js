@@ -47,10 +47,6 @@ function* id_generator() {
 let query = "";
 let nodes = [];
 
-function add_node() {
-    return true
-}
-
 function update_global_query() {
     let ids = id_generator();
     let matches = "MATCH ";
@@ -64,8 +60,8 @@ function update_global_query() {
             returned += `${node_id}, `;
             return_sth = true;
         }
-        if (node.node_type) {
-            matches += `:${node.node_type}`;
+        if (node.type) {
+            matches += `:${node.type}`;
         }
         if (node.name !== "") {
             matches += ` {name: "${node.name}" }`;
@@ -98,22 +94,32 @@ function update_global_query() {
     }
 }
 
+let node_id_generator = id_generator();
+let QMdiv = $("#QM");
+
+let add_btn = $("#add");
 
 class Node {
     constructor() {
         nodes.push(this);
-        this.node_type = "";
+        add_btn.onclick = this.new_node;
+        this.id = "Node" + node_id_generator.next().value;
+        this.type = "";
         this.returned = false;
-        this.name_options = [];
         this.name = "";
         this.link = null;
         this.next = null;
+        this.node_div = $(`<div id=${this.id}></div>`);
+        this.select_type = $(`<SELECT onchange='this.set_type()'></SELECT>`);
+        this.get_types();
+        this.node_div.append(this.select_type);
+        add_btn.before(this.node_div);
     }
 
     get descriptor() {
         let cypher = "(";
-        if (this.node_type) {
-            cypher += `:${this.node_type}`;
+        if (this.type) {
+            cypher += `:${this.type}`;
         }
         if (this.name !== "") {
             cypher += ` {name: "${this.name}" }`;
@@ -124,10 +130,10 @@ class Node {
     get query() {
         let cypher = "MATCH ";
         for (let node of nodes) {
-            if (node === this) {
+            if (node == this) {
                 break;
             }
-            cypher += node.descriptor();
+            cypher += node.descriptor;
 
             let link = node.link;
             if (link) {
@@ -147,25 +153,44 @@ class Node {
         return cypher;
     }
 
-    display_types() {
-        let types_query = this.query + "(a) RETURN DISTINCT labels(a) as type";
-        let results = session.run(types_query);
-        let types = [];
-        types.push("Unknown");
-        for (label of results) {
-            types.push(label);
-        }
+    set_type() {
+        this.type = this.select_type.find(":selected").text();
     }
 
-    /**
-     * Set the autocompletion list accordingly to current node information
-     *
-     */
+    get_types() {
+        let types_query = this.query + "(a) RETURN DISTINCT labels(a) as type";
+        session.run(types_query).then(result => {
+            this.select_type.append($("<OPTION value='Unknown'>Unknown</OPTION>"));
+            for (let record of result.records) {
+                console.log(record);
+                let label = record.get('type')[0];
+                console.log(label);
+                this.select_type.append($(`<OPTION value='${label}'>${label}</OPTION>`));
+            }
+        });
+    }
+
+    //
+    // get_types() {
+    //     let types_query = this.query + "(a) RETURN DISTINCT labels(a)";
+    //     // let resultPromise = session.run(types_query);
+    //     // resultPromise.then(this.set_type_list);
+    //     let list = "";
+    //     cx.run(types_query,{},{onRecord:this.set_type_list});
+    //     this.select_type.innerHTML = list;
+    // }
+
+    // set_type_list(record, list) {
+    //     const node = record[0][0];
+    //     console.log(node);
+    //     list += ($(`<OPTION value='${node}'>${node}</OPTION>`));
+    //     return list;
+    // }
 
     update_name_list() {
         let name_query = this.query + '(a';
-        if (this.node_type) {
-            name_query += `:${this.node_type}`;
+        if (this.type) {
+            name_query += `:${this.type}`;
         }
         name_query += ') RETURN a.name';
         // completion list is a set to avoid repetition
@@ -175,13 +200,20 @@ class Node {
         }
     }
 
-
-    new_node() {
-        this.link = Relation(this);
-        this.link.next.update_name_list();
-        ImportGraph.update_global_query(ImportGraph());
+    get html() {
+        let newDiv = document.createElement("div");
+        newDiv.setAttribute("id", this.id);
+        let list_types = this.get_types();
+        for (types of list_types) {
+            newDiv.innerHTML = "<OPTION "
+        }
     }
 
+    new_node() {
+        this.link = new Relation(this);
+        this.link.next.update_name_list();
+        update_global_query();
+    }
 }
 
 class Relation {
@@ -198,14 +230,14 @@ class Relation {
         this.max = 0;
 
         this.previous = previous;
-        this.next = ImportGraph.nodes;
+        this.next = new Node();
         this.update_type_list();
     }
 
     update_type_list() {
         let type_query = this.previous.query + this.previous.descriptor + `-[r]-${this.next} RETURN DISTINCT type(r) as types`;
 
-        let results = session.run(types_query);
+        let results = session.run(type_query);
         let types = [];
         types.push("Unknown");
         for (label of results) {
@@ -214,12 +246,8 @@ class Relation {
     }
 
     dist_switch() {
-        if (this.simple) {
-            this.simple = false;
-        } else {
-            this.simple = true;
-        }
-        ImportGraph.update_global_query();
+        this.simple = !this.simple;
+        update_global_query();
     }
 
     update_max() {
@@ -234,7 +262,7 @@ class Relation {
         }
     }
 
-    // main():
+    // main(){
     //    init = ImportGraph.Node(this)
     //    init.update_name_list()
     //    ImportGraph.update_global_query(ImportGraph())

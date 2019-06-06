@@ -20,7 +20,8 @@ class IndexView(generic.ListView):
 
 def graph(request, graph):
     graph = get_object_or_404(Graph, name=graph)
-    return render(request, "Viewer/graph.html", locals())
+    graph.host = ":".join(graph.uri.split(":")[:-2])
+    return render(request, "Viewer/graph.html", )
 
 
 class ImportGraph:
@@ -128,7 +129,7 @@ class ImportGraph:
 
         def select_type(self, node_type):
             """Select a type from the node selection panel previously built and destroy it"""
-            # Set node_type variable used after
+            # Set type variable used after
             self.node_type = node_type if node_type != "Unknown" else ""
 
             # Update autocompletion list since the type has been set
