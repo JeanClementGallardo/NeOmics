@@ -19,3 +19,12 @@ def main():
 
 if __name__ == '__main__':
     main()
+    if "runserver" in sys.argv:
+
+        from ComputeGraph.models import Graph
+
+        for graph in Graph.objects.all():
+            try:
+                graph.stop()
+            except:
+                pass

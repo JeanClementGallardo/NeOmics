@@ -1,0 +1,19 @@
+#cypher {
+    width: 100%;
+    height: 15vh;
+}
+
+#viz {
+    background-color: white;
+    width: 49vw;
+    height: 100vh;
+    border: 1px solid lightgray;
+    font: 22pt arial;
+}
+
+.button_home {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}

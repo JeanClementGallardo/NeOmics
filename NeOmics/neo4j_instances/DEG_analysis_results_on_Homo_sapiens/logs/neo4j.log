@@ -1,0 +1,114 @@
+2019-05-29 16:39:16.771+0000 WARN  dbms.active_database is deprecated.
+2019-05-29 16:39:16.778+0000 WARN  You are using an unsupported version of the Java runtime. Please use Oracle(R) Java(TM) Runtime Environment 8, OpenJDK(TM) 8 or IBM J9.
+2019-05-29 16:39:16.786+0000 INFO  ======== Neo4j 3.5.6 ========
+2019-05-29 16:39:16.797+0000 INFO  Starting...
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.eclipse.collections.impl.utility.ArrayListIterate (file:/home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/eclipse-collections-9.2.0.jar) to field java.util.ArrayList.elementData
+WARNING: Please consider reporting this to the maintainers of org.eclipse.collections.impl.utility.ArrayListIterate
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+2019-05-29 16:39:20.508+0000 INFO  Bolt enabled on 127.0.0.1:59337.
+2019-05-29 16:39:22.184+0000 INFO  Started.
+2019-05-29 16:39:23.181+0000 INFO  Remote interface available at http://localhost:47081/
+2019-05-29 16:40:40.056+0000 INFO  Neo4j Server shutdown initiated by request
+2019-05-29 16:40:40.065+0000 INFO  Stopping...
+2019-05-29 16:40:40.171+0000 INFO  Stopped.
+2019-05-31 14:00:12.645+0000 WARN  dbms.active_database is deprecated.
+2019-05-31 14:00:12.651+0000 WARN  You are using an unsupported version of the Java runtime. Please use Oracle(R) Java(TM) Runtime Environment 8, OpenJDK(TM) 8 or IBM J9.
+2019-05-31 14:00:12.658+0000 INFO  ======== Neo4j 3.5.6 ========
+2019-05-31 14:00:12.665+0000 INFO  Starting...
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.eclipse.collections.impl.utility.ArrayListIterate (file:/home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/eclipse-collections-9.2.0.jar) to field java.util.ArrayList.elementData
+WARNING: Please consider reporting this to the maintainers of org.eclipse.collections.impl.utility.ArrayListIterate
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+2019-05-31 14:00:16.355+0000 INFO  Bolt enabled on 127.0.0.1:59337.
+2019-05-31 14:00:18.201+0000 INFO  Started.
+2019-05-31 14:00:19.728+0000 INFO  Remote interface available at http://localhost:47081/
+2019-05-31 14:07:29.951+0000 INFO  Neo4j Server shutdown initiated by request
+2019-05-31 14:07:29.962+0000 INFO  Stopping...
+2019-05-31 14:07:30.060+0000 INFO  Stopped.
+2019-05-31 14:25:54.434+0000 WARN  dbms.active_database is deprecated.
+2019-05-31 14:25:54.438+0000 WARN  You are using an unsupported version of the Java runtime. Please use Oracle(R) Java(TM) Runtime Environment 8, OpenJDK(TM) 8 or IBM J9.
+2019-05-31 14:25:54.444+0000 INFO  ======== Neo4j 3.5.6 ========
+2019-05-31 14:25:54.450+0000 INFO  Starting...
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.eclipse.collections.impl.utility.ArrayListIterate (file:/home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/eclipse-collections-9.2.0.jar) to field java.util.ArrayList.elementData
+WARNING: Please consider reporting this to the maintainers of org.eclipse.collections.impl.utility.ArrayListIterate
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+2019-05-31 14:25:57.477+0000 INFO  Bolt enabled on 127.0.0.1:59337.
+2019-05-31 14:25:59.392+0000 INFO  Started.
+2019-05-31 14:26:00.661+0000 INFO  Remote interface available at http://localhost:47081/
+2019-05-31 15:10:08.962+0000 INFO  Neo4j Server shutdown initiated by request
+2019-05-31 15:10:09.211+0000 INFO  Stopping...
+2019-05-31 15:10:09.753+0000 INFO  Stopped.
+2019-06-03 07:37:50.833+0000 WARN  dbms.active_database is deprecated.
+2019-06-03 07:37:50.844+0000 WARN  You are using an unsupported version of the Java runtime. Please use Oracle(R) Java(TM) Runtime Environment 8, OpenJDK(TM) 8 or IBM J9.
+2019-06-03 07:37:50.860+0000 INFO  ======== Neo4j 3.5.6 ========
+2019-06-03 07:37:50.874+0000 INFO  Starting...
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.eclipse.collections.impl.utility.ArrayListIterate (file:/home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/eclipse-collections-9.2.0.jar) to field java.util.ArrayList.elementData
+WARNING: Please consider reporting this to the maintainers of org.eclipse.collections.impl.utility.ArrayListIterate
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+2019-06-03 07:37:56.949+0000 INFO  Bolt enabled on 127.0.0.1:59337.
+2019-06-03 07:38:00.085+0000 INFO  Started.
+2019-06-03 07:38:01.965+0000 INFO  Remote interface available at http://localhost:47081/
+2019-06-03 14:53:16.581+0000 INFO  Neo4j Server shutdown initiated by request
+2019-06-03 14:53:16.611+0000 INFO  Stopping...
+2019-06-03 14:53:16.770+0000 INFO  Stopped.
+2019-06-03 14:53:21.783+0000 WARN  dbms.active_database is deprecated.
+2019-06-03 14:53:21.789+0000 WARN  You are using an unsupported version of the Java runtime. Please use Oracle(R) Java(TM) Runtime Environment 8, OpenJDK(TM) 8 or IBM J9.
+2019-06-03 14:53:21.796+0000 INFO  ======== Neo4j 3.5.6 ========
+2019-06-03 14:53:21.803+0000 INFO  Starting...
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.eclipse.collections.impl.utility.ArrayListIterate (file:/home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/eclipse-collections-9.2.0.jar) to field java.util.ArrayList.elementData
+WARNING: Please consider reporting this to the maintainers of org.eclipse.collections.impl.utility.ArrayListIterate
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+2019-06-03 14:53:25.164+0000 INFO  Bolt enabled on 127.0.0.1:59337.
+2019-06-03 14:53:27.366+0000 INFO  Started.
+2019-06-03 14:53:28.744+0000 INFO  Remote interface available at http://localhost:47081/
+2019-06-03 16:29:30.543+0000 INFO  Neo4j Server shutdown initiated by request
+2019-06-03 16:29:30.558+0000 INFO  Stopping...
+2019-06-03 16:29:30.684+0000 INFO  Stopped.
+2019-06-03 19:13:20.280+0000 WARN  dbms.active_database is deprecated.
+2019-06-03 19:13:20.285+0000 WARN  You are using an unsupported version of the Java runtime. Please use Oracle(R) Java(TM) Runtime Environment 8, OpenJDK(TM) 8 or IBM J9.
+2019-06-03 19:13:20.293+0000 INFO  ======== Neo4j 3.5.6 ========
+2019-06-03 19:13:20.305+0000 INFO  Starting...
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.eclipse.collections.impl.utility.ArrayListIterate (file:/home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/eclipse-collections-9.2.0.jar) to field java.util.ArrayList.elementData
+WARNING: Please consider reporting this to the maintainers of org.eclipse.collections.impl.utility.ArrayListIterate
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+2019-06-03 19:13:23.564+0000 INFO  Bolt enabled on 127.0.0.1:59337.
+2019-06-03 19:13:25.452+0000 INFO  Started.
+2019-06-03 19:13:26.684+0000 INFO  Remote interface available at http://localhost:47081/
+2019-06-04 08:30:13.136+0000 WARN  dbms.active_database is deprecated.
+2019-06-04 08:30:13.142+0000 WARN  You are using an unsupported version of the Java runtime. Please use Oracle(R) Java(TM) Runtime Environment 8, OpenJDK(TM) 8 or IBM J9.
+2019-06-04 08:30:13.150+0000 INFO  ======== Neo4j 3.5.6 ========
+2019-06-04 08:30:13.161+0000 INFO  Starting...
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.eclipse.collections.impl.utility.ArrayListIterate (file:/home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/eclipse-collections-9.2.0.jar) to field java.util.ArrayList.elementData
+WARNING: Please consider reporting this to the maintainers of org.eclipse.collections.impl.utility.ArrayListIterate
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+2019-06-04 08:30:16.449+0000 INFO  Bolt enabled on 127.0.0.1:59337.
+2019-06-04 08:30:18.230+0000 INFO  Started.
+2019-06-04 08:30:19.463+0000 INFO  Remote interface available at http://localhost:47081/
+2019-06-04 15:49:08.950+0000 INFO  Neo4j Server shutdown initiated by request
+2019-06-04 15:49:09.359+0000 INFO  Stopping...
+2019-06-04 15:49:10.034+0000 INFO  Stopped.
+2019-06-05 08:12:12.021+0000 WARN  dbms.active_database is deprecated.
+2019-06-05 08:12:12.074+0000 WARN  You are using an unsupported version of the Java runtime. Please use Oracle(R) Java(TM) Runtime Environment 8, OpenJDK(TM) 8 or IBM J9.
+2019-06-05 08:12:12.162+0000 INFO  ======== Neo4j 3.5.6 ========
+2019-06-05 08:12:12.199+0000 INFO  Starting...
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.eclipse.collections.impl.utility.ArrayListIterate (file:/home/eliot/Documents/Travail/M1/Projets/DjangoNeOmics/NeOmics/neo4j_instances/DEG_analysis_results_on_Homo_sapiens/lib/eclipse-collections-9.2.0.jar) to field java.util.ArrayList.elementData
+WARNING: Please consider reporting this to the maintainers of org.eclipse.collections.impl.utility.ArrayListIterate
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+2019-06-05 08:12:28.405+0000 INFO  Bolt enabled on 127.0.0.1:59337.
+2019-06-05 08:12:32.870+0000 INFO  Started.
+2019-06-05 08:12:35.669+0000 INFO  Remote interface available at http://localhost:47081/
