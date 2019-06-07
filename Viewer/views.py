@@ -20,8 +20,7 @@ class IndexView(generic.ListView):
 
 def graph(request, graph):
     graph = get_object_or_404(Graph, name=graph)
-    graph.host = ":".join(graph.uri.split(":")[:-2])
-    return render(request, "Viewer/graph.html", )
+    return render(request, "Viewer/graph.html", locals())
 
 
 class ImportGraph:

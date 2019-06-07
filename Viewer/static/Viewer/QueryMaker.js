@@ -43,6 +43,7 @@ function* id_generator() {
     }
 }
 
+//////////// Query Maker \\\\\\\\\\\\\\
 
 let query = "";
 let nodes = [];
@@ -53,6 +54,7 @@ function update_global_query() {
     let returned = " RETURN ";
     let return_sth = false;
     for (let node of nodes) {
+
         matches += "(";
         if (node.returned === 1) {
             let node_id = ids.next().value;
@@ -60,7 +62,8 @@ function update_global_query() {
             returned += `${node_id}, `;
             return_sth = true;
         }
-        if (node.type) {
+        node.type = node.select_type.find(":selected").val();
+        if (node.type && node.type !== "Unknown") {
             matches += `:${node.type}`;
         }
         if (node.name !== "") {
@@ -72,6 +75,8 @@ function update_global_query() {
             link.update_type_list();
             matches += "-[";
             if (link.simple) {
+                // link.type = link.select_type.find(":selected").val();
+                // console.log(link.select_type.find(":selected").val());
                 let link_type = link.type;
                 if (link.returned) {
                     let link_id = next(ids);
@@ -88,37 +93,42 @@ function update_global_query() {
             matches += "]-";
         }
         if (return_sth) {
-            returned.substring(0, (returned.length - 2))
+            returned.substring(0, (returned.length - 2));
         }
         query = matches + returned;
+        $("#cypher").val(query);
     }
 }
 
 let node_id_generator = id_generator();
-let QMdiv = $("#QM");
-
+let rel_id_generator = id_generator();
 let add_btn = $("#add");
 
 class Node {
     constructor() {
         nodes.push(this);
-        add_btn.onclick = this.new_node;
         this.id = "Node" + node_id_generator.next().value;
         this.type = "";
         this.returned = false;
         this.name = "";
         this.link = null;
-        this.next = null;
+
         this.node_div = $(`<div id=${this.id}></div>`);
-        this.select_type = $(`<SELECT onchange='this.set_type()'></SELECT>`);
+        this.select_type = $(`<SELECT onchange="update_global_query()"></SELECT>`);
+        this.check_return = $(`<input type="checkbox" onchange="return_value()">Return</input>`);
         this.get_types();
         this.node_div.append(this.select_type);
+        this.node_div.append(this.check_return);
         add_btn.before(this.node_div);
+    }
+
+    return_value(){
+        this.returned = !this.returned;
     }
 
     get descriptor() {
         let cypher = "(";
-        if (this.type) {
+        if (this.type && this.type !== "Unknown") {
             cypher += `:${this.type}`;
         }
         if (this.name !== "") {
@@ -146,8 +156,8 @@ class Node {
                     }
                 } else {
                     cypher += `*${link.min}..${link.max}`;
-                    cypher += "]-"
                 }
+                cypher += "]-";
             }
         }
         return cypher;
@@ -160,89 +170,86 @@ class Node {
     get_types() {
         let types_query = this.query + "(a) RETURN DISTINCT labels(a) as type";
         session.run(types_query).then(result => {
+            this.select_type.empty();
             this.select_type.append($("<OPTION value='Unknown'>Unknown</OPTION>"));
             for (let record of result.records) {
-                console.log(record);
                 let label = record.get('type')[0];
-                console.log(label);
                 this.select_type.append($(`<OPTION value='${label}'>${label}</OPTION>`));
             }
         });
     }
 
-    //
-    // get_types() {
-    //     let types_query = this.query + "(a) RETURN DISTINCT labels(a)";
-    //     // let resultPromise = session.run(types_query);
-    //     // resultPromise.then(this.set_type_list);
-    //     let list = "";
-    //     cx.run(types_query,{},{onRecord:this.set_type_list});
-    //     this.select_type.innerHTML = list;
+
+    // update_name_list() {
+    //     let name_query = this.query + '(a';
+    //     if (this.type) {
+    //         name_query += `:${this.type}`;
+    //     }
+    //     name_query += ') RETURN a.name';
+    //     // completion list is a set to avoid repetition
+    //     let results = session.run(name_query);
+    //     for (name of results) {
+    //         //    update name selection
+    //     }
     // }
+}
 
-    // set_type_list(record, list) {
-    //     const node = record[0][0];
-    //     console.log(node);
-    //     list += ($(`<OPTION value='${node}'>${node}</OPTION>`));
-    //     return list;
-    // }
+function new_node() {
+    let last_node = nodes[nodes.length - 1];
+    last_node.link = new Relation(last_node);
+    last_node.link.set_next();
+    // last_node.link.next.update_name_list();
+    update_global_query();
+}
 
-    update_name_list() {
-        let name_query = this.query + '(a';
-        if (this.type) {
-            name_query += `:${this.type}`;
-        }
-        name_query += ') RETURN a.name';
-        // completion list is a set to avoid repetition
-        let results = session.run(name_query);
-        for (name of results) {
-            //    update name seelection
-        }
-    }
-
-    get html() {
-        let newDiv = document.createElement("div");
-        newDiv.setAttribute("id", this.id);
-        let list_types = this.get_types();
-        for (types of list_types) {
-            newDiv.innerHTML = "<OPTION "
-        }
-    }
-
-    new_node() {
-        this.link = new Relation(this);
-        this.link.next.update_name_list();
-        update_global_query();
-    }
+function remove_node() {
+    let node_id = nodes[nodes.length -1].id;
+    let rel_id = "Rel" + nodes[nodes.length -2].id.substr(node_id.length - 1);
+    document.getElementById(node_id).parentNode.removeChild(document.getElementById(node_id));
+    document.getElementById(rel_id).parentNode.removeChild(document.getElementById(rel_id));
+    update_global_query();
 }
 
 class Relation {
 
     constructor(previous) {
+        this.id = "Rel" + rel_id_generator.next().value;
         this.simple = true;
-
         this.returned = false;
-
         this.type = "";
-        this.type_options = [];
-
         this.min = 0;
         this.max = 0;
 
         this.previous = previous;
+        this.rel_div = $(`<div id=${this.id}></div>`);
+
+        this.select_type = $(`<SELECT onchange="update_global_query()"></SELECT>`);
+        this.rel_div.append(this.select_type);
+        add_btn.before(this.rel_div);
+
+    }
+
+    set_next() {
         this.next = new Node();
+        this.next.select_type.change(this.update_type_list);
         this.update_type_list();
     }
 
     update_type_list() {
-        let type_query = this.previous.query + this.previous.descriptor + `-[r]-${this.next} RETURN DISTINCT type(r) as types`;
-
-        let results = session.run(type_query);
-        let types = [];
-        types.push("Unknown");
-        for (label of results) {
-            types.push(label);
-        }
+        this.type = this.select_type.find(":selected").val();
+        let selected = this.select_type.find(":selected").val();
+        let type_query = this.previous.query + this.previous.descriptor + `-[r]-() RETURN DISTINCT type(r) as types`;
+        this.select_type.empty();
+        session.run(type_query).then(result => {
+            for (let record of result.records) {
+                let label = record.get('types');
+                if (label === selected) {
+                    this.select_type.append($(`<OPTION value='${label}' selected>${label}</OPTION>`));
+                } else {
+                    this.select_type.append($(`<OPTION value='${label}'>${label}</OPTION>`));
+                }
+            }
+        });
     }
 
     dist_switch() {
@@ -261,10 +268,7 @@ class Relation {
             this.min = this.max
         }
     }
-
-    // main(){
-    //    init = ImportGraph.Node(this)
-    //    init.update_name_list()
-    //    ImportGraph.update_global_query(ImportGraph())
-    //    return render(request, "ComputeGraph/stat_load.html")
 }
+
+new Node();
+update_global_query();
