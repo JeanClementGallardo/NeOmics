@@ -65,6 +65,7 @@ function update_global_query() {
         }
         node.type = node.select_type.find(":selected").val();
         if (node.type && node.type !== "Unknown") {
+            console.log(node.type);
             matches += `:${node.type}`;
         }
         if (node.name !== "") {
@@ -115,7 +116,7 @@ class Node {
 
         this.node_div = $(`<div id=${this.id} class="selectBox"></div>`);
         this.select_type = $(`<SELECT onchange="update_global_query()"></SELECT>`);
-        this.check_return = $(`<input type="checkbox" onchange="update_global_query()" id=${this.id}>Return</input>`);
+        this.check_return = $(`<input type="checkbox" onchange="update_global_query()" id=${this.id} class="return_check">Return</input>`);
         this.node_div.append(this.select_type);
         this.node_div.append(this.check_return);
         add_btn.before(this.node_div);
@@ -141,7 +142,6 @@ class Node {
             cypher += node.descriptor;
 
             let link = node.link;
-            console.log(link);
             if (link) {
                 cypher += "-[";
                 if (link.simple) {
@@ -155,7 +155,6 @@ class Node {
                 cypher += "]-";
             }
         }
-        console.log(cypher);
         return cypher;
     }
 
@@ -170,10 +169,8 @@ class Node {
         this.select_type.empty();
         this.select_type.append($("<OPTION value='Unknown'>Unknown</OPTION>"));
         session.run(types_query).then(result => {
-            console.log(result);
             for (let record of result.records) {
                 let label = record.get('type')[0];
-                console.log(label);
                 if (label === selected) {
                     this.select_type.append($(`<OPTION value='${label}' selected>${label}</OPTION>`));
                 } else {
@@ -211,11 +208,11 @@ class Relation {
 
         this.previous = previous;
         this.rel_div = $(`<div id=${this.id} class="selectBox"></div>`);
-        this.image = $(`<img src="${simpleLinkPath}" onclick="Relation.dist_switch(${this.previous.id})">`);
+        this.image = $(`<img src="${simpleLinkPath}" onclick="Relation.dist_switch(${this.previous.id})" class="rel_img">`);
 
         this.rel_div.append(this.image);
         this.select_type = $(`<SELECT onchange="update_global_query()"></SELECT>`);
-        this.check_return = $(`<input type="checkbox" onchange="update_global_query()" id=${this.id}>Return</input>`);
+        this.check_return = $(`<input type="checkbox" onchange="update_global_query()" id=${this.id} class="return_check">Return</input>`);
         this.rel_div.append(this.select_type);
         this.rel_div.append(this.check_return);
         add_btn.before(this.rel_div);
