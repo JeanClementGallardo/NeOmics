@@ -21,13 +21,13 @@
             <h1 style="text-align: center">Visualization</h1>
             <div title="Cypher box" style="height: 20vh">
                 <label for="cypher" class="">Cypher query: </label>
-                <input type="text" id="cypher"><br>
+                <textarea id="cypher" rows="2" cols="30"></textarea><br>
                 <input type="submit" value="Submit" id="reload" class="float-left" onclick="reload()">
                 <input type="submit" value="Stabilize" id="stabilize" class="float-right" onclick="stabilize()">
             </div>
-            <div title="Cypher creator" style="height: 80vh" id="QM">
-                <button id="add" onclick="new_node()">+</button>
-                <button id="remove" onclick="remove_node()">-</button>
+            <div title="Cypher creator" style="height: 80vh; text-align: center" id="QM">
+                <button id="add" onclick="new_node()" class="button">+</button>
+                <button id="remove" onclick="remove_node()" class="button">-</button>
             </div>
         </div>
         <div class="col-sm-6 pull-right">
@@ -39,6 +39,12 @@
 </div>
 <a href="/"><img src="{% static 'Common/home-icon-silhouette.svg' %}" height='40px' class="button_home"></a>
 </body>
+
+<script>
+    const simpleLinkPath = "{% static 'Viewer/Ressources/Lien.png' %}";
+    const composedLinkPath = "{% static 'Viewer/Ressources/Composed_Link.png' %}";
+    const unknownNode = "{% static 'Viewer/Ressources/Unknown_node.png' %}";
+</script>
 
 <script type="text/javascript">
 
@@ -79,7 +85,6 @@
     function stabilize() {
         viz.stabilize();
     }
-
 
 </script>
 <script type="text/javascript" src="{% static 'Viewer/QueryMaker.js' %}"></script>

@@ -17,3 +17,17 @@
     margin-right: auto;
     margin-top: 20px;
 }
+
+.selectBox{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.button{
+    text-align: center;
+    margin-left: 10px;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    border-color: black;
+}
