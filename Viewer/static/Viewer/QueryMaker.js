@@ -63,7 +63,6 @@ function update_global_query() {
             returned += `${node_id}, `;
             return_sth = true;
         }
-        node.type = node.select_type.find(":selected").val();
         if (node.type && node.type !== "Unknown") {
             console.log(node.type);
             matches += `:${node.type}`;

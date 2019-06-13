@@ -16,13 +16,13 @@ resultPromise.then(result => {
 });
 
 function selectNode() {
-    var e = document.getElementById("test");
+    var e = $("#test");
     var strUser = e.options[e.selectedIndex].text;
     document.getElementById("cypher").append(" " + strUser);
 }
 
 function addNode() {
-    let currentDiv = document.getElementById("QM");
+    let currentDiv = $("#QM");
     let newDiv = document.createElement("form");
     newDiv.setAttribute("id", "next");
     currentDiv.insertBefore(newDiv, document.getElementById('add'));

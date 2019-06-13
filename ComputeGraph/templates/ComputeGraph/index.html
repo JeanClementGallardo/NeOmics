@@ -11,10 +11,10 @@
 <body>
 <h1>Compute graph</h1>
 <div>
-{% if organism_list %}
+{% if project_list %}
     <ul class="text_list">
-        {% for organism in organism_list %}
-            <li><a href="{% url 'ComputeGraph:stat_choice' organism.organism %}">{{ organism.organism }}</a></li>
+        {% for project in project_list %}
+            <li><a href="{% url 'ComputeGraph:stat_choice' project.name %}">{{ project.name }}</a></li>
         {% endfor %}
     </ul>
 {% endif %}

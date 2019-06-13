@@ -6,14 +6,15 @@ import uuid
 
 from django.db import models
 
-from ImportRaw.models import RawData
+from ImportRaw.models import Project
 from NeOmics import settings
+
+non_alpha_pattern = re.compile(r'\W')
 
 
 def simplify(string):
     string = string.replace(' ', '_')
-    pattern = re.compile(r'\W')
-    return re.sub(pattern, '', string)
+    return re.sub(non_alpha_pattern, '', string)
 
 
 # Create your models here.
@@ -35,7 +36,7 @@ class Analysis(models.Model):
 
 
 class Graph(models.Model):
-    organism = models.ForeignKey(RawData, on_delete=models.CASCADE)
+    project = models.ForeignKey(Project, on_delete=models.CASCADE)
     analysis_family = models.ForeignKey(AnalysisFamily, on_delete=models.CASCADE)
     http_port = models.IntegerField(default=7474)
     bolt_port = models.IntegerField(default=7687)
@@ -45,12 +46,12 @@ class Graph(models.Model):
     password = models.CharField(default="neo4j", max_length=200)
 
     @classmethod
-    def create(cls, current_host: str, organism, analysis_family):
+    def create(cls, current_host: str, project, analysis_family):
         current_host = current_host
         address = ':'.join(current_host.split(':')[:-1])
 
         try:
-            graph = Graph.objects.get(organism=organism, analysis_family=analysis_family)
+            graph = Graph.objects.get(project=project, analysis_family=analysis_family)
         except Graph.DoesNotExist:
 
             # Get new free port
@@ -63,7 +64,7 @@ class Graph(models.Model):
             s1.close()
             s2.close()
 
-            db_name = "{}_analysis_results_on_{}".format(simplify(analysis_family.name), simplify(organism.organism))
+            db_name = "{}_analysis_results_on_{}".format(simplify(analysis_family.name), simplify(project.name))
 
             uri = "bolt://{}:{}".format(address, bolt_port)
             user = uuid.uuid4().hex
@@ -82,8 +83,8 @@ class Graph(models.Model):
 
             launcher = '{}/neo4j_instances/{}/bin/neo4j'.format(root_path, db_name)
 
-            graph = cls(organism=organism, analysis_family=analysis_family, name=db_name, uri=uri, user=user,
-                        password=password, http_port=http_port, bolt_port=bolt_port, launcher=launcher)
+            graph = cls(project=project, analysis_family=analysis_family, name=db_name, uri=uri, user=user,
+                        password=password, http_port=http_port, bolt_port=bolt_port)
             graph.save()
             return graph
         else:
@@ -100,7 +101,7 @@ class Graph(models.Model):
         subprocess.call([self.launcher, "stop"])
 
     def __str__(self):
-        return "{}_analysis_results_on_{}".format(simplify(self.analysis_family.name), simplify(self.organism.organism))
+        return "{}_analysis_results_on_{}".format(simplify(self.analysis_family.name), simplify(self.project.name))
 
     def delete(self, using=None, keep_parents=False):
         super(Graph, self).delete()
