@@ -1,10 +1,19 @@
+# !/usr/bin/env python3
+__authors__ = ["Eliot Ragueneau", "Jean-Clément Gallardo"]
+__date__ = "14/06/2019"
+__email__ = "eliot.ragueneau@etu.u-bordeaux.fr"
 import json
+import os
+import threading
+from shutil import rmtree
+from typing import *
 
 from django.shortcuts import render, get_object_or_404
 from django.views import generic
 
 from ComputeGraph.models import AnalysisFamily, Analysis, Graph
 from ImportRaw.models import Project
+from NeOmics import settings
 from .static.ComputeGraph.results_to_neo4j import ResultsToNeo4j
 
 
@@ -50,11 +59,19 @@ def stat_load(request, project_name, analysis_name):
 
     if request.POST:
         graph = Graph.create(request.get_host(), project, analysis.family)
-        # TODO Execute R script with R params
-        # TODO Make R output in tmp directory
-        ResultsToNeo4j(graph.uri, graph.user, graph.password,
-                       "/home/eliot/Documents/Travail/M1/Projets/NeOmics/Organism__Arabidopsis")
-        # TODO remove tmp results directory
+        parameters = {parameter["name"]: request.POST[parameter["name"]] for parameter in params}
+        process_thread = threading.Thread(target=process_analysis, args=(graph, analysis, parameters))
+        process_thread.start()
         return render(request, "ComputeGraph/stat_load.html")
 
     return render(request, "ComputeGraph/stat_load.html")
+
+
+def process_analysis(graph: Graph, analysis: Analysis, parameters: Dict):
+    tmp_dir = "{}/tmp/{}_on_{}".format(settings.MEDIA_ROOT, graph.project.name, analysis.name)
+    os.mkdir(tmp_dir)
+    analysis.execute(out_dir=tmp_dir, **parameters)
+    ResultsToNeo4j(graph.uri, graph.user, graph.password, tmp_dir)
+    # Remove tmp files
+    rmtree(tmp_dir)
+    return "Completed"

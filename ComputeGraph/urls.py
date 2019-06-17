@@ -1,3 +1,9 @@
+# !/usr/bin/env python3
+"""Describes ComputeGraph urls, and link them with views"""
+__authors__ = ["Eliot Ragueneau", "Jean-Clément Gallardo"]
+__date__ = "14/06/2019"
+__email__ = "eliot.ragueneau@etu.u-bordeaux.fr"
+
 from django.urls import path
 
 from . import views

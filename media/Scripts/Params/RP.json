@@ -1,11 +1,11 @@
 [
     {
-        "name" : "Param 1",
+        "name" : "Param1",
         "default" : "Default 1",
         "help_text" : "Je suis le paramètre 1"
     },
     {
-        "name" : "Param 2",
+        "name" : "Param2",
         "default" : "Default 2",
         "help_text" : "Je suis le paramètre 2"
     }

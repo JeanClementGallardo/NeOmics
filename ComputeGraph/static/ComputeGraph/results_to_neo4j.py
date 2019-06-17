@@ -1,10 +1,17 @@
-import os
-import py2neo
-import py2neo.matching
+# !/usr/bin/env python3
+"""Grants a class that interprets R analysis outputs as a folder tree, which contains node descriptor
+explained in extract_node()"""
+__authors__ = ["Eliot Ragueneau", "Jean-Clément Gallardo"]
+__date__ = "14/06/2019"
+__email__ = "eliot.ragueneau@etu.u-bordeaux.fr"
+
 import csv
+import re
 from pathlib import Path
 from typing import *
-import re
+
+import py2neo
+import py2neo.matching
 
 
 def extract_node(node_descriptor: str) -> Tuple[List[str], str, str]:
@@ -34,6 +41,7 @@ class ResultsToNeo4j:
         self.graph = py2neo.Graph(uri=uri, auth=(user, password))
         self.tx = self.graph.begin()
         self.nodes = [node for node in self.graph.nodes.match()]
+        self.relations = [rel for rel in self.graph.relationships.match()]
         self.__rec_browse_dir(Path(root_path), None)
         self.tx.commit()
 
@@ -46,6 +54,14 @@ class ResultsToNeo4j:
         self.tx.create(node)
         self.nodes.append(node)
         return node
+
+    def get_or_create_relation(self, relation: py2neo.Relationship):
+        for rel in self.relations:
+            if rel == relation:
+                return rel
+        self.tx.merge(relation)
+        self.relations.append(relation)
+        return relation
 
     def create_node(self, *labels, **properties):
         node = py2neo.Node(*labels, **properties)
@@ -70,10 +86,10 @@ class ResultsToNeo4j:
     def __rec_browse_dir(self, path: Path, previous_node):
         labels, name, rel_type = extract_node(path.stem)
 
-        current_node = self.create_node(*labels, name=name)
+        current_node = self.get_or_create_node(*labels, name=name)
 
         if previous_node:
-            self.tx.merge(py2neo.Relationship(previous_node, rel_type, current_node))
+            self.get_or_create_relation(py2neo.Relationship(previous_node, rel_type, current_node))
 
         if path.is_dir():
             for elt in path.iterdir():
@@ -91,7 +107,7 @@ class ResultsToNeo4j:
                     for col in range(len(header)):
                         sub_labels, sub_name, sub_rel = extract_node(header[col])
                         sub_node = self.create_node(*sub_labels, name=sub_name)
-                        self.tx.merge(py2neo.Relationship(current_node, sub_rel, sub_node))
+                        self.get_or_create_relation(py2neo.Relationship(current_node, sub_rel, sub_node))
                         col_to_node[col] = sub_node
 
                     for row in reader:
@@ -99,7 +115,8 @@ class ResultsToNeo4j:
                             if row[col] != "":
                                 sub_sub_labels, sub_sub_name, sub_sub_rel = extract_node(row[col])
                                 sub_sub_node = self.get_or_create_node(*sub_sub_labels, name=sub_sub_name)
-                                self.tx.merge(py2neo.Relationship(col_to_node[col], sub_sub_rel, sub_sub_node))
+                                self.get_or_create_relation(
+                                    py2neo.Relationship(col_to_node[col], sub_sub_rel, sub_sub_node))
 
             elif path.suffix == ".lab":
                 label = path.stem

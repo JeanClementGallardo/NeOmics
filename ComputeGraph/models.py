@@ -1,7 +1,6 @@
-import os
 import re
-import subprocess
 import socket
+import subprocess
 import uuid
 
 from django.db import models
@@ -33,6 +32,11 @@ class Analysis(models.Model):
 
     def __str__(self):
         return self.name
+
+    def execute(self, **parameters):
+        subprocess.call(
+            [settings.BASE_DIR + "/NeOmics/R-3.6.0/bin/Rscript", self.script.path] +
+            ["--{}={}".format(param, parameters[param]) for param in parameters])
 
 
 class Graph(models.Model):

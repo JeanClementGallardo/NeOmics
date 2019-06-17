@@ -1,3 +1,12 @@
+/**
+ * @author Jean-Clément Gallardo, Eliot Ragueneau
+ */
+
+
+/**
+ * Generator function that produces alphabetical identifiers from a to z, then from aa to az, etc.
+ * @return {IterableIterator<*>}
+ */
 function* id_generator() {
 
     function product(iterables, repeat) {

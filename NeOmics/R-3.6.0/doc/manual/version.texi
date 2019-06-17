@@ -1,0 +1,4 @@
+@set VERSIONno 3.6.0
+@set VERSION 3.6.0 (2019-04-26)
+@set RWVERSION R-3.6.0
+@afourpaper
